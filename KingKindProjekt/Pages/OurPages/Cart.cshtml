@@ -7,4 +7,8 @@
 <div class="text-center">
     <h1 class="display-4">YooooooooHoooooo</h1>
     <p>CHECK OUT IF YOU WANT TO CHECK OUT.</p>
+    @foreach (Models.Item cart in Model.Items)
+    {
+        <p>@cart.Name @cart.Price</p>
+    }
 </div>

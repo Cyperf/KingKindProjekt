@@ -13,15 +13,17 @@
         }
     </div>
     <div class="mainPage">
-        @foreach (Models.Item item in Model.itemService.Items)
-        {
-            <a>
-                <div class="card" width="33%" height="auto">
-                    <img src="@item.PathToImage">
-                    <p>@item.Name</p>
-                    <p>@item.Price</p>
-                </div>
-            </a>
-        }
+        <div class="">
+            @foreach (Models.Item item in Model.itemService.Items)
+            {
+                <a href="../Pages/Error.cshtml">
+                    <div class="card" width="33%" height="auto">
+                        <img src="@item.PathToImage" width="100%" height="auto">
+                        <p>@item.Name</p>
+                        <p>@item.Price</p>
+                    </div>
+                </a>
+            }
+        </div>
     </div>
 </div>

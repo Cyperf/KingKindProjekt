@@ -1,7 +1,6 @@
 ﻿
 namespace KingKindProjekt.Models
 {
-    public IWEB
     public enum ItemType
     {
         NoItem,
@@ -14,7 +13,7 @@ namespace KingKindProjekt.Models
         public string Brand { get; set; }
         public ItemType Type { get; set; }
         public string Description { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
         public string PathToImage { get; set; }
         public Item()
         {
@@ -24,7 +23,7 @@ namespace KingKindProjekt.Models
             Description = "No description given";
             Price = 0;
         }
-        public Item(string name, string brand, ItemType type, string description, float price, string pathToImage)
+        public Item(string name, string brand, ItemType type, string description, double price, string pathToImage)
         {
             Name = name;
             Brand = brand;

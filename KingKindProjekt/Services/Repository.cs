@@ -1,35 +1,40 @@
 ﻿namespace KingKindProjekt.Services
 {
-    public class Repository<t>
+    public class Repository<T>
     {
-        public Dictionary<string, t> Items { get; private set; }
+        public Dictionary<string, T> Items { get; private set; }
 
         public Repository()
         {
-            Items = new Dictionary<string, t>();
+            Items = new Dictionary<string, T>();
         }
 
-        public void Create(string id, t item)
+        public void Create(string id, T item)
         {
             if (Items.ContainsKey(id))
                 return;
             Items.Add(id, item);
         }
-        public t? Read(string id)
+        public T? Read(string id)
         {
             if (Items.ContainsKey(id))
                 return Items[id];
             return default;
         }
-        public void Update(string id, t item)
+        public void Update(string id, T item)
         {
             if (Items.ContainsKey(id))
                 Items[id] = item;
         }
-        public void Delete(string id)
+        public T Delete(string id)
         {
             if (Items.ContainsKey(id))
+            {
+                T i = Items[id];
                 Items.Remove(id);
+                return i;
+            }
+            return default;
         }
     }
 }

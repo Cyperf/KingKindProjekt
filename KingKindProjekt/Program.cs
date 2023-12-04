@@ -4,8 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+//builder.Services.AddTransient < JsonFileService<KingKindProjekt.Models.Item> >();
+builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Item>>();
 builder.Services.AddSingleton<ItemService, ItemService>();
-//builder.Services.AddTransient < JsonFileGenericService<ItemRazorV1.Models.Customer> >();
+builder.Services.AddSingleton<CartService, CartService>();
 
 var app = builder.Build();
 
