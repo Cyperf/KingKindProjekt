@@ -1,7 +1,11 @@
+using KingKindProjekt.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<ItemService, ItemService>();
+//builder.Services.AddTransient < JsonFileGenericService<ItemRazorV1.Models.Customer> >();
 
 var app = builder.Build();
 

@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.brands {
+    float: left;
+    width: 20%;
+}
+.mainPage {
+    float: right;
+    width: 80%;
+}
