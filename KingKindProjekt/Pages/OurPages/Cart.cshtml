@@ -17,13 +17,13 @@
 	<thead>
 		<tr class="btn-secondary active">
 			<th>
-				Id
-			</th>
-			<th>
 				Name
 			</th>
 			<th>
 				Price
+			</th>
+			<th>
+				Amount
 			</th>
 			<th>
 				Actions
@@ -31,20 +31,23 @@
 		</tr>
 	</thead>
 	<tbody>
-		@if (Model.Items != null)
+		@if (Model.cartService._cart.Items != null)
 		{
-			foreach (var item in Model.Items)
+			foreach (var item in Model.cartService._cart.Items)
 			{
 				<tr class="btn-secondary">
 					<td>
-						@item.Name
+						@item.Value.Name
 					</td>
 					<td>
-						@item.Price
+						@item.Value.Price
 					</td>
 					<td>
-						<a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditItem" asp-route-id="@item.Name"><i class="fa fa-edit"></i></a>
-						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="DeleteItem" asp-route-id="@item.Name"><i class="fa fa-trash"></i></a>
+						@Model.cartService._amount.Read(item.Value.Name);
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditItem" asp-route-id="@Model.cartService._cart.Create"><i class="fa fa-edit"></i></a>
+						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="DeleteItem" asp-route-id="@Model.cartService._cart.Delete(item.Value.Name)"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 			}

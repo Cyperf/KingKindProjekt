@@ -1,0 +1,13 @@
+﻿@page
+@model KingKindProjekt.Pages.OurPages.DeleteItemModel
+@{
+}
+
+<h1>Delete Confirmation></h1>
+<div class="alert alert-danger">
+	<h5>Are you sure you want to delete Item - @Model.Item.Name</h5>
+	<form method="post">
+		<button type="submit" class="btn btn-danger">Yes</button>
+		<a class="btn btn-primary" asp-page="/OurPages/Cart">No</a>
+	</form>
+</div>

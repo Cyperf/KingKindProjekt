@@ -9,3 +9,37 @@
     float: right;
     width: 80%;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /*min-width: 50%;
+    width: 50%;*/
+    /*width: fit-content;*/
+    height: 350px;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #efefef;
+}
+
+.imageClass {
+    width: 100%;
+    height: auto;
+    max-height: 65%;
+}
