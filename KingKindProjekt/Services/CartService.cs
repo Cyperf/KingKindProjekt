@@ -27,15 +27,14 @@ namespace KingKindProjekt.Services
 			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
 		}
 		
-		public void Create(Item item)
+		public void Create(Item? item)
         {
-           
+			if (item == null)
+				return;
 			_cart.Create(item.Name, item);
             if (_amount.Contains(item.Name))
                 _amount.Update(item.Name, _amount.Read(item.Name) + 1);
             else _amount.Create(item.Name, 1);
-
-
 		}
 
         public Item? Read(Item item, string name)

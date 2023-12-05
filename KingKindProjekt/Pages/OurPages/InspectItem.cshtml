@@ -16,7 +16,11 @@
 <br />
 <p>@item.Description</p>
 
-<form method="post">
-    <button type="submit" class="btn btn-danger">Yes</button>
-    <a class="btn btn-primary" asp-page="/Item/GetAllItems">No</a>
-</form>
+    <a class="btn btn-primary" type="button" title="Add to cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="@item.Name"></a>
+    <a class="btn btn-warning" type="button" title="Remove from cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="" asp-route-deleteName="@item.Name"></a>
+
+ 
+@* <form method="post">
+    <input />
+    <a asp-for="AddToCart" class="btn btn-primary" type="submit" value="@item.Name" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="@item.Name"></a>
+</form> *@
