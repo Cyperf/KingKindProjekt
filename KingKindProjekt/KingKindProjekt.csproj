@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Data\Costumer.JSON" />
-    <Content Remove="wwwroot\Data\NewFile.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="wwwroot\Data\" />
     <Folder Include="wwwroot\Data\" />
     <Folder Include="wwwroot\res\" />
   </ItemGroup>

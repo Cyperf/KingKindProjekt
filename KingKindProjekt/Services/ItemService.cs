@@ -16,9 +16,13 @@ namespace KingKindProjekt.Services
             _items = new Repository<Item>();
             _jsonFileService = JsonFileService;
             //_items = JsonFileService.GetJsonItems();
-            if (_items == null)
-                _items = new Repository<Item>();
+            _items = new Repository<Item>();
             var items = JsonFileService.GetJsonItems();
+            if (items == null)
+            {
+                AddMockData();
+                System.Diagnostics.Debug.WriteLine("---------------------" + _items.Items.Count + "----------------------------");
+            }
             if (items != null)
                 foreach (var item in items)
                 {
@@ -34,7 +38,7 @@ namespace KingKindProjekt.Services
         public void Create(Item item)
         {
             _items.Create(item.Name, item);
-            //_jsonFileService.SaveJsonItems(_items.Items.Values);
+            _jsonFileService.SaveJsonItems(_items.Items.Values);
         }
         public Item? Read(Item item)
         {
@@ -43,7 +47,7 @@ namespace KingKindProjekt.Services
         public void Update(Item item)
         {
             _items.Update(item.Name, item);
-            //_jsonFileService.SaveJsonItems(_items.Items.Values);
+            _jsonFileService.SaveJsonItems(_items.Items.Values);
         }
         public void Delete(Item item)
         {
@@ -51,8 +55,16 @@ namespace KingKindProjekt.Services
             Item itemToBeDeleted = _items.Delete(item.Name);
             if (itemToBeDeleted != null)
             {
-                //_jsonFileService.SaveJsonItems(_items.Items.Values);
+                _jsonFileService.SaveJsonItems(_items.Items.Values);
             }
+        }
+
+        private void AddMockData()
+        {
+            Create(new Item("Name", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "/res/KingKindLogo.png"));
+            Create(new Item("Hair gel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
+            Create(new Item("Gel'ler hair", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
+            Create(new Item("Expencive hair gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
         }
     }
 }
