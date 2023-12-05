@@ -10,7 +10,10 @@ namespace KingKindProjekt.Services
         {
             WebHostEnvironment = webHostEnvironment;
         }
-
+        public string GetPathRelativeToRoot(string folder, string file)
+        {
+            return Path.Combine(WebHostEnvironment.WebRootPath, folder, file);
+        }
         private string JsonFileName
         {
             get

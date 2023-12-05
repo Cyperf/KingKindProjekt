@@ -21,7 +21,7 @@ namespace KingKindProjekt.Services
             if (items == null)
             {
                 AddMockData();
-                System.Diagnostics.Debug.WriteLine("---------------------" + _items.Items.Count + "----------------------------");
+                //System.Diagnostics.Debug.WriteLine("---------------------" + _items.Items.Count + "----------------------------");
             }
             if (items != null)
                 foreach (var item in items)
@@ -61,10 +61,10 @@ namespace KingKindProjekt.Services
 
         private void AddMockData()
         {
-            Create(new Item("Name", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "/res/KingKindLogo.png"));
+            Create(new Item("Name", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "res/KindKindLogo.png"));
             Create(new Item("Hair gel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
             Create(new Item("Gel'ler hair", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
-            Create(new Item("Expencive hair gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
+            Create(new Item("Expensive hair gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
         }
     }
 }
