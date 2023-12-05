@@ -15,14 +15,6 @@ namespace KingKindProjekt.Services
         {
             _cart = new Repository<Item> ();
 			_amount = new Repository<int>();
-
-			// mock data
-			Create(new Item("safffffffffffffffffffffffffffffffffffffffffasddaasdasdasdasdasdasdasgvnfsdf", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
-			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
-			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
-			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
-			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
-			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
 		}
 		
 		public void Create(Item? item)
