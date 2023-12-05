@@ -2,7 +2,7 @@
 @model KingKindProjekt.Pages.OurPages.ViewProductsModel
 @{
 }
-<link rel="stylesheet" type="text/css" href="css/ViewProducts.css" />
+<link rel="stylesheet" type="text/css" href="/css/ViewProducts.css" />
 
 <div class="wrapper">
     <div class="brands">
@@ -13,13 +13,16 @@
         }
     </div>
     <div class="mainPage">
-        <div class="">
+        <div class="container row-cols-3">
             @foreach (Models.Item item in Model.itemService.Items)
             {
                 <a href="../Pages/Error.cshtml">
-                    <div class="card" width="33%" height="auto">
-                        @* <img src="@item.PathToImage" width="100%" height="auto"> *@
-                        <p>@item.Name</p>
+                    <div class="card">
+                        @* draw the image *@
+                        @{ string imagePath = Url.Content("~/" + item.PathToImage); }
+                        <img src="@imagePath" class="imageClass">
+                        <h2>@item.Name</h2>
+                        <h3>@item.Brand</h3>
                         <p>@item.Price</p>
                     </div>
                 </a>

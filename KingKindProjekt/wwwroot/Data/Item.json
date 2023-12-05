@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Name",
+    "Brand": "Branded",
+    "Type": 1,
+    "Description": "Wow, this is the best razer I have ever tried!",
+    "Price": 199.99,
+    "PathToImage": "res/KindKindLogo.png"
+  },
+  {
+    "Name": "Hair gel",
+    "Brand": "Other brand",
+    "Type": 2,
+    "Description": "Just normal hair gel.",
+    "Price": 99.99,
+    "PathToImage": ""
+  },
+  {
+    "Name": "Gel\u0027ler hair",
+    "Brand": "Super brand",
+    "Type": 2,
+    "Description": "Nice hair gel.",
+    "Price": 119.99,
+    "PathToImage": ""
+  },
+  {
+    "Name": "Expensive hair gel",
+    "Brand": "Branded",
+    "Type": 2,
+    "Description": "Most likely the best hair gel in excistence.",
+    "Price": 1199.99,
+    "PathToImage": "res/KindKindLogo.png"
+  }
+]
