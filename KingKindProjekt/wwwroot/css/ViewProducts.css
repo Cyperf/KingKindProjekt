@@ -33,6 +33,7 @@
     width: 100%;
 }
 
+
 .card:hover {
     transform: translateY(-10px);
     background-color: #efefef;

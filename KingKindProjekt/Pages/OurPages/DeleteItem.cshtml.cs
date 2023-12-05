@@ -29,11 +29,11 @@ namespace KingKindProjekt.Pages.OurPages
 
 		public IActionResult OnPost(string name)
 		{
-			Models.Item deletedItem = _cartService.Delete(_cartService.GetItem(name));
+			Models.Item deletedItem = _cartService.Delete(name);
 			if (deletedItem == null)
 				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
 
-			return RedirectToPage("GetAllItems");
+			return RedirectToPage("Cart");
 		}
 	}
 }

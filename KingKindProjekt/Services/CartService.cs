@@ -1,4 +1,5 @@
 ﻿using KingKindProjekt.Models;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace KingKindProjekt.Services
 {
@@ -10,18 +11,26 @@ namespace KingKindProjekt.Services
         public Repository<Item> _cart;
         public Repository<int> _amount;
 
-        private List<Item> _carts;
+        //private List<Item> _carts;
 		
 		public CartService ()
         {
             _cart = new Repository<Item> ();
 			_amount = new Repository<int>();
+
+			// mock data
+			Create(new Item("safffffffffffffffffffffffffffffffffffffffffasddaasdasdasdasdasdasdasgvnfsdf", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
+			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
+			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
+			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
+			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
+			Create(new Item("sa", "sdad", ItemType.Razor, "ads", 2, "/res/KingKindLogo"));
 		}
 		
 		public void Create(Item item)
         {
            
-                _cart.Create(item.Name, item);
+			_cart.Create(item.Name, item);
             if (_amount.Contains(item.Name))
                 _amount.Update(item.Name, _amount.Read(item.Name) + 1);
             else _amount.Create(item.Name, 1);
@@ -34,15 +43,27 @@ namespace KingKindProjekt.Services
             return _cart.Read(item.Name);   
         }
        
-        public void Delete(Item item)
+        public Item Delete(Item item)
         {
-            _cart.Delete(item.Name);
+            return _cart.Delete(item.Name);
         }
+        public Item Delete(string name)
+        {
+			int amount = _amount.Read(name);
+			_amount.Update(name, amount-1);
+			if (amount == 0)
+			{
+				_amount.Delete(name);
+				return _cart.Delete(name);
+			}
+			return _cart.Read(name);
 
-		public Item GetItem(string name)
+		}
+
+        public Item GetItem(string name)
 		{
 			
-			foreach (Item item in _carts)
+			foreach (Item item in _cart.Items.Values)
 			{
 				if (item.Name == name)
 					return item;
@@ -50,7 +71,7 @@ namespace KingKindProjekt.Services
 
 			return null;
 		}
-		public List<Item> GetItems(string name) { return _carts; }
+		public List<Item> GetItems(string name) { return _cart.Items.Values.ToList(); }
         
 
 		public void CalculateTotalPrice()

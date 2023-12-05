@@ -2,3 +2,21 @@
 @model KingKindProjekt.Pages.OurPages.InspectItemModel
 @{
 }
+
+
+
+@{
+    var item = Model.item;
+    string imagePath = Url.Content("~/" + item.PathToImage);
+}
+<img src="@imagePath" class="imageClass" style="width: 100%; height: auto;">
+<h2>@item.Name</h2>
+<h3>@item.Brand</h3>
+<p>@item.Price</p>
+<br />
+<p>@item.Description</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <a class="btn btn-primary" asp-page="/Item/GetAllItems">No</a>
+</form>

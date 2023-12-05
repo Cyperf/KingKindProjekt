@@ -44,6 +44,10 @@ namespace KingKindProjekt.Services
         {
             return _items.Read(item.Name);
         }
+        public Item? Read(string item)
+        {
+            return _items.Read(item);
+        }
         public void Update(Item item)
         {
             _items.Update(item.Name, item);
