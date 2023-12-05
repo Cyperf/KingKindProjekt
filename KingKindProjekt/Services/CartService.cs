@@ -3,15 +3,13 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace KingKindProjekt.Services
 {
-    public class CartService : ICartService
+    public class CartService 
     {
 		public double TotalPrice;
         public IEnumerable<Models.Item> items { get { return _cart.Items.Values; } }
 
         public Repository<Item> _cart;
         public Repository<int> _amount;
-
-        //private List<Item> _carts;
 		
 		public CartService ()
         {

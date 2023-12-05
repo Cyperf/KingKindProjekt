@@ -3,6 +3,7 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 using System.Xml.Linq;
 
 namespace KingKindProjekt.Pages.OurPages
@@ -14,27 +15,38 @@ namespace KingKindProjekt.Pages.OurPages
         public List<double>? Price { get; set; } 
 		public CartService? cartService { get; set; }
         public int? Amount { get; set; }
-
-        public CartModel(CartService cartService)
-        {
-            this.cartService = cartService;
-
-			Items = cartService.items.ToList();
-			//cartService.Delete(cartService.GetItem());
-		}
-		//public IActionResult OnGet()
-		//{
-		//	return Page();
-		//}
-		public IActionResult OnGet(string deleteName = "")
+		public ItemService _itemService { get; set; }	
+		public CartModel(CartService cartService, ItemService itemService)
 		{
-			if (deleteName == "")
-				return Page();
-			int amount = cartService.Delete(deleteName);
-			if (amount == 0)
-				return RedirectToPage("Cart");
-			return Page();
+			this.cartService = cartService;
+			_itemService = itemService;
+			
+			Items = cartService.items.ToList();
 		}
+
+
+
+		public IActionResult OnGet(string ItemName, string createName = "", string deleteName = "")
+		{
+			if (deleteName != "")
+			{
+				int amount = cartService.Delete(deleteName);
+
+				if (amount == 0)
+					return RedirectToPage("Cart");
+			}
+
+			if (createName != "")
+				cartService.Create(_itemService.Read(createName));
+				
+			return Page();
+		
+			}
+		
+			
+		}
+
+		
 
 	}
-}
+
