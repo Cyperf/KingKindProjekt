@@ -30,7 +30,9 @@ namespace KingKindProjekt.Pages.OurPages
 		{
 			if (deleteName == "")
 				return Page();
-			cartService.Delete(deleteName);
+			int amount = cartService.Delete(deleteName);
+			if (amount == 0)
+				return RedirectToPage("Cart");
 			return Page();
 		}
 

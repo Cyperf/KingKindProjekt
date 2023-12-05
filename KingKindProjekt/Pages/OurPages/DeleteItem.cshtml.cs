@@ -29,9 +29,8 @@ namespace KingKindProjekt.Pages.OurPages
 
 		public IActionResult OnPost(string name)
 		{
-			Models.Item deletedItem = _cartService.Delete(name);
-			if (deletedItem == null)
-				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
+			//Models.Item deletedItem = _cartService.Delete(name);
+			//if (deletedItem == null)return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
 
 			return RedirectToPage("Cart");
 		}

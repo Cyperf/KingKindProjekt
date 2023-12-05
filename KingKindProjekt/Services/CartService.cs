@@ -47,16 +47,17 @@ namespace KingKindProjekt.Services
         {
             return _cart.Delete(item.Name);
         }
-        public Item Delete(string name)
+        public int Delete(string name)
         {
-			int amount = _amount.Read(name);
-			_amount.Update(name, amount-1);
-			if (amount == 0)
+			int amount = _amount.Read(name) - 1;
+			_amount.Update(name, amount);
+			if (amount <= 0)
 			{
 				_amount.Delete(name);
-				return _cart.Delete(name);
+				_cart.Delete(name);
+				return 0;
 			}
-			return _cart.Read(name);
+			return amount;
 
 		}
 
