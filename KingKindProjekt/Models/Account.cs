@@ -8,7 +8,7 @@ namespace KingKindProjekt.Models
     }
     public enum AccountType
     {
-        Costumer, Worker, Admin
+        Customer, Worker, Admin
     }
 
     public class Account
@@ -31,10 +31,12 @@ namespace KingKindProjekt.Models
         public string Country { get; set; }
         [BindProperty]
         public string PhoneNumber { get; set; }
+        [BindProperty]
+        public bool WantsNewsLetter { get; set; }
 
         public Account ()
         { }
-        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string adress, string country, string phoneNumber)
+        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string adress, string country, string phoneNumber, bool wantsNewsLetter)
         {
             Name = name;
             EMail = email;
@@ -45,6 +47,7 @@ namespace KingKindProjekt.Models
             Adress = adress;
             Country = country;
             PhoneNumber = phoneNumber;
+            WantsNewsLetter = wantsNewsLetter;
         }
     }
 }

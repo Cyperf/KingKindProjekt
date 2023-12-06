@@ -31,7 +31,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            Debug.WriteLine("---------------------" + searchItems + "----------------------------");
+            //Debug.WriteLine("---------------------" + searchItems + "----------------------------");
             if (searchItems != "")
             {
                 for (int i  = 0; i < Items.Count; i++)
