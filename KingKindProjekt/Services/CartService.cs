@@ -6,6 +6,7 @@ namespace KingKindProjekt.Services
     public class CartService 
     {
 		public double TotalPrice;
+		public bool Coupon = false;
         public IEnumerable<Models.Item> items { get { return _cart.Items.Values; } }
 
         public Repository<Item> _cart;
@@ -64,14 +65,26 @@ namespace KingKindProjekt.Services
 		public List<Item> GetItems(string name) { return _cart.Items.Values.ToList(); }
         
 
-		public double CalculateTotalPrice()
+		public double CalculateTotalPriceExTax()
 		{
-			foreach(Item item in _cart.Items.Values)
+			TotalPrice = 0;
+			foreach (Item item in _cart.Items.Values)
 			{
-				TotalPrice = TotalPrice + item.Price;
-			}
+				TotalPrice = TotalPrice + item.Price*_amount.Read(item.Name);
+			}			
 			return TotalPrice;
 			
+		}
+		public double CalculateTotalPriceWTax()
+		{
+			
+			return CalculateTotalPriceExTax()*1.25;
+
+		}
+
+		public void couponApply()
+		{
+			Coupon = true;
 		}
 
 	}
