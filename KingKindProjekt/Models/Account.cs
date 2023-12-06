@@ -26,7 +26,7 @@ namespace KingKindProjekt.Models
         [BindProperty]
         public string CVR { get; set; }
         [BindProperty]
-        public string Adress { get; set; }
+        public string Address { get; set; }
         [BindProperty]
         public string Country { get; set; }
         [BindProperty]
@@ -36,7 +36,7 @@ namespace KingKindProjekt.Models
 
         public Account ()
         { }
-        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string adress, string country, string phoneNumber, bool wantsNewsLetter)
+        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter)
         {
             Name = name;
             EMail = email;
@@ -44,7 +44,7 @@ namespace KingKindProjekt.Models
             _PrivateOrCorporation = poc;
             _AccountType = at;
             CVR = cvr;
-            Adress = adress;
+            Address = address;
             Country = country;
             PhoneNumber = phoneNumber;
             WantsNewsLetter = wantsNewsLetter;
