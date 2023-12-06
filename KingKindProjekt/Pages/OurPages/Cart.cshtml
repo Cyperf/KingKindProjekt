@@ -9,10 +9,11 @@
 
 <table class="table table-bordered table-hover table-striped table-opacity" width="60%">
 	<colgroup>
-		<col style="width : 5%">
-		<col style="width : 77%">
-		<col style="width : 9%">
-		<col style="width : 9%">
+		<col style="width : 24%">
+		<col style="width : 24%">
+		<col style="width : 24%">
+		<col style="width : 24%">
+		<col style="width : 4%">
 	</colgroup>
 	<thead>
 		<tr class="btn-secondary active">
@@ -24,6 +25,9 @@
 			</th>
 			<th>
 				Amount
+			</th>
+			<th>
+				TotalPrice
 			</th>
 			<th>
 				Actions
@@ -44,6 +48,9 @@
 					</td>
 					<td>
 						@Model.cartService._amount.Read(item.Value.Name);
+					</td>
+					<td>
+						@Model.cartService.CalculateTotalPrice();
 					</td>
 					<td>
 						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Value.Name"><i class="fa fa-edit"></i></a>

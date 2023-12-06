@@ -64,12 +64,14 @@ namespace KingKindProjekt.Services
 		public List<Item> GetItems(string name) { return _cart.Items.Values.ToList(); }
         
 
-		public void CalculateTotalPrice()
+		public double CalculateTotalPrice()
 		{
 			foreach(Item item in _cart.Items.Values)
 			{
 				TotalPrice = TotalPrice + item.Price;
 			}
+			return TotalPrice;
+			
 		}
 
 	}
