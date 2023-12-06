@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -15,9 +16,11 @@ namespace KingKindProjekt.Pages.OurPages
             EMail = "";
             Password = "";
         }
-        public void OnPostLogin()
+        public IActionResult OnPostLogin()
         {
+            Debug.WriteLine("anfajsknklasadsamkdladmalksmdakld");
 
+            return RedirectToPage("Our");
         }
     }
 }
