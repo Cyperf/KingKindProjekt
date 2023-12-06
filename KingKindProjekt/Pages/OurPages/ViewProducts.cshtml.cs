@@ -2,6 +2,7 @@ using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -28,8 +29,32 @@ namespace KingKindProjekt.Pages.OurPages
             //    Brands.Add("Test" + i);
         }
 
-        public void OnGet()
+        public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
+            Debug.WriteLine("---------------------" + searchItems + "----------------------------");
+            if (searchItems != "")
+            {
+                for (int i  = 0; i < Items.Count; i++)
+                {
+                    if (!Items[i].Name.ToLower().Contains(searchItems.ToLower()))
+                    {
+                        Items.RemoveAt(i);
+                        i--;
+                    }
+                }
+            }
+            if (searchBrands != "")
+            {
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    if (!Items[i].Brand.ToLower().Contains(searchItems.ToLower()))
+                    {
+                        Items.RemoveAt(i);
+                        i--;
+                    }
+                }
+            }
+                return Page();
         }
     }
 }

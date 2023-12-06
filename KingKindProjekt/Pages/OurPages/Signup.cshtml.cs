@@ -5,8 +5,9 @@ namespace KingKindProjekt.Pages.OurPages
 {
     public class SignupModel : PageModel
     {
-        public void OnGet()
+        public void OnPost ()
         {
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,8 +19,25 @@
                         <a class="nav-link text-dark" asp-area="" asp-page="/Index"><img src="/res/KindKindLogo.png" width="20%" height="auto" /></a>
                     </li>
                     <li class="nav-item ">
-                        Search Bar <input type="text" name="SearchString">
-                        <input type="submit" value="Search" />
+                        @* Search Bar <input type="text" name="SearchString">
+                        <input type="submit" value="Search" /> *@
+                        
+                        @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
+                        {
+                            <div class="input-group">
+                                @Html.TextBox("SearchString");
+                                <input type="submit" id="btnSearch" value="Søg" />
+                            </div>
+                        }
+                        @* <form method="post">
+                            <div class="input-group">
+                                @{
+                                    string SearchString = "gel"; 
+                                }
+                                <input asp="SearchString" class="form-control mr-1" placeholder="Enter search term" />
+                                <input type="submit" value="Search" class="btn btn-primary" asp-page="OurPages/ViewProducts" asp-route-searchItems="@SearchString" />
+                            </div>
+                        </form> *@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Login">Login</a>

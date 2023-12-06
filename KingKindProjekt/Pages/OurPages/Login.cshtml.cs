@@ -5,8 +5,19 @@ namespace KingKindProjekt.Pages.OurPages
 {
     public class LoginModel : PageModel
     {
-        public void OnGet()
+
+        [BindProperty]
+        string EMail { get; set; }
+        [BindProperty]
+        string Password { get; set; }
+        public LoginModel()
         {
+            EMail = "";
+            Password = "";
+        }
+        public void OnPostLogin()
+        {
+
         }
     }
 }
