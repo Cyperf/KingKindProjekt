@@ -15,12 +15,12 @@ namespace KingKindProjekt.Pages.OurPages
         public List<double>? Price { get; set; } 
 		public CartService? cartService { get; set; }
         public int? Amount { get; set; }
-		public ItemService _itemService { get; set; }	
+		public ItemService _itemService { get; set; }
 		public CartModel(CartService cartService, ItemService itemService)
 		{
 			this.cartService = cartService;
 			_itemService = itemService;
-			
+
 			Items = cartService.items.ToList();
 		}
 

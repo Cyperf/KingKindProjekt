@@ -27,7 +27,7 @@
 				Amount
 			</th>
 			<th>
-				TotalPrice
+				Total Price For This Item
 			</th>
 			<th>
 				Actions
@@ -50,7 +50,7 @@
 						@Model.cartService._amount.Read(item.Value.Name);
 					</td>
 					<td>
-						@Model.cartService.CalculateTotalPrice();
+						@(item.Value.Price * Model.cartService._amount.Read(item.Value.Name));
 					</td>
 					<td>
 						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Value.Name"><i class="fa fa-edit"></i></a>
@@ -61,4 +61,59 @@
 			}
 		}
 	</tbody>
+</table>
+
+<table class="table table-bordered table-hover table-striped table-opacity" width="30%"> 
+	
+	<colgroup>
+		<col style="width : 50%">
+		<col style="width : 50%">
+	</colgroup>
+	@if (Model.cartService._cart.Items != null) {
+		<tbody>
+			<td>
+				Cart Total
+			</td>
+			<td>
+				@Model.cartService.CalculateTotalPriceExTax()
+			</td>
+		</tbody>
+		<tbody>
+			<td>
+				Tax
+			</td>
+			<td>
+				@(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax())
+			</td>
+		</tbody>
+		<tbody>
+			<td>
+				Coupon Applied
+			</td>
+			<td>
+				@Model.cartService.Coupon
+			</td>
+		</tbody>
+		<tbody>
+			<td>
+				Checkout Total
+			</td>
+			<td>
+				@Model.cartService.CalculateTotalPriceWTax()
+			</td>
+		</tbody>
+		<tbody>
+			<td>
+			<a class="btn btn-success" href="Checkout" role="button">Checkout</a>
+			</td>
+			<td>
+			<li class="nav-item ">
+				Apply Coupon <input type="text" name="SearchString">
+				<input type="submit" value="Apply" />
+			</li>
+			</td>
+		</tbody>
+	}
+
+
 </table>
