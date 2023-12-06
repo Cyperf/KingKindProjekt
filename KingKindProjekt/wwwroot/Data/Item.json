@@ -30,5 +30,13 @@
     "Description": "Most likely the best hair gel in excistence.",
     "Price": 1199.99,
     "PathToImage": "res/KindKindLogo.png"
+  },
+  {
+    "Name": "yeasdf",
+    "Brand": "Coolio brando",
+    "Type": 1,
+    "Description": "so cool for school",
+    "Price": 123,
+    "PathToImage": "res/KindKindLogo.png"
   }
 ]
