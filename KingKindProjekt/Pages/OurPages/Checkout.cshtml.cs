@@ -13,6 +13,8 @@ namespace KingKindProjekt.Pages.OurPages
         }
         public void OnGet()
         {
+
+
             cartService._cart.Items.Clear();
         }
     }
