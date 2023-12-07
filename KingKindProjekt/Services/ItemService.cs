@@ -68,7 +68,19 @@ namespace KingKindProjekt.Services
             Create(new Item("Name", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "res/KindKindLogo.png"));
             Create(new Item("Hair gel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
             Create(new Item("Gel'ler hair", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
-            Create(new Item("Expensive hair gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
+            Create(new Item("Expensives hairs    gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
+            Create(new Item("Nasme", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "res/KindKindLogo.png"));
+            Create(new Item("Hair gsel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
+            Create(new Item("Gel'ler hasir", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
+            Create(new Item("Expenssive hair gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
+            Create(new Item("sName", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "res/KindKindLogo.png"));
+            Create(new Item("Hsair gel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
+            Create(new Item("Gsel'ler hair", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
+            Create(new Item("Expensive hairs gel", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
+            Create(new Item("Names", "Branded", ItemType.Razor, "Wow, this is the best razer I have ever tried!", 199.99d, "res/KindKindLogo.png"));
+            Create(new Item("Hairs gel", "Other brand", ItemType.Hairgel, "Just normal hair gel.", 99.99d, ""));
+            Create(new Item("Gel'ler hairs", "Super brand", ItemType.Hairgel, "Nice hair gel.", 119.99d, ""));
+            Create(new Item("Expensive hair gels", "Branded", ItemType.Hairgel, "Most likely the best hair gel in excistence.", 1199.99d, ""));
         }
     }
 }
