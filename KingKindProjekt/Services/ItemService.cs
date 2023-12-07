@@ -1,4 +1,5 @@
 ﻿using KingKindProjekt.Models;
+using System.Diagnostics;
 
 namespace KingKindProjekt.Services
 {
@@ -6,15 +7,17 @@ namespace KingKindProjekt.Services
     {
         Repository<Item> _items;
         JsonFileService<Item> _jsonFileService;
+        SaleService _saleService;
         //public ItemService()
         //{
         //    _items = new Repository<Item>();
         //}
 
-        public ItemService(JsonFileService<Item> JsonFileService)
+        public ItemService(JsonFileService<Item> JsonFileService, SaleService saleService)
         {
             _items = new Repository<Item>();
             _jsonFileService = JsonFileService;
+            _saleService = saleService;
             //_items = JsonFileService.GetJsonItems();
             _items = new Repository<Item>();
             var items = JsonFileService.GetJsonItems();
@@ -28,12 +31,59 @@ namespace KingKindProjekt.Services
                 {
                     _items.Create(item.Name, item);
                 }
+        }
 
+        public double GetPrice (string itemName)
+        {
+            Item item = _items.Read(itemName);
+            if (item == null)
+                return 0;
+            if (_saleService.IsOnSale(itemName))
+                return _saleService.GetPrice(itemName);
+            return item.Price;
+
+        }
+        public double GetPrice(Item item)
+        {
+            return GetPrice(item.Name);
         }
 
         public IEnumerable<Item> Items
         {
             get { return _items.Items.Values; }
+        }
+        public IEnumerable<Item> GetItems(string seachWord)
+        {
+            List<Item> items = new List<Item>();
+            if (seachWord != "")
+            {
+                seachWord = seachWord.ToLower();
+                foreach (var item in _items.Items.Values)
+                {
+                    if (item.Name.ToLower().Contains(seachWord))
+                    {
+                        items.Add(item);
+                    }
+                }
+            }
+            return items;
+        }
+        public IEnumerable<Item> FilterBrands(string brandName)
+        {
+            List<Item> items = new List<Item>();
+            if (brandName != "")
+            {
+                brandName = brandName.ToLower();
+                foreach (var item in _items.Items.Values)
+                {
+                    if (item.Brand.ToLower().Contains(brandName))
+                    {
+                        items.Add(item);
+                    }
+                }
+            }
+            items.Sort();
+            return items;
         }
         public void Create(Item item)
         {
@@ -61,6 +111,18 @@ namespace KingKindProjekt.Services
             {
                 _jsonFileService.SaveJsonItems(_items.Items.Values);
             }
+        }
+        public IEnumerable<String> GetAllBrands()
+        {
+            List<string> brands = new List<string>();
+            foreach (var item in Items)
+            {
+                string brand = item.Brand;
+                if (!brands.Contains(brand))
+                    brands.Add(brand);
+            }
+            brands.Sort();
+            return brands;
         }
 
         private void AddMockData()

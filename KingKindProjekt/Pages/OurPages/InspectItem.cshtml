@@ -8,11 +8,15 @@
 @{
     var item = Model.item;
     string imagePath = Url.Content("~/" + item.PathToImage);
+    @if (item.PathToImage.Length == 0)
+    {
+        imagePath = Url.Content("~/res/NoPicture.png");
+    }
 }
 <img src="@imagePath" class="imageClass" style="width: 100%; height: auto;">
 <h2>@item.Name</h2>
 <h3>@item.Brand</h3>
-<p>@item.Price</p>
+<p>@Model.ItemService.GetPrice(item.Name)</p>
 <br />
 <p>@item.Description</p>
 

@@ -10,6 +10,8 @@ builder.Services.AddSingleton<ItemService, ItemService>();
 builder.Services.AddSingleton<CartService, CartService>();
 builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Account>>();
 builder.Services.AddSingleton<AccountService, AccountService>();
+builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Sale>>();
+builder.Services.AddSingleton<SaleService, SaleService>();
 
 var app = builder.Build();
 

@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿@using KingKindProjekt.Pages.OurPages;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -31,8 +31,10 @@
                         } *@
                         <form method="post">
                             <div class="input-group">
-                                <input asp="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" class="form-control mr-1" placeholder="Enter search term" />
-                                <input type="submit" value="Search" class="btn btn-primary" asp-route-searchItems="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" asp-page="/OurPages/ViewProducts" />
+                                @{ string text = "aaa"; 
+                                    <input asp="@text" class="form-control mr-1" placeholder="Enter search term" />
+                                    <input type="submit" value="Search" class="btn btn-primary" asp-route-searchItems="@text" asp-page="/OurPages/ViewProducts" />
+                                }
                             </div>
                         </form>
                     </li>
