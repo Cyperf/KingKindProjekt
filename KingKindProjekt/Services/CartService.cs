@@ -22,7 +22,7 @@ namespace KingKindProjekt.Services
 
         public double GetPrice(string itemName)
         {
-            Item item = _items.Read(itemName);
+            Item item = _cart.Read(itemName);
             if (item == null)
                 return 0;
             if (_saleService.IsOnSale(itemName))

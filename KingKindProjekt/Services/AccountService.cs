@@ -56,10 +56,17 @@ namespace KingKindProjekt.Services
         {
             if (AccountService.LoggedInAccount != null)
             {
-                return "Admin";
+                if (AccountService.LoggedInAccount._AccountType == AccountType.Admin)
+                { return "Admin"; }
+                else return "User";
+
             }
             else return "Login";
         }
 
+        public void Save()
+        {
+            jsonFileService.SaveJsonItems(accounts.Items.Values);
+        }
     }
 }

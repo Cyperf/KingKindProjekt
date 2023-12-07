@@ -9,7 +9,8 @@
     "Address": "AAA vej, 4000 Roskilde",
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 10 02 24 90",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "name2",
@@ -21,7 +22,8 @@
     "Address": "BBB vej, 4000 Roskilde",
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 15 22 42 09",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "ajidao jioadj",
@@ -33,7 +35,8 @@
     "Address": "sadjjga 47",
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 12341296",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "akdml adkml",
@@ -45,7 +48,8 @@
     "Address": "ianosd 9218, 4000 Roskilde",
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 14587428",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "Frederik Nicolajsen",
@@ -57,7 +61,8 @@
     "Address": "Banebrinken, 2400 K\u00F8benhavn NV",
     "Country": "Denmark",
     "PhoneNumber": "\u002B45 124514521",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "asd asd",
@@ -69,7 +74,8 @@
     "Address": "Banebrinken, 0 K\u00F8benhavn NV",
     "Country": "Denmark",
     "PhoneNumber": "\u002B12 78451268",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": []
   },
   {
     "Name": "admin admin",
@@ -81,6 +87,35 @@
     "Address": "et 1, 1111 etterbyen",
     "Country": "etterlandet",
     "PhoneNumber": "\u002B11 11111111",
-    "WantsNewsLetter": false
+    "WantsNewsLetter": false,
+    "Receipts": [
+      "Name Branded 199,99 Razor 3\n",
+      "Hair gel Other brand 99,99 Hairgel 1\n",
+      "Gel\u0027ler hair Super brand 119,99 Hairgel 3\n",
+      "Expensives hairs gel Branded 1199,99 Hairgel 2\n",
+      "Nasme Branded 199,99 Razor 1\n",
+      "Hair gsel Other brand 99,99 Hairgel 5\n",
+      "Expenssive hair gel Branded 1199,99 Hairgel 20\n",
+      "Name Branded 199,99 Razor 1\n",
+      "Name Branded 199,99 Razor 1\nHair gel Other brand 99,99 Hairgel 2\n",
+      "",
+      "Name Branded 199,99 Razor 3\nHair gel Other brand 99,99 Hairgel 1\n",
+      "Nasme Branded 199,99 Razor 3\nExpensive hair gels Branded 1199,99 Hairgel 8\n",
+      "Name Branded 199,99 Razor 3\nGsel\u0027ler hair Super brand 119,99 Hairgel 3\n",
+      "Names Branded 199,99 Razor 10\n"
+    ]
+  },
+  {
+    "Name": "username nameuser",
+    "EMail": "user@user.user",
+    "Password": "useruser",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "12341231",
+    "Address": "userlane 12, 7845 UserCity",
+    "Country": "Usercoutnry",
+    "PhoneNumber": "\u002B12 91739172",
+    "WantsNewsLetter": false,
+    "Receipts": []
   }
 ]
