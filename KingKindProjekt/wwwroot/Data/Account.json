@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "name",
+    "EMail": "email@gmail.com",
+    "Password": "password",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "cvr",
+    "Address": "AAA vej, 4000 Roskilde",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 10 02 24 90",
+    "WantsNewsLetter": false
+  },
+  {
+    "Name": "name2",
+    "EMail": "email2@gmail.com",
+    "Password": "pass",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "cvr",
+    "Address": "BBB vej, 4000 Roskilde",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 15 22 42 09",
+    "WantsNewsLetter": false
+  },
+  {
+    "Name": "ajidao jioadj",
+    "EMail": "aabb@gmail.com",
+    "Password": "iojad",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "913",
+    "Address": "sadjjga 47",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 12341296",
+    "WantsNewsLetter": false
+  },
+  {
+    "Name": "akdml adkml",
+    "EMail": "ajiod@gmail.com",
+    "Password": "jiodjaiodjao",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "ianosd 9218, 4000 Roskilde",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 14587428",
+    "WantsNewsLetter": false
+  }
+]
