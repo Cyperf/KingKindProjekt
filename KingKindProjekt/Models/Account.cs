@@ -33,10 +33,13 @@ namespace KingKindProjekt.Models
         public string PhoneNumber { get; set; }
         [BindProperty]
         public bool WantsNewsLetter { get; set; }
+        [BindProperty]
+        public List<string>? Receipts { get; set; }
+
 
         public Account ()
-        { }
-        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter)
+        { Receipts = new List<string>(); }
+        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter, List<string>? receipts)
         {
             Name = name;
             EMail = email;
@@ -48,6 +51,20 @@ namespace KingKindProjekt.Models
             Country = country;
             PhoneNumber = phoneNumber;
             WantsNewsLetter = wantsNewsLetter;
+            Receipts = receipts;
+            if (receipts == null) { Receipts = new List<string>(); }
         }
+
+        public override string ToString()
+        {
+            string temp="";
+            foreach (string str in Receipts)
+            {
+                temp = temp + str;
+
+            }
+            return temp;
+        }
+
     }
 }

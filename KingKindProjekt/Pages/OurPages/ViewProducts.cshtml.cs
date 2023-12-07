@@ -9,7 +9,7 @@ namespace KingKindProjekt.Pages.OurPages
     public class ViewProductsModel : PageModel
     {
         [BindProperty]
-        public static string SearchProduct { get; set; } = "";
+        public static string SearchProduct { get; set; }
 
         public List<Item> Items { get; set; }
         public List<string> Brands { get; set; }
