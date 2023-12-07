@@ -14,7 +14,7 @@ namespace KingKindProjekt.Pages.OurPages
         }
         public IActionResult OnGet()
         {
-            if (!accountService.IsLoggedIn() || accountService.LoggedInAccount._AccountType != Models.AccountType.Admin) 
+            if (!accountService.IsLoggedIn() || AccountService.LoggedInAccount._AccountType != Models.AccountType.Admin) 
             return RedirectToPage("ViewProducts");
 
             return default;
