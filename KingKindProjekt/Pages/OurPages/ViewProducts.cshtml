@@ -15,19 +15,21 @@
     </div>
     <div class="mainPage">
         <div class="container row-cols-3">
-            @foreach (Models.Item item in Model.itemService.Items)
+            @foreach (Models.Item item in Model.Items)
             {
                 <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/InspectItem" asp-route-ItemName="@item.Name">
                 @* <a href="InspectItem" asp-route-ItemName="@item.Name"> *@
                     <div class="card">
                         @* draw the image *@
-                        @{
-                            string imagePath = Url.Content("~/" + item.PathToImage);
+                        @{string imagePath = Url.Content("~/" + item.PathToImage);}
+                        @if (item.PathToImage.Length == 0)
+                        {
+                            imagePath = Url.Content("~/res/NoPicture.png");
                         }
                         <img src="@imagePath" class="imageClass">
                         <h2>@item.Name</h2>
                         <h3>@item.Brand</h3>
-                        <p>@item.Price</p>
+                        <p>@Model.itemService.GetPrice(item.Name)</p>
                     </div>
                 </a>
             }

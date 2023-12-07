@@ -9,8 +9,9 @@ namespace KingKindProjekt.Pages.OurPages
     public class InspectItemModel : PageModel
     {
         public Item item;
-        ItemService _itemService;
         CartService _cartService;
+        private ItemService _itemService;
+        public ItemService ItemService { get { return _itemService; } }
         public InspectItemModel (ItemService itemService, CartService cartService)
         {
             _itemService = itemService;
