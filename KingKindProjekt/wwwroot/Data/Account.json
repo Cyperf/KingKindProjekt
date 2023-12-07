@@ -46,5 +46,41 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 14587428",
     "WantsNewsLetter": false
+  },
+  {
+    "Name": "Frederik Nicolajsen",
+    "EMail": "drageon@live.dk",
+    "Password": "qwerty",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "123412341234",
+    "Address": "Banebrinken, 2400 K\u00F8benhavn NV",
+    "Country": "Denmark",
+    "PhoneNumber": "\u002B45 124514521",
+    "WantsNewsLetter": false
+  },
+  {
+    "Name": "asd asd",
+    "EMail": "lollern@dragemail.kingking",
+    "Password": "qwerty",
+    "_PrivateOrCorporation": 1,
+    "_AccountType": 2,
+    "CVR": "2134",
+    "Address": "Banebrinken, 0 K\u00F8benhavn NV",
+    "Country": "Denmark",
+    "PhoneNumber": "\u002B12 78451268",
+    "WantsNewsLetter": false
+  },
+  {
+    "Name": "admin admin",
+    "EMail": "admin@admin.admin",
+    "Password": "admin",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 2,
+    "CVR": "11111",
+    "Address": "et 1, 1111 etterbyen",
+    "Country": "etterlandet",
+    "PhoneNumber": "\u002B11 11111111",
+    "WantsNewsLetter": false
   }
 ]

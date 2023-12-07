@@ -8,10 +8,13 @@ namespace KingKindProjekt.Pages.OurPages
     {
         private AccountService accountService;
 
-        public IActionResult OnGet(AccountService account)
+        public AdminModel(AccountService accountService)
         {
-            this.accountService = account;
-            if (!account.IsLoggedIn() || account.LoggedInAccount._AccountType != Models.AccountType.Admin) 
+            this.accountService = accountService;
+        }
+        public IActionResult OnGet()
+        {
+            if (!accountService.IsLoggedIn() || accountService.LoggedInAccount._AccountType != Models.AccountType.Admin) 
             return RedirectToPage("ViewProducts");
 
             return default;
