@@ -3,6 +3,7 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -39,6 +40,9 @@ namespace KingKindProjekt.Pages.OurPages
         [Display(Name = "City")]
         [BindProperty]
         public string City { get; set; }
+        [Display(Name = "Address")]
+        [BindProperty]
+        public string Address { get; set; }
 
         public SignupModel (AccountService accountService)
         {
@@ -53,7 +57,22 @@ namespace KingKindProjekt.Pages.OurPages
         {
             _Account.Name = FirstName + " " + LastName;
             _Account.PhoneNumber = "+" + CountryCode + " " + PhoneNumber;
-            if (!ModelState.IsValid)
+            _Account.Address = Address + ", " + PostNumber + " " + City;
+            _Account.WantsNewsLetter = false;
+            Debug.WriteLine("<--------------------------------->");
+            Debug.WriteLine(_Account.Name);
+            Debug.WriteLine(_Account.EMail);
+            Debug.WriteLine(_Account.Password);
+            Debug.WriteLine(_Account._PrivateOrCorporation);
+            Debug.WriteLine(_Account._AccountType);
+            Debug.WriteLine(_Account.CVR);
+            Debug.WriteLine(_Account.Address);
+            Debug.WriteLine(_Account.Country);
+            Debug.WriteLine(_Account.PhoneNumber);
+            Debug.WriteLine(_Account.WantsNewsLetter);
+            Debug.WriteLine("Valid: " + ModelState.ToString());
+            Debug.WriteLine("<--------------------------------->");
+            if (!ValidateAccountDetails())//if(!ModelState.IsValid)
                 return Page();
 
             // login automatically 
@@ -61,6 +80,23 @@ namespace KingKindProjekt.Pages.OurPages
             if (_accountService.TryLogin(_Account.EMail, _Account.Password))
                 return RedirectToPage("ViewProducts");
             return Page(); // could not login - ? (douplicate email... maybe)
+        }
+
+        private bool ValidateAccountDetails ()
+        {
+            if (_Account.Name.Length < 5)
+                return false;
+            if (_Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
+                return false;
+            if (_Account.Password.Length < 5)
+                return false;
+            if (_Account.Address.Length < 5)
+                return false;
+            if (_Account.Country.Length < 3)
+                return false;
+            if (_Account.PhoneNumber.Length < 8)
+                return false;
+            return true;
         }
     }
 }

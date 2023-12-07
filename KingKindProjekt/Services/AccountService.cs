@@ -1,20 +1,36 @@
 ﻿using KingKindProjekt.Models;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace KingKindProjekt.Services
 {
     public class AccountService
     {
         Repository<Account> accounts;
+        JsonFileService<Account> jsonFileService;
 
-        public AccountService()
+        public AccountService(JsonFileService<Account> jsonFileService)
         {
+            this.jsonFileService = jsonFileService;
             accounts = new Repository<Account>();
-            Create(new Account("name", "email@gmail.com", "password", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "+45 10 02 24 90", false));
-            Create(new Account("name2", "email2@gmail.com", "pass", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "+45 15 22 42 09", false));
+            var savedAccounts = jsonFileService.GetJsonItems();
+            if (savedAccounts != null)
+            {
+                foreach (var account in savedAccounts)
+                {
+                    CreateWithoutSaving(account);
+                }
+            }
+            else // dummy data
+            {
+            Create(new Account("name", "email@gmail.com", "password", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "+45 10 02 24 90", false, null));
+            Create(new Account("name2", "email2@gmail.com", "pass", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "+45 15 22 42 09", false, null));
+            }
         }
 
-        public Account LoggedInAccount { get; set; } = null;
+        public AccountService() { }
+
+        public static Account LoggedInAccount { get; set; } = null;
 
         public bool IsLoggedIn() { return LoggedInAccount != null; }
         public bool TryLogin (string Email, string password)
@@ -26,10 +42,31 @@ namespace KingKindProjekt.Services
             LoggedInAccount = temp;
             return true;
         }
-
+        public void CreateWithoutSaving(Account account)
+        {
+            accounts.Create(account.EMail, account);
+        }
         public void Create(Account account)
         {
             accounts.Create(account.EMail, account);
+            jsonFileService.SaveJsonItems(accounts.Items.Values);
+        }
+
+        public static string checkAccountState()
+        {
+            if (AccountService.LoggedInAccount != null)
+            {
+                if (AccountService.LoggedInAccount._AccountType == AccountType.Admin)
+                { return "Admin"; }
+                else return "User";
+
+            }
+            else return "Login";
+        }
+
+        public void Save()
+        {
+            jsonFileService.SaveJsonItems(accounts.Items.Values);
         }
     }
 }

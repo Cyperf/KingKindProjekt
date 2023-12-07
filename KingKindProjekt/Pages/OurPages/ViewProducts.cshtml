@@ -15,47 +15,24 @@
     </div>
     <div class="mainPage">
         <div class="container row-cols-3">
-            @foreach (Models.Item item in Model.itemService.Items)
+            @foreach (Models.Item item in Model.Items)
             {
                 <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/InspectItem" asp-route-ItemName="@item.Name">
                 @* <a href="InspectItem" asp-route-ItemName="@item.Name"> *@
                     <div class="card">
                         @* draw the image *@
-                        @{
-                            string imagePath = Url.Content("~/" + item.PathToImage);
+                        @{string imagePath = Url.Content("~/" + item.PathToImage);}
+                        @if (item.PathToImage.Length == 0)
+                        {
+                            imagePath = Url.Content("~/res/NoPicture.png");
                         }
                         <img src="@imagePath" class="imageClass">
                         <h2>@item.Name</h2>
                         <h3>@item.Brand</h3>
-                        <p>@item.Price</p>
+                        <p>@Model.itemService.GetPrice(item.Name)</p>
                     </div>
                 </a>
             }
         </div>
     </div>
 </div>
-
-
-
-
-@* modal *@
-@* 
-<div class="modal fade" id="@modalName" tabindex="-1" aria-labelledby="@modalNameWithLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="@modalNameWithLabel">@item.Name</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>@item.Description</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
- *@
-@* modal end *@

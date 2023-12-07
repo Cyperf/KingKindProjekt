@@ -1,0 +1,14 @@
+﻿@page
+@model KingKindProjekt.Pages.OurPages.UserModel
+@{
+    ViewData["Title"] = "User";
+}
+@{
+    foreach (string str in KingKindProjekt.Services.AccountService.LoggedInAccount.Receipts){
+    string[] strings = str.Split("\n");
+    foreach (string s in strings)
+    {
+        <p>@s</p>
+    }
+}
+}

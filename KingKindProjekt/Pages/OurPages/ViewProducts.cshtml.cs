@@ -8,6 +8,9 @@ namespace KingKindProjekt.Pages.OurPages
 {
     public class ViewProductsModel : PageModel
     {
+        [BindProperty]
+        public static string SearchProduct { get; set; } = "";
+
         public List<Item> Items { get; set; }
         public List<string> Brands { get; set; }
         public ItemService itemService { get; set; }
@@ -15,46 +18,31 @@ namespace KingKindProjekt.Pages.OurPages
         public ViewProductsModel(ItemService itemService)
         {
             this.itemService = itemService;
-            Items = itemService.Items.ToList();
-            // find brands
-            Brands = new List<string>();
-            foreach (var item in Items)
-            {
-                string brand = item.Brand;
-                if (!Brands.Contains(brand))
-                    Brands.Add(brand);
-            }
-            Brands.Sort();
+            Brands = itemService.GetAllBrands().ToList();
             //for (int i = 0; i < 10; i++)
             //    Brands.Add("Test" + i);
         }
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            //Debug.WriteLine("---------------------" + searchItems + "----------------------------");
+            Debug.WriteLine("---------------------> " + searchItems + " : " + SearchProduct + " <----------------------------");
             if (searchItems != "")
-            {
-                for (int i  = 0; i < Items.Count; i++)
-                {
-                    if (!Items[i].Name.ToLower().Contains(searchItems.ToLower()))
-                    {
-                        Items.RemoveAt(i);
-                        i--;
-                    }
-                }
-            }
-            if (searchBrands != "")
-            {
-                for (int i = 0; i < Items.Count; i++)
-                {
-                    if (!Items[i].Brand.ToLower().Contains(searchItems.ToLower()))
-                    {
-                        Items.RemoveAt(i);
-                        i--;
-                    }
-                }
-            }
-                return Page();
+                Items = itemService.GetItems(searchItems).ToList();
+            else if (searchBrands != "")
+                Items = itemService.FilterBrands(searchBrands).ToList();
+            else
+                Items = itemService.Items.ToList();
+            //{
+            //    for (int i = 0; i < Items.Count; i++)
+            //    {
+            //        if (!Items[i].Brand.ToLower().Contains(searchItems.ToLower()))
+            //        {
+            //            Items.RemoveAt(i);
+            //            i--;
+            //        }
+            //    }
+            //}
+            return Page();
         }
     }
 }

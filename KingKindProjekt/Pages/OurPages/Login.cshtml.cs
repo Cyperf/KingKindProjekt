@@ -25,7 +25,7 @@ namespace KingKindProjekt.Pages.OurPages
         //}
         public IActionResult OnPostLogin()
         {
-            Debug.WriteLine("Onpost: " + EMail + " : " + Password);
+            //Debug.WriteLine("Onpost: " + EMail + " : " + Password);
             if (EMail == null  || Password == null)
                 return Page();
             //Debug.WriteLine("dasklfnasklnskdmsafmakfls");

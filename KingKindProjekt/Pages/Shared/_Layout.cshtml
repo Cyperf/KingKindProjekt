@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿@using KingKindProjekt.Pages.OurPages;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -38,25 +38,23 @@
                         @* Search Bar <input type="text" name="SearchString">
                         <input type="submit" value="Search" /> *@
                         
-                        @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
+                        @* @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
                         {
                             <div class="input-group">
                                 @Html.TextBox("SearchString")
                                 <input type="submit" id="btnSearch" value="Søg" />
                             </div>
-                        }
-                        @* <form method="post">
+                        } *@
+                        <form method="post">
                             <div class="input-group">
-                                @{
-                                    string SearchString = "gel"; 
-                                }
-                                <input asp="SearchString" class="form-control mr-1" placeholder="Enter search term" />
-                                <input type="submit" value="Search" class="btn btn-primary" asp-page="OurPages/ViewProducts" asp-route-searchItems="@SearchString" />
+                                <input asp="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" class="form-control mr-1" placeholder="Enter search term" />
+                                <input type="submit" value="Search" class="btn btn-primary" asp-route-searchItems="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" asp-page="/OurPages/ViewProducts" />
                             </div>
-                        </form> *@
+                        </form>
                     </li>
+          
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Login">Login</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/@Services.AccountService.checkAccountState()">@Services.AccountService.checkAccountState()</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">Cart</a>
