@@ -116,6 +116,9 @@
     "Country": "Usercoutnry",
     "PhoneNumber": "\u002B12 91739172",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [
+      "Name Branded 199,99 Razor 5\nHair gel Other brand 99,99 Hairgel 3\nGel\u0027ler hair Super brand 119,99 Hairgel 4\n",
+      "Expensives hairs gel Branded 1199,99 Hairgel 4\nExpensive hair gels Branded 1199,99 Hairgel 4\n"
+    ]
   }
 ]
