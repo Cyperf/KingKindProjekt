@@ -8,6 +8,9 @@ namespace KingKindProjekt.Pages.OurPages
 {
     public class ViewProductsModel : PageModel
     {
+        [BindProperty]
+        public static string SearchProduct { get; set; } = "";
+
         public List<Item> Items { get; set; }
         public List<string> Brands { get; set; }
         public ItemService itemService { get; set; }
@@ -31,7 +34,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            //Debug.WriteLine("---------------------" + searchItems + "----------------------------");
+            Debug.WriteLine("---------------------> " + searchItems + " : " + SearchProduct + " <----------------------------");
             if (searchItems != "")
             {
                 for (int i  = 0; i < Items.Count; i++)
