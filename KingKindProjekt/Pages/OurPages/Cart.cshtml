@@ -37,25 +37,25 @@
 	<tbody>
 		@if (Model.cartService._cart.Items != null)
 		{
-			foreach (var item in Model.cartService._cart.Items)
+			foreach (var item in Model.cartService._cart.Items.Values)
 			{
 				<tr class="btn-secondary">
 					<td>
-						@item.Value.Name
+						@item.Name
 					</td>
 					<td>
-						@item.Value.Price
+						@Model.cartService.GetPrice(item.Name)
 					</td>
 					<td>
-						@Model.cartService._amount.Read(item.Value.Name);
+						@Model.cartService._amount.Read(item.Name);
 					</td>
 					<td>
-						@(item.Value.Price * Model.cartService._amount.Read(item.Value.Name));
+						@(item.Price * Model.cartService._amount.Read(item.Name));
 					</td>
 					<td>
-						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Value.Name"><i class="fa fa-edit"></i></a>
+						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Name"><i class="fa fa-edit"></i></a>
 						
-						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="Cart" asp-route-deleteName="@item.Value.Name"><i class="fa fa-trash"></i></a>
+						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="Cart" asp-route-deleteName="@item.Name"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 			}
