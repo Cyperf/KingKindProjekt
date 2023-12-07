@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KingKindProjekt.styles.css" asp-append-version="true" />
+
+    <style>
+       
+        #newsletter {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+        }
+        #newslettertilmeld {
+            max-height: 60px;
+            font-size: 25px;
+            text-align:center;
+            background-color: white;
+        }  
+    </style>
 </head>
 <body>
     <header>
@@ -25,7 +41,7 @@
                         @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
                         {
                             <div class="input-group">
-                                @Html.TextBox("SearchString");
+                                @Html.TextBox("SearchString")
                                 <input type="submit" id="btnSearch" value="Søg" />
                             </div>
                         }
@@ -73,18 +89,27 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+
+    <div class="container" style="min-height: 1000px">
         <main role="main" class="pb-3">
             @RenderBody()
+           
         </main>
     </div>
 
+
     <footer class="border-top footer text-muted">
-        <div>
-                
-            @Html.TextBox("SearchString");
-            <input type="submit" id="btnSearch" value="Søg" />
+    
+        <div id="newsletter" class="d-flex justify-content-center">
+              NEWSLETTER
+         </div>
+        <div id="newslettertilmeld" class="d-flex justify-content-center">
             
+            <input type="text" size="100" placeholder="Enter E-Mail"><br><br>
+            <button id="alert-button"
+                    onclick="alert('You have been signed up!');">
+                Tilmeld via e-Mail
+            </button>
         </div>
         <div class="container">
             &copy; 2023 - KingKindProjekt - <a asp-area="" asp-page="/Privacy">Privacy</a>
