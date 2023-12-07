@@ -10,8 +10,18 @@ namespace KingKindProjekt.Services
         {
             _sales = new Repository<Sale>();
             _jsonFileService = jsonFileService;
+            var sales = _jsonFileService.GetJsonItems();
+            if (sales != null)
+            {
+                foreach (Sale sale in sales) { CreateWithoutSave(sale); }
+            }
+            else GetMockData();
         }
 
+        public void CreateWithoutSave(Sale sale)
+        {
+            _sales.Create(sale.ItemName, sale);
+        }
         public void Create (Sale sale)
         {
             if (_sales.Contains(sale.ItemName))
@@ -43,6 +53,13 @@ namespace KingKindProjekt.Services
         public double GetPrice(string item)
         {
             return _sales.Read(item).SalePrice;
+        }
+
+        private void GetMockData ()
+        {
+            DateOnly today = DateOnly.FromDateTime(DateTime.Now);
+            Create(new Sale("Name", 10d, today.AddDays(1)));
+            Create(new Sale("Hair gel", 10d, today.AddDays(2)));
         }
     }
 }

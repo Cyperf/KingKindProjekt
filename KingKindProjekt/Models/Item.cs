@@ -17,7 +17,7 @@ namespace KingKindProjekt.Models
         public string PathToImage { get; set; }
         public Item()
         {
-            Name = "No name given";
+            Name = "No name given ";
             Brand = "No brand given";
             Type = ItemType.NoItem;
             Description = "No description given";
