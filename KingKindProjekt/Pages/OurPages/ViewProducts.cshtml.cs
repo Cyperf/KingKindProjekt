@@ -10,8 +10,6 @@ namespace KingKindProjekt.Pages.OurPages
     {
         [BindProperty]
         public static string SearchProduct { get; set; } = "";
-        [BindProperty]
-        public string tempSearch { get; set; } = "";
 
         public List<Item> Items { get; set; }
         public List<string> Brands { get; set; }
