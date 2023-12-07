@@ -1,5 +1,6 @@
 ﻿using KingKindProjekt.Models;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace KingKindProjekt.Services
 {
@@ -27,7 +28,9 @@ namespace KingKindProjekt.Services
             }
         }
 
-        public Account LoggedInAccount { get; set; } = null;
+        public AccountService() { }
+
+        public static Account LoggedInAccount { get; set; } = null;
 
         public bool IsLoggedIn() { return LoggedInAccount != null; }
         public bool TryLogin (string Email, string password)
@@ -47,6 +50,15 @@ namespace KingKindProjekt.Services
         {
             accounts.Create(account.EMail, account);
             jsonFileService.SaveJsonItems(accounts.Items.Values);
+        }
+
+        public static string checkAccountState()
+        {
+            if (AccountService.LoggedInAccount != null)
+            {
+                return "Admin";
+            }
+            else return "Login";
         }
     }
 }
