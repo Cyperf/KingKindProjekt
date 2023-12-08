@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class SignupModel : PageModel
+    public class SignupModel : PageBase
     {
         private AccountService _accountService;
         [BindProperty]

@@ -7,7 +7,7 @@ using System.Security.Principal;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class CheckoutModel : PageModel
+    public class CheckoutModel : PageBase
     {
         CartService cartService { get; set; }
         ItemService itemService { get; set; }

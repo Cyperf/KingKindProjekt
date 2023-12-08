@@ -12,6 +12,8 @@ builder.Services.AddSingleton<AccountService, AccountService>();
 builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Sale>>();
 builder.Services.AddSingleton<SaleService, SaleService>();
 
+builder.Services.AddMvc();
+builder.Services.AddTransient<SearchProductService, SearchProductService>();
 
 var app = builder.Build();
 

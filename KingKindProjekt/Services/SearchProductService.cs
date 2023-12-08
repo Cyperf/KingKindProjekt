@@ -2,9 +2,9 @@
 {
     public class SearchProductService
     {
-        //public async Task<User> GetUserAsync(int id)
-        //{
-
-        //}
+        public async Task<string> SearchAsync()
+        {
+            return "Hello";
+        }
     }
 }

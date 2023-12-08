@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class LoginModel : PageModel
+    public class LoginModel : PageBase
     {
 
         [BindProperty]

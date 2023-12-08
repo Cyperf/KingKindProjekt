@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class ViewProductsModel : PageModel
+    public class ViewProductsModel : PageBase
     {
         [BindProperty]
         public static string SearchProduct { get; set; } = "";
@@ -24,7 +24,11 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            Debug.WriteLine("---------------------> " + searchBrands + " : " + " <----------------------------");
+            searchItems = PageBase.TryingToSearch;
+            PageBase.TryingToSearch = "";
+            if (searchItems == null)
+                searchItems = "";
+            Debug.WriteLine("---------------------> " + searchItems + " : " + SearchWord + " <----------------------------");
             if (searchItems != "")
                 Items = itemService.GetItems(searchItems).ToList();
             else if (searchBrands != "")

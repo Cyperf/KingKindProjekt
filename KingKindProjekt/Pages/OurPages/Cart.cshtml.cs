@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class CartModel : PageModel
+    public class CartModel : PageBase
     {
 		public List<Item>? Items { get; set; }
 		public List<string>? Name { get; set; }

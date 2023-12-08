@@ -1,0 +1,10 @@
+﻿@model KingKindProjekt.Pages.OurPages.PageBase;
+
+<form method="post">
+    <div class="input-group">
+        @* <input asp="@Model.SearchWord" class="form-control mr-1" placeholder="Enter search term" /> *@
+        <input asp-for="SearchWord" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Search..." />
+        @* <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/ViewProducts" asp-route-searchItems="@Model.SearchWord">aaaaaa <button class="btn btn-primary">Search</button> </a> *@
+        <input asp-page-handler="Search" type="submit" value="Search" class="btn btn-primary" asp-page="/OurPages/ViewProducts" asp-route-searchItems="@Model.SearchWord" />
+    </div>
+</form>

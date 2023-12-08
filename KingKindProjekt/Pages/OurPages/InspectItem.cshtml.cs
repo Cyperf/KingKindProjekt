@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class InspectItemModel : PageModel
+    public class InspectItemModel : PageBase
     {
         public Item item;
         CartService _cartService;
