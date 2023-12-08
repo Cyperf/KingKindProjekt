@@ -14,7 +14,7 @@
         }
     </div>
     <div class="mainPage">
-        <div class="container row-cols-3">
+        <div class="container row-cols-sm-3 row-cols-md-6">
             @foreach (Models.Item item in Model.Items)
             {
                 <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/InspectItem" asp-route-ItemName="@item.Name">
