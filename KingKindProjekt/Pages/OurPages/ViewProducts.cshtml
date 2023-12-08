@@ -10,7 +10,7 @@
         <h1>Brands</h1>
         @foreach (string brand in Model.Brands)
         {
-            <p>@brand</p>
+            <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/ViewProducts" asp-route-searchBrands="@brand">@brand</a>
         }
     </div>
     <div class="mainPage">
