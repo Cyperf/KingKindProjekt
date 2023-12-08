@@ -28,7 +28,6 @@ namespace KingKindProjekt.Pages.OurPages
             PageBase.TryingToSearch = "";
             if (searchItems == null)
                 searchItems = "";
-            Debug.WriteLine("---------------------> " + searchItems + " : " + SearchWord + " <----------------------------");
             if (searchItems != "")
                 Items = itemService.GetItems(searchItems).ToList();
             else if (searchBrands != "")

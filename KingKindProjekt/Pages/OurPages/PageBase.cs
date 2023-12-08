@@ -15,7 +15,6 @@ namespace KingKindProjekt.Pages.OurPages
         {
             TryingToSearch = SearchWord;
             SearchWord = "";
-            //Debug.WriteLine("Searched: " + TryingToSearch);
             return RedirectToPage("/OurPages/ViewProducts");
         }
     }
