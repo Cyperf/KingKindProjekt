@@ -4,6 +4,7 @@
     ViewData["Title"] = "User";
 }
 @{
+    <h1>Receipt History</h1>
     foreach (string str in KingKindProjekt.Services.AccountService.LoggedInAccount.Receipts){
     string[] strings = str.Split("\n");
     foreach (string s in strings)

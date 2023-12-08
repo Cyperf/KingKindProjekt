@@ -88,24 +88,7 @@
     "Country": "etterlandet",
     "PhoneNumber": "\u002B11 11111111",
     "WantsNewsLetter": false,
-    "Receipts": [
-      "Name Branded 199,99 Razor 3\n",
-      "Hair gel Other brand 99,99 Hairgel 1\n",
-      "Gel\u0027ler hair Super brand 119,99 Hairgel 3\n",
-      "Expensives hairs gel Branded 1199,99 Hairgel 2\n",
-      "Nasme Branded 199,99 Razor 1\n",
-      "Hair gsel Other brand 99,99 Hairgel 5\n",
-      "Expenssive hair gel Branded 1199,99 Hairgel 20\n",
-      "Name Branded 199,99 Razor 1\n",
-      "Name Branded 199,99 Razor 1\nHair gel Other brand 99,99 Hairgel 2\n",
-      "",
-      "Name Branded 199,99 Razor 3\nHair gel Other brand 99,99 Hairgel 1\n",
-      "Nasme Branded 199,99 Razor 3\nExpensive hair gels Branded 1199,99 Hairgel 8\n",
-      "Name Branded 199,99 Razor 3\nGsel\u0027ler hair Super brand 119,99 Hairgel 3\n",
-      "Names Branded 199,99 Razor 10\n",
-      "Name Branded 10 Razor 9\nHair gel Other brand 10 Hairgel 10\n",
-      "Name Branded 10 Razor 9\nHair gsel Other brand 99,99 Hairgel 4\n"
-    ]
+    "Receipts": []
   },
   {
     "Name": "username nameuser",
@@ -119,10 +102,7 @@
     "PhoneNumber": "\u002B12 91739172",
     "WantsNewsLetter": false,
     "Receipts": [
-      "Name Branded 199,99 Razor 5\nHair gel Other brand 99,99 Hairgel 3\nGel\u0027ler hair Super brand 119,99 Hairgel 4\n",
-      "Expensives hairs gel Branded 1199,99 Hairgel 4\nExpensive hair gels Branded 1199,99 Hairgel 4\n",
-      "5 Name Branded 10 Razor \n2 Gel\u0027ler hair Super brand 119,99 Hairgel \n",
-      "5 Gel\u0027ler hair Super brand 119,99 Hairgel \n5 Hair gel Other brand 10 Hairgel \n4 Nasme Branded 199,99 Razor \n"
+      "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
     ]
   }
 ]

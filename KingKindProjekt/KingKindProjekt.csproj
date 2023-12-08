@@ -10,7 +10,6 @@
     <Folder Include="Pages\Shared\Components\" />
     <Folder Include="wwwroot\Data\" />
     <Folder Include="wwwroot\Data\" />
-    <Folder Include="wwwroot\res\" />
   </ItemGroup>
 
 </Project>
