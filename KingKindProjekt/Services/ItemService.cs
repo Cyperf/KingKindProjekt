@@ -98,7 +98,6 @@ namespace KingKindProjekt.Services
                     }
                 }
             }
-            items.Sort();
             return items;
         }
         public void Create(Item item)

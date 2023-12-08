@@ -24,7 +24,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            //Debug.WriteLine("---------------------> " + searchItems + " : " + SearchModel.Instance.SearchWord + " <----------------------------");
+            Debug.WriteLine("---------------------> " + searchBrands + " : " + " <----------------------------");
             if (searchItems != "")
                 Items = itemService.GetItems(searchItems).ToList();
             else if (searchBrands != "")
