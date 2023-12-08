@@ -14,7 +14,7 @@ namespace KingKindProjekt.Pages.OurPages
         public string Password { get; set; }
 
         AccountService _accountService;
-        public LoginModel(AccountService accountService)
+        public LoginModel(AccountService accountService) : base(accountService)
         {
             _accountService = accountService;
         }

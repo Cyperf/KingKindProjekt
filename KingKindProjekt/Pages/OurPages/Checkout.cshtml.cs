@@ -14,7 +14,7 @@ namespace KingKindProjekt.Pages.OurPages
         AccountService accountService { get; set; }
         [BindProperty]
         public string currentReceipt { get; set; }
-        public CheckoutModel(CartService cartService, AccountService accountService, ItemService itemService)
+        public CheckoutModel(CartService cartService, AccountService accountService, ItemService itemService) : base(accountService)
         {
             this.cartService = cartService;
             this.accountService = accountService;

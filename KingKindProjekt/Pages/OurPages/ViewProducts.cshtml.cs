@@ -15,7 +15,7 @@ namespace KingKindProjekt.Pages.OurPages
         public List<string> Brands { get; set; }
         public ItemService itemService { get; set; }
 
-        public ViewProductsModel(ItemService itemService)
+        public ViewProductsModel(ItemService itemService, AccountService accountService) : base(accountService)
         {
             this.itemService = itemService;
             Items = itemService.Items.ToList();

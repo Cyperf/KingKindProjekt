@@ -1,3 +1,4 @@
+using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
@@ -14,8 +15,8 @@ namespace KingKindProjekt.Pages
 
 		private readonly ILogger<ErrorModel> _logger;
 
-		public ErrorModel(ILogger<ErrorModel> logger)
-		{
+		public ErrorModel(ILogger<ErrorModel> logger, AccountService accountService) : base(accountService)
+        {
 			_logger = logger;
 		}
 
