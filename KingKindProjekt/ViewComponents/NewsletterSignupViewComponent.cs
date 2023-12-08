@@ -1,13 +1,14 @@
 ﻿using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
+
 namespace KingKindProjekt.ViewComponents
 {
-    public class SearchViewComponent : ViewComponent
+    public class NewsletterSignupViewComponent : ViewComponent
     {
-
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View("SearchView.cshtml");
+            return View("NewsletterSignupView.cshtml");
+            //return View("/Pages/OurPages/Components/Search/SearchView.cshtml");
         }
     }
 }

@@ -103,8 +103,10 @@
 
     @* Footer ------------------------------------------- *@
     <footer class="border-top footer text-muted">
-    
-        <div id="newsletter" class="d-flex justify-content-center">
+
+
+        @await Component.InvokeAsync("NewsletterSignup")
+        @* <div id="newsletter" class="d-flex justify-content-center">
               NEWSLETTER
          </div>
         <div id="newslettertilmeld" class="d-flex justify-content-center" style="width: 100%;">
@@ -113,7 +115,7 @@
                     onclick="alert('You have been signed up!');">
                 Tilmeld
             </button>
-        </div>
+        </div> *@
         <div class="container">
             &copy; 2023 - KingKindProjekt - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
