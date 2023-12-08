@@ -1,0 +1,107 @@
+﻿@page
+@model KingKindProjekt.Pages.OurPages.CreateItemModel
+@{
+    ViewData["Title"] = "ItemCreation";
+}
+
+<html>
+<head>
+</head>
+<body>
+    <form method="post">
+        <section class="h-100 h-custom gradient-custom-2">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12">
+                        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+
+                                    <div class="col-lg-6 bg-indigo text-dark">
+                                        <div class="p-5">
+                                            <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                                            <div class="col-md-7 mb-4 pb-2">
+
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="Name" class="control-label"></label>
+                                                    <input asp-for="Name" class="form-control" />
+                                                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-7 mb-4 pb-2">
+
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="Brand" class="control-label"></label>
+                                                    <input asp-for="Brand" class="form-control" />
+                                                    <span asp-validation-for="Brand" class="text-danger"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mb-4 pb-2 form-group">
+                                                <select asp-for="_Item.Type" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.ItemType>()"></select>
+                                                @* <select class="select">
+                                                <option value="1">Kunde</option>
+                                                <option value="2">Medarbejder</option>
+                                                <option value="3">Admin</option>
+                                                </select> *@
+                                            </div>
+
+                                            <div class="col-md-7 mb-4 pb-2">
+
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="Description" class="control-label"></label>
+                                                    <input asp-for="Description" class="form-control" />
+                                                    <span asp-validation-for="Description" class="text-danger"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-7 mb-4 pb-2">
+
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="Price" class="control-label"></label>
+                                                    <input asp-for="Price" class="form-control" />
+                                                    <span asp-validation-for="Price" class="text-danger"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-7 mb-4 pb-2">
+
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="PathToImage" class="control-label"></label>
+                                                    <input asp-for="PathToImage" class="form-control" />
+                                                    <span asp-validation-for="PathToImage" class="text-danger"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <input asp-page-handler="Signup" type="submit" value="Signup" class="btn btn-info btn-lg btn-block" name="Create Item" />
+
+                                            @* <button type="button" class="btn btn-light btn-lg"
+                                            data-mdb-ripple-color="dark">
+                                            Register
+                                            </button> *@
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+</html>
