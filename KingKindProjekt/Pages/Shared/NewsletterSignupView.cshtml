@@ -1,24 +1,21 @@
 ﻿@model KingKindProjekt.Pages.OurPages.PageBase;
 
-@* <form method="post">
-    <div class="input-group">
-        <input asp-for="SearchWord" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Search..." />
-        <input asp-page-handler="Search" type="submit" value="Search" class="btn btn-primary" asp-page="/OurPages/ViewProducts" asp-route-searchItems="@Model.SearchWord" />
-    </div>
-</form> *@
 <div id="newsletter" class="d-flex justify-content-center">
-        NEWSLETTER
-    </div>
+    NEWSLETTER
+</div>
+@if (ViewData["NewsletterSignup"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewData["NewsletterSignup"]");
+        };
+        </script>
+}
 <form method="post">
     <div id="newslettertilmeld" class="d-flex justify-content-center input-group" style="width: 100%;">
         <div style="width: 20%;"> </div>
         <input asp-for="NewsletterSignup" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="E-mail..." style="width: 40%;" />
-        <input asp-page-handler="NewsletterSignup" type="submit" value="Tilmeld" class="btn btn-primary" id="alert-button" style="width: 10%;" onclick="alert('You have been signed up!');"/>
+        <input asp-page-handler="NewsletterSignup" type="submit" value="Tilmeld" class="btn btn-primary" id="alert-button" style="width: 10%;" />
         <div style="width: 20%;"> </div>
-    @* <input type="text" placeholder="Enter E-Mail" style="width: 60%;"><br><br> *@
-    @* <button id="alert-button" style="width: 10%;"
-            onclick="alert('You have been signed up!');">
-        Tilmeld
-    </button> *@
     </div> 
 </form>

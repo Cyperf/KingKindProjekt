@@ -31,6 +31,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnPostNewsletterSignup()
         {
+            CanSignupForNewsletter();
             if (NewsletterSignup == null || NewsletterSignup == "")
                 return Page();
             Account acc = _accountService.Read(NewsletterSignup);
@@ -42,6 +43,18 @@ namespace KingKindProjekt.Pages.OurPages
             }
             NewsletterSignup = "";
             return Page();
+        }
+
+        public string CanSignupForNewsletter ()
+        {
+            Account acc;
+            if (NewsletterSignup == null || (acc = _accountService.Read(NewsletterSignup)) == null)
+            {
+                ViewData["NewsletterSignup"] = "Unable to sign you up for newsletter :(";
+                return "Unable to sign you up for newsletter :(";
+            }
+            ViewData["NewsletterSignup"] = acc.EMail + " Has been signed up to our newsletter :)";
+            return acc.EMail + " Has been signed up to our newsletter :)";
         }
     }
 }
