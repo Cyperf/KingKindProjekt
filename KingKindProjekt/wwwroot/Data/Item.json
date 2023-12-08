@@ -126,5 +126,29 @@
     "Description": "Most likely the best hair gel in excistence.",
     "Price": 1199.99,
     "PathToImage": ""
+  },
+  {
+    "Name": "ad",
+    "Brand": "asd",
+    "Type": 0,
+    "Description": "asd",
+    "Price": 455,
+    "PathToImage": "res/cola.jpeg"
+  },
+  {
+    "Name": "BarberMaskineofDoom",
+    "Brand": "DoomGaming",
+    "Type": 0,
+    "Description": "barber maskinen brugt af selveste dr. doom",
+    "Price": 9999999999999,
+    "PathToImage": "res/doom.png"
+  },
+  {
+    "Name": "asd",
+    "Brand": "fas",
+    "Type": 0,
+    "Description": "w21",
+    "Price": 12,
+    "PathToImage": "212"
   }
 ]

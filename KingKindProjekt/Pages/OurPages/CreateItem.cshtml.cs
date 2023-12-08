@@ -3,11 +3,15 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+using System.Net;
+using System.Security.Principal;
 
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CreateItemModel : PageBase
     {
+        
         public ItemService _itemService { get; set; }
         [BindProperty]
         public Item _Item { get; set; }
@@ -32,15 +36,29 @@ namespace KingKindProjekt.Pages.OurPages
         public string PathToImage { get; set; }
 
 
-        public CreateItemModel(ItemService itemService)
+        public CreateItemModel(ItemService itemService, AccountService accountService) : base(accountService)
         {
-            this._itemService = itemService;
+            _itemService = itemService;
+            
         }
         public void OnGet()
         {
+        }
 
-            
+        public IActionResult OnPostSignup()
+        {
+            _Item.Name = Name;
+            _Item.Brand = Brand;
+            _Item.Type = ItemType;
+            _Item.Description = Description;
+            _Item.Price = Price;
+            _Item.PathToImage = PathToImage;
 
+
+
+            _itemService.Create(_Item);
+
+            return Page();
         }
     }
 }
