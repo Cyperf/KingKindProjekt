@@ -27,6 +27,8 @@ namespace KingKindProjekt.Pages.OurPages
         [Display(Name = "Accept")]
         [BindProperty]
         public bool AcceptTermsAndConditions { get; set; }
+        [BindProperty]
+        public string PasswordChecker { get; set; }
 
 
 
@@ -88,7 +90,7 @@ namespace KingKindProjekt.Pages.OurPages
                 return false;
             if (_Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
                 return false;
-            if (_Account.Password.Length < 5)
+            if (_Account.Password.Length < 5 || _Account.Password != PasswordChecker)
                 return false;
             if (_Account.Address.Length < 5)
                 return false;
