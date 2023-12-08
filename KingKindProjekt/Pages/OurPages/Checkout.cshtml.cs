@@ -25,13 +25,13 @@ namespace KingKindProjekt.Pages.OurPages
             currentReceipt = "";
             if (cartService._cart.Items.Count>0)
             {
-                currentReceipt = "---------------KVITTERING START---------------"+"\n";
+                currentReceipt = "---------------RECEIPT START---------------"+"\n";
 
 				foreach (var item in cartService._cart.Items.Values)
                 {
                     currentReceipt += "["+cartService._amount.Read(item.Name)+"]"+" "+item.Name + " "+item.Brand+" "+item.Type+" - "+itemService.GetPrice(item.Name)+"\n";
                 }
-				currentReceipt += "---------------KVITTERING SLUT---------------" + "\n";
+				currentReceipt += "---------------RECEIPT END---------------" + "\n";
 				if (AccountService.LoggedInAccount != null)
                     AccountService.LoggedInAccount.Receipts.Add(currentReceipt);
                 accountService.Save();
