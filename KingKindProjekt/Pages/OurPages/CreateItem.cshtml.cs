@@ -12,6 +12,7 @@ namespace KingKindProjekt.Pages.OurPages
     public class CreateItemModel : PageBase
     {
         
+        private AccountService _accountService;
         public ItemService _itemService { get; set; }
         [BindProperty]
         public Item _Item { get; set; }
@@ -39,10 +40,15 @@ namespace KingKindProjekt.Pages.OurPages
         public CreateItemModel(ItemService itemService, AccountService accountService) : base(accountService)
         {
             _itemService = itemService;
+            _accountService = accountService;
             
         }
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            if (!_accountService.IsLoggedIn() || AccountService.LoggedInAccount._AccountType != Models.AccountType.Admin)
+                return RedirectToPage("ViewProducts");
+
+            return default;
         }
 
         public IActionResult OnPostSignup()
