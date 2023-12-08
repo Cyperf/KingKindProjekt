@@ -6,20 +6,20 @@
 <link rel="stylesheet" type="text/css" href="/css/ViewProducts.css" />
 
 <div class="wrapper">
-    <div class="brands">
+    <div style="padding-left: 10px;" class="brands">
         <h1>Brands</h1>
         @foreach (string brand in Model.Brands)
         {
-            <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/ViewProducts" asp-route-searchBrands="@brand">@brand</a>
+            <a style="padding-left: 20px;" class="nav-link text-dark" asp-area="" asp-page="/OurPages/ViewProducts" asp-route-searchBrands="@brand">@brand</a>
         }
     </div>
     <div class="mainPage">
-        <div class="container row-cols-3">
+        <div class="container row-cols-sm-3 row-cols-md-6 row-cols-lg-9">
             @foreach (Models.Item item in Model.Items)
             {
                 <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/InspectItem" asp-route-ItemName="@item.Name">
                 @* <a href="InspectItem" asp-route-ItemName="@item.Name"> *@
-                    <div class="card">
+                    <div class="card" style="width: 100%">
                         @* draw the image *@
                         @{string imagePath = Url.Content("~/" + item.PathToImage);}
                         @if (item.PathToImage.Length == 0)
