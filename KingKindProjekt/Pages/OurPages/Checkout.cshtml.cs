@@ -10,13 +10,15 @@ namespace KingKindProjekt.Pages.OurPages
     public class CheckoutModel : PageModel
     {
         CartService cartService { get; set; }
+        ItemService itemService { get; set; }
         AccountService accountService { get; set; }
         [BindProperty]
         public string currentReceipt { get; set; }
-        public CheckoutModel(CartService cartService, AccountService accountService)
+        public CheckoutModel(CartService cartService, AccountService accountService, ItemService itemService)
         {
             this.cartService = cartService;
             this.accountService = accountService;
+            this.itemService = itemService;
         }
         public void OnGet()
         {
@@ -26,7 +28,7 @@ namespace KingKindProjekt.Pages.OurPages
 
                 foreach (var item in cartService._cart.Items.Values)
                 {
-                    currentReceipt += item.Name+" "+item.Brand+" "+cartService.GetPrice(item.Name)+" "+item.Type+" "+cartService._amount.Read(item.Name) +"\n";
+                    currentReceipt += cartService._amount.Read(item.Name)+" "+item.Name + " "+item.Brand+" "+item.Type+" "+itemService.GetPrice(item.Name)+"\n";
                 }
                 if (AccountService.LoggedInAccount != null)
                     AccountService.LoggedInAccount.Receipts.Add(currentReceipt);

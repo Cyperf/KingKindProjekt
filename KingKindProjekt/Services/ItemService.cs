@@ -33,19 +33,35 @@ namespace KingKindProjekt.Services
                 }
         }
 
-        public double GetPrice (string itemName)
+        public string GetPrice (string itemName)
+        {
+            Item item = _items.Read(itemName);
+            if (item == null)
+                return 0.ToString();
+            if (_saleService.IsOnSale(itemName))
+                return _saleService.GetPrice(itemName);
+            return item.Price.ToString()+" kr.";
+
+        }
+        public string GetPrice(Item item)
+        {
+            return GetPrice(item.Name);
+        }
+
+        public double GetPriceAsDouble(string itemName)
         {
             Item item = _items.Read(itemName);
             if (item == null)
                 return 0;
             if (_saleService.IsOnSale(itemName))
-                return _saleService.GetPrice(itemName);
+                return _saleService.GetPriceAsDouble(itemName);
             return item.Price;
 
         }
-        public double GetPrice(Item item)
+
+        public double GetPriceAsDouble(Item item)
         {
-            return GetPrice(item.Name);
+            return GetPriceAsDouble(item.Name);
         }
 
         public IEnumerable<Item> Items

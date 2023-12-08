@@ -50,12 +50,16 @@ namespace KingKindProjekt.Services
             _sales.Delete(item);
             _jsonFileService.SaveJsonItems(_sales.Items.Values);
         }
-        public double GetPrice(string item)
+        public string GetPrice(string item)
         {
-            return _sales.Read(item).SalePrice;
+            return _sales.Read(item).SalePrice.ToString()+" kr.";
         }
+		public double GetPriceAsDouble(string item)
+		{
+			return _sales.Read(item).SalePrice;
+		}
 
-        private void GetMockData ()
+		private void GetMockData ()
         {
             DateOnly today = DateOnly.FromDateTime(DateTime.Now);
             Create(new Sale("Name", 10d, today.AddDays(1)));

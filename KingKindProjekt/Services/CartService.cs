@@ -13,11 +13,13 @@ namespace KingKindProjekt.Services
         public Repository<int> _amount;
         SaleService _saleService;
 
+
         public CartService (SaleService saleService)
         {
             _cart = new Repository<Item> ();
 			_amount = new Repository<int>();
 			_saleService = saleService;
+
         }
 
         public double GetPrice(string itemName)
@@ -26,7 +28,7 @@ namespace KingKindProjekt.Services
             if (item == null)
                 return 0;
             if (_saleService.IsOnSale(itemName))
-                return _saleService.GetPrice(itemName);
+                return _saleService.GetPriceAsDouble(itemName);
             return item.Price;
 
         }
@@ -87,7 +89,8 @@ namespace KingKindProjekt.Services
 			TotalPrice = 0;
 			foreach (Item item in _cart.Items.Values)
 			{
-				TotalPrice = TotalPrice + item.Price*_amount.Read(item.Name);
+				TotalPrice = TotalPrice + GetPrice(item.Name)*_amount.Read(item.Name);	
+				
 			}			
 			return TotalPrice;
 			
