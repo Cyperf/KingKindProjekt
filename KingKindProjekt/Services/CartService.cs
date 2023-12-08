@@ -32,7 +32,8 @@ namespace KingKindProjekt.Services
             return item.Price;
 
         }
-        public double GetPrice(Item item)
+
+		public double GetPrice(Item item)
         {
             return GetPrice(item.Name);
         }

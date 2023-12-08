@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KingKindProjekt.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <style>
        
@@ -57,7 +58,11 @@
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/@Services.AccountService.checkAccountState()">@Services.AccountService.checkAccountState()</a>
                     </li>
                     <li class="nav-item col-1">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">Cart</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                            </button>
+                        </a>
                     </li>
                     
                 </ul>
