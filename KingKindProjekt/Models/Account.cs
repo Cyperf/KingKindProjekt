@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace KingKindProjekt.Models
 {
@@ -16,6 +17,7 @@ namespace KingKindProjekt.Models
         [BindProperty]
         public string Name { get; set; }
         [BindProperty]
+        [Display(Name = "E-Mail")]
         public string EMail { get; set; }
         [BindProperty]
         public string Password { get; set; }

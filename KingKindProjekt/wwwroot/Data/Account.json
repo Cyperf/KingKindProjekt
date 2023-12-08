@@ -87,7 +87,7 @@
     "Address": "et 1, 1111 etterbyen",
     "Country": "etterlandet",
     "PhoneNumber": "\u002B11 11111111",
-    "WantsNewsLetter": false,
+    "WantsNewsLetter": true,
     "Receipts": [
       "---------------RECEIPT START---------------\n[3] Name Branded Razor - 10 kr.\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[2] Hsair gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
     ]
@@ -106,5 +106,18 @@
     "Receipts": [
       "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
     ]
+  },
+  {
+    "Name": "luffe luffe",
+    "EMail": "LuffesEmail@gmail.com",
+    "Password": "123456",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "aaa vej 90, 4000 Roskilde",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 98647247",
+    "WantsNewsLetter": false,
+    "Receipts": []
   }
 ]

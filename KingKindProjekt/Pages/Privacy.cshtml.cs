@@ -7,7 +7,7 @@ namespace KingKindProjekt.Pages
     {
 		private readonly ILogger<PrivacyModel> _logger;
 
-		public PrivacyModel(ILogger<PrivacyModel> logger)
+		public PrivacyModel(ILogger<PrivacyModel> logger, KingKindProjekt.Services.AccountService accountService) : base(accountService)
 		{
 			_logger = logger;
 		}
