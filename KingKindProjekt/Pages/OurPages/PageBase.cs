@@ -32,15 +32,12 @@ namespace KingKindProjekt.Pages.OurPages
         public IActionResult OnPostNewsletterSignup()
         {
             CanSignupForNewsletter();
-            if (NewsletterSignup == null || NewsletterSignup == "")
+            Account acc;
+            if (NewsletterSignup == null || (acc = _accountService.Read(NewsletterSignup)) == null)
                 return Page();
-            Account acc = _accountService.Read(NewsletterSignup);
 
-            if (acc != null)
-            {
-                acc.WantsNewsLetter = true;
-                _accountService.Save();
-            }
+            acc.WantsNewsLetter = true;
+            _accountService.Save();
             NewsletterSignup = "";
             return Page();
         }
