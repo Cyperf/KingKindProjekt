@@ -25,7 +25,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnPostNewsletterSignup()
         {
-
+            Debug.WriteLine("Test: " + NewsletterSignup);
             NewsletterSignup = "";
             return Page();
         }
