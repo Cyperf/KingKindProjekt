@@ -11,8 +11,8 @@ namespace KingKindProjekt.Pages
     {
 		private readonly ILogger<IndexModel> _logger;
 		
-		public IndexModel(ILogger<IndexModel> logger)
-		{
+		public IndexModel(ILogger<IndexModel> logger, AccountService accountService) : base(accountService)
+        {
 			
 			_logger = logger;
 		}

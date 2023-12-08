@@ -8,7 +8,7 @@ namespace KingKindProjekt.Pages.OurPages
     {
         private AccountService accountService;
 
-        public AdminModel(AccountService accountService)
+        public AdminModel(AccountService accountService) : base(accountService)
         {
             this.accountService = accountService;
         }

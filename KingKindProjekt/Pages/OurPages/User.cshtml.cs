@@ -9,6 +9,8 @@ namespace KingKindProjekt.Pages.OurPages
 
         Models.Account? account;
 
+        public UserModel(AccountService accountService) : base(accountService) { }
+
         public void OnGet()
         {
         }

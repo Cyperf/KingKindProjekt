@@ -44,7 +44,7 @@ namespace KingKindProjekt.Pages.OurPages
         [BindProperty]
         public string Address { get; set; }
 
-        public SignupModel (AccountService accountService)
+        public SignupModel (AccountService accountService) : base(accountService)
         {
             _accountService = accountService;
         }
