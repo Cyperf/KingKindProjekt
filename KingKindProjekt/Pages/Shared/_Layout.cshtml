@@ -30,14 +30,12 @@
         @* Picture, search bar, login and cart button *@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="overflow: auto; white-space: nowrap;">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index"><img src="/res/KindKindLogo.png" width="20%" height="auto" /></a>
+                <ul class="navbar-nav flex-grow-1 row-cols-12 align-items-center">
+                    <li class="nav-item col-2">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Index"><img src="/res/KindKindLogo.png" width="100%" height="auto" /></a>
                     </li>
-                    <li class="nav-item ">
-                        @* Search Bar <input type="text" name="SearchString">
-                        <input type="submit" value="Search" /> *@
-                        
+                    <li class="nav-item col-1"></li> @* Padding *@
+                    <li class="nav-item col-6">
                         @* @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
                         {
                             <div class="input-group">
@@ -52,11 +50,13 @@
                             </div>
                         </form>
                     </li>
+
+                    <li class="nav-item col-1"></li> @* Padding *@
           
-                    <li class="nav-item">
+                    <li class="nav-item col-1">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/@Services.AccountService.checkAccountState()">@Services.AccountService.checkAccountState()</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item col-1">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">Cart</a>
                     </li>
                     

@@ -50,7 +50,7 @@
 						@Model.cartService._amount.Read(item.Name);
 					</td>
 					<td>
-						@(item.Price * Model.cartService._amount.Read(item.Name));
+						@(Model.cartService.GetPrice(item.Name) * Model.cartService._amount.Read(item.Name));
 					</td>
 					<td>
 						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Name"><i class="fa fa-edit"></i></a>

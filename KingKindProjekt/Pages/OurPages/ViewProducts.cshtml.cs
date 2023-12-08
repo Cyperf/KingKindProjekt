@@ -18,30 +18,17 @@ namespace KingKindProjekt.Pages.OurPages
         public ViewProductsModel(ItemService itemService)
         {
             this.itemService = itemService;
+            Items = itemService.Items.ToList();
             Brands = itemService.GetAllBrands().ToList();
-            //for (int i = 0; i < 10; i++)
-            //    Brands.Add("Test" + i);
         }
 
         public IActionResult OnGet(string searchItems = "", string searchBrands = "")
         {
-            Debug.WriteLine("---------------------> " + searchItems + " : " + SearchProduct + " <----------------------------");
+            //Debug.WriteLine("---------------------> " + searchItems + " : " + SearchModel.Instance.SearchWord + " <----------------------------");
             if (searchItems != "")
                 Items = itemService.GetItems(searchItems).ToList();
             else if (searchBrands != "")
                 Items = itemService.FilterBrands(searchBrands).ToList();
-            else
-                Items = itemService.Items.ToList();
-            //{
-            //    for (int i = 0; i < Items.Count; i++)
-            //    {
-            //        if (!Items[i].Brand.ToLower().Contains(searchItems.ToLower()))
-            //        {
-            //            Items.RemoveAt(i);
-            //            i--;
-            //        }
-            //    }
-            //}
             return Page();
         }
     }
