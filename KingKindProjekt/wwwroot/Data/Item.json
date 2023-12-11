@@ -5,7 +5,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hair gel",
@@ -37,7 +37,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hair gsel",
@@ -69,7 +69,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hsair gel",
@@ -101,7 +101,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hairs gel",
@@ -133,7 +133,7 @@
     "Type": 0,
     "Description": "asd",
     "Price": 455,
-    "PathToImage": "res/cola.jpeg"
+    "PathToImage": "cola.jpeg"
   },
   {
     "Name": "BarberMaskineofDoom",
@@ -141,7 +141,7 @@
     "Type": 0,
     "Description": "barber maskinen brugt af selveste dr. doom",
     "Price": 9999999999999,
-    "PathToImage": "res/doom.png"
+    "PathToImage": "doom.png"
   },
   {
     "Name": "asd",
