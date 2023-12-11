@@ -72,6 +72,7 @@ namespace KingKindProjekt.Services
 
         public static void LogOut() {
             LoggedInAccount = null;
+            
         }
 		public void Save()
         {

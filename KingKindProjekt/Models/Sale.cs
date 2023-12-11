@@ -1,9 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using KingKindProjekt.Services;
+using KingKindProjekt.Models;
 
 namespace KingKindProjekt.Models
 {
+
+
     public class Sale
     {
+
+
         [BindProperty]
         public string ItemName { get; set; }
         [BindProperty]
