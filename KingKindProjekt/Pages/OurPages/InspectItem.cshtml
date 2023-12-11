@@ -20,8 +20,8 @@
 <br />
 <p>@item.Description</p>
 
-<a class="btn btn-primary" type="button" title="Add to cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="@item.Name"></a>
-<a class="btn btn-danger" type="button" title="Remove from cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="" asp-route-deleteName="@item.Name"></a>
+<a class="btn-primary btn" type="button" title="Add to cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="@item.Name">Add to cart</a>
+<a class="btn-primary btn-danger btn" type="button" title="Remove from cart" asp-page="InspectItem" asp-route-ItemName="@item.Name" asp-route-createName="" asp-route-deleteName="@item.Name">Remove from cart</a>
 
  
 @* <form method="post">

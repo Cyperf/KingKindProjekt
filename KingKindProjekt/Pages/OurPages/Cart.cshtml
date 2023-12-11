@@ -53,9 +53,9 @@
 						@(Model.cartService.GetPrice(item.Name) * Model.cartService._amount.Read(item.Name)) kr.
 					</td>
 					<td>
-						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Name"><i class="fa fa-edit"></i></a>
-						
-						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="Cart" asp-route-deleteName="@item.Name"><i class="fa fa-trash"></i></a>
+						<a class="glyphicon glyphicon-plus" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Name"><i class="fa fa-edit"></i></a>
+
+						<a class="glyphicon glyphicon-minus" type="button" title="Delete" asp-page="Cart" asp-route-deleteName="@item.Name"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 			}

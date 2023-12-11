@@ -1,4 +1,5 @@
 ﻿using KingKindProjekt.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
@@ -69,7 +70,10 @@ namespace KingKindProjekt.Services
             else return "Login";
         }
 
-        public void Save()
+        public static void LogOut() {
+            LoggedInAccount = null;
+        }
+		public void Save()
         {
             jsonFileService.SaveJsonItems(accounts.Items.Values);
         }

@@ -57,6 +57,10 @@
           
                     <li class="nav-item col-1">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/@Services.AccountService.checkAccountState()">@Services.AccountService.checkAccountState()</a>
+                        @if (@Services.AccountService.LoggedInAccount != null)
+                        {
+                            @await Component.InvokeAsync("LogOut")
+                        }
                     </li>
                     <li class="nav-item col-1">
                         <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">

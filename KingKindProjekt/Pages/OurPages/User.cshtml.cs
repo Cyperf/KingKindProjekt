@@ -11,8 +11,11 @@ namespace KingKindProjekt.Pages.OurPages
 
         public UserModel(AccountService accountService) : base(accountService) { }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            if (AccountService.LoggedInAccount == null)
+                return RedirectToPage("ViewProducts");
+            return Page();
         }
 
         public string PrintReceipt(Models.Account account)
