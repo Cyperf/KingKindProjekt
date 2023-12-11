@@ -70,6 +70,7 @@
 		<col style="width : 50%">
 	</colgroup>
 	@if (Model.cartService._cart.Items != null) {
+		double price = Model.cartService.CalculateTotalPriceWTax() * Model.GetPriceMultiplier();
 		<tbody>
 			<td>
 				Cart Total
@@ -83,7 +84,9 @@
 				Tax
 			</td>
 			<td>
-				@(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax()) kr.
+				@{double tax = price*0.2d;}
+				<p>@tax</p>
+				@* @(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax()) kr. *@
 			</td>
 		</tbody>
 		<tbody>
@@ -92,7 +95,7 @@
 			</td>
 			<td>
 				@if (Model.CurrentlyAppliedCoupon != null)
-				{ <p>true</p> }
+				{ <p>@Model.CouponPercentOff()%</p> }
 				else { <p>false</p> }
 			</td>
 		</tbody>
@@ -101,18 +104,21 @@
 				Checkout Total
 			</td>
 			<td>
-				@Model.cartService.CalculateTotalPriceWTax() kr.
+				@price kr.
 			</td>
 		</tbody>
 		<tbody>
 			<td>
-			<a class="btn btn-success" href="Checkout" role="button">Checkout</a>
+			@* <a class="btn btn-success" href="Checkout" role="button">Checkout</a> *@
+				
+				<a class="btn-success btn" type="button" title="Checkout" asp-page="Checkout" asp-route-appliedCoupon="@Model.CurrentlyAppliedCoupon">Checkout</a>
+				
 			</td>
 			<td>
 			<li class="nav-item ">
 				<form method="post">
 					@* <input asp-for="SearchWord" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Search..." /> *@
-				Apply Coupon <input type="text" asp-for="CouponToApply" name="Coupon name" placeholder="Coupon...">
+					Apply Coupon <input asp-for="CouponToApply" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Coupon...">
 					<input type="submit" value="Apply" asp-page-handler="ApplyCoupon" />
 				</form>
 			</li>

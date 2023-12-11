@@ -5,7 +5,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hair gel",
@@ -37,7 +37,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hair gsel",
@@ -69,7 +69,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hsair gel",
@@ -101,7 +101,7 @@
     "Type": 1,
     "Description": "Wow, this is the best razer I have ever tried!",
     "Price": 199.99,
-    "PathToImage": "res/KindKindLogo.png"
+    "PathToImage": "KindKindLogo.png"
   },
   {
     "Name": "Hairs gel",
@@ -133,7 +133,7 @@
     "Type": 0,
     "Description": "asd",
     "Price": 455,
-    "PathToImage": "res/cola.jpeg"
+    "PathToImage": "cola.jpeg"
   },
   {
     "Name": "BarberMaskineofDoom",
@@ -141,7 +141,7 @@
     "Type": 0,
     "Description": "barber maskinen brugt af selveste dr. doom",
     "Price": 9999999999999,
-    "PathToImage": "res/doom.png"
+    "PathToImage": "doom.png"
   },
   {
     "Name": "asd",
@@ -152,19 +152,43 @@
     "PathToImage": "212"
   },
   {
-    "Name": "KINGKINDTEXT",
-    "Brand": "ASDD",
+    "Name": "123",
+    "Brand": "123",
     "Type": 0,
-    "Description": "ASDSD",
-    "Price": 10101,
-    "PathToImage": "KindKindLogo.png"
+    "Description": "dsadas",
+    "Price": 213,
+    "PathToImage": null
   },
   {
-    "Name": "aasd",
-    "Brand": "f21",
+    "Name": "321",
+    "Brand": "321",
     "Type": 0,
-    "Description": "asdvva",
-    "Price": 12,
-    "PathToImage": "res/KindKindLogo.png"
+    "Description": "312",
+    "Price": 321,
+    "PathToImage": null
+  },
+  {
+    "Name": "432",
+    "Brand": "432",
+    "Type": 0,
+    "Description": "432",
+    "Price": 432,
+    "PathToImage": null
+  },
+  {
+    "Name": "ny",
+    "Brand": "ny",
+    "Type": 0,
+    "Description": "ny",
+    "Price": 100,
+    "PathToImage": "Bombevest.jpg"
+  },
+  {
+    "Name": "burhn",
+    "Brand": "burhan",
+    "Type": 0,
+    "Description": "burhan",
+    "Price": 123,
+    "PathToImage": "Burhan.PNG"
   }
 ]

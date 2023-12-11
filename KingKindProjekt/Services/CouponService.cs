@@ -43,8 +43,11 @@ namespace KingKindProjekt.Services
             }
             return coupon.PercentOff / 100d;
         }
-
-        public void CreateWithoutSaving(Coupon coupon)
+		public double GetCouponPercentOff(string name)
+		{
+			return GetCouponMultiplier(name) * 100d;
+		}
+		public void CreateWithoutSaving(Coupon coupon)
         {
             _coupons.Create(coupon.Name, coupon);
         }
@@ -61,7 +64,7 @@ namespace KingKindProjekt.Services
 
         public bool IsThisCouponValid (string name)
         {
-            if (_coupons.Contains(name))
+            if (!_coupons.Contains(name))
                 return false;
             if (AccountService.LoggedInAccount == null)
                 return false;

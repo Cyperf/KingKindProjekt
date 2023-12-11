@@ -77,9 +77,9 @@
                                             <div class="col-md-7 mb-4 pb-2">
 
                                                 <div class="form-outline form-group form-white">
-                                                    <label asp-for="PathToImage" class="control-label"></label>
-                                                    <input asp-for="PathToImage" class="form-control" />
-                                                    <span asp-validation-for="PathToImage" class="text-danger"></span>
+                                                    <label for="imageInput">Select an image:</label>
+                                                    <input type="file" asp-for="PathToImage" accept="image/*">
+                                                    @* <span asp-validation-for="PathToImage" class="text-danger"></span> *@
 
                                                 </div>
 
