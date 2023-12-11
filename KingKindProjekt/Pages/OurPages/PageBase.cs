@@ -44,8 +44,9 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnPostLogOut()
         {
-            
-            return Page();
+            AccountService.LogOut();
+            //return Page();
+            return RedirectToPage(Page().Page);
         }
 
         public string CanSignupForNewsletter ()

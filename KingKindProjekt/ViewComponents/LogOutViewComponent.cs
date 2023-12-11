@@ -6,7 +6,7 @@ namespace KingKindProjekt.ViewComponents
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View("NewsletterSignupView.cshtml");
+            return View("LogOutView.cshtml");
         }
     }
 }
