@@ -150,5 +150,21 @@
     "Description": "w21",
     "Price": 12,
     "PathToImage": "212"
+  },
+  {
+    "Name": "KINGKINDTEXT",
+    "Brand": "ASDD",
+    "Type": 0,
+    "Description": "ASDSD",
+    "Price": 10101,
+    "PathToImage": "KindKindLogo.png"
+  },
+  {
+    "Name": "aasd",
+    "Brand": "f21",
+    "Type": 0,
+    "Description": "asdvva",
+    "Price": 12,
+    "PathToImage": "res/KindKindLogo.png"
   }
 ]
