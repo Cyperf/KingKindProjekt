@@ -14,10 +14,16 @@ namespace KingKindProjekt.Services
             _coupons = new Repository<Coupon>();
             this.jsonFileService = jsonFileService;
             var coupons = jsonFileService.GetJsonItems();
-            if (jsonFileService != null)
+            if (coupons != null)
             {
                 foreach (Coupon coupon in coupons)
                     CreateWithoutSaving(coupon);
+            }
+            else
+            {
+                Create(new Coupon("50-Off", 50, DateOnly.FromDateTime(DateTime.Now.AddDays(1))));
+                Create(new Coupon("25-Off", 25, DateOnly.FromDateTime(DateTime.Now.AddDays(2))));
+                Create(new Coupon("Off75", 75, DateOnly.FromDateTime(DateTime.Now.AddDays(3))));
             }
         }
         /// <summary>
