@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "50-Off",
+    "PercentOff": 50,
+    "SaleDate": "2023-12-12"
+  },
+  {
+    "Name": "25-Off",
+    "PercentOff": 25,
+    "SaleDate": "2023-12-13"
+  },
+  {
+    "Name": "Off75",
+    "PercentOff": 75,
+    "SaleDate": "2023-12-14"
+  }
+]
