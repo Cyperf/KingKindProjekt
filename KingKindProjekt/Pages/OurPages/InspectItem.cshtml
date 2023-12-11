@@ -7,8 +7,8 @@
 
 @{
     var item = Model.item;
-    string imagePath = Url.Content("~/" + item.PathToImage);
-    @if (item.PathToImage.Length == 0)
+    string imagePath = Url.Content("~/res/" + item.PathToImage);
+    @if (item.PathToImage == null || item.PathToImage.Length == 0)
     {
         imagePath = Url.Content("~/res/NoPicture.png");
     }

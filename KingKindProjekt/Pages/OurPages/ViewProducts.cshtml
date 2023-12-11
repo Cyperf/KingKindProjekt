@@ -22,7 +22,7 @@
                     <div class="card" style="width: 100%">
                         @* draw the image *@
                         @{string imagePath = Url.Content("~/" + item.PathToImage);}
-                        @if (item.PathToImage.Length == 0)
+                        @if (item.PathToImage != null && item.PathToImage.Length == 0)
                         {
                             imagePath = Url.Content("~/res/NoPicture.png");
                         }
