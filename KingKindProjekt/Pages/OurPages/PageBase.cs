@@ -42,6 +42,12 @@ namespace KingKindProjekt.Pages.OurPages
             return Page();
         }
 
+        public IActionResult OnPostLogOut()
+        {
+            
+            return Page();
+        }
+
         public string CanSignupForNewsletter ()
         {
             Account acc;
