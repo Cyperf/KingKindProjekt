@@ -11,6 +11,8 @@ builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Account>>()
 builder.Services.AddSingleton<AccountService, AccountService>();
 builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Sale>>();
 builder.Services.AddSingleton<SaleService, SaleService>();
+builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Coupon>>();
+builder.Services.AddSingleton<CouponService, CouponService>();
 
 builder.Services.AddMvc();
 
