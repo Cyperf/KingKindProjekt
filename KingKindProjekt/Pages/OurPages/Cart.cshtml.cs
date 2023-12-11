@@ -52,11 +52,9 @@ namespace KingKindProjekt.Pages.OurPages
 		}
 		public IActionResult OnPostApplyCoupon()
 		{
-			Debug.WriteLine("COUPON: " + CouponToApply);
 			if (CouponToApply == null)return Page();
             if (_couponService.IsThisCouponValid(CouponToApply))
 			{
-				Debug.WriteLine("Applied");
 				CurrentlyAppliedCoupon = CouponToApply;
 			}
             return Page();
