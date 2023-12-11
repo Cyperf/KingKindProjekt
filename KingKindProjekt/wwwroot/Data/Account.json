@@ -10,7 +10,8 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 10 02 24 90",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "name2",
@@ -23,7 +24,8 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 15 22 42 09",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "ajidao jioadj",
@@ -36,7 +38,8 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 12341296",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "akdml adkml",
@@ -49,7 +52,8 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 14587428",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "Frederik Nicolajsen",
@@ -62,7 +66,8 @@
     "Country": "Denmark",
     "PhoneNumber": "\u002B45 124514521",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "asd asd",
@@ -75,7 +80,8 @@
     "Country": "Denmark",
     "PhoneNumber": "\u002B12 78451268",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   },
   {
     "Name": "admin admin",
@@ -89,7 +95,14 @@
     "PhoneNumber": "\u002B11 11111111",
     "WantsNewsLetter": true,
     "Receipts": [
-      "---------------RECEIPT START---------------\n[3] Name Branded Razor - 10 kr.\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[2] Hsair gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
+      "---------------RECEIPT START---------------\n[3] Name Branded Razor - 10 kr.\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[2] Hsair gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n",
+      "---------------RECEIPT START---------------\n[2] Hair gel Other brand Hairgel - 1337 kr.\n[4] sName Branded Razor - 199,99 kr.\nTotal price: 4342,45\nTax: 3473,96\n---------------RECEIPT END---------------\n",
+      "---------------RECEIPT START---------------\n[4] Hair gel Other brand Hairgel - 1337 kr.\n[1] Gel\u0027ler hairs Super brand Hairgel - 119,99 kr.\n[1] Hair gsel Other brand Hairgel - 99,99 kr.\nApplied coupon: CurrentlyAppliedCoupon which gave 100% off\nTotal price: 6959,974999999999\nTax: 5567,98\n---------------RECEIPT END---------------\n",
+      "---------------RECEIPT START---------------\n[1] Hair gel Other brand Hairgel - 1337 kr.\n[1] sName Branded Razor - 199,99 kr.\nApplied coupon: 25-Off which gave 25% off\nTotal price: 480,309375\nTax: 384,2475\n---------------RECEIPT END---------------\n"
+    ],
+    "UsedCoupons": [
+      "CurrentlyAppliedCoupon",
+      "25-Off"
     ]
   },
   {
@@ -105,7 +118,8 @@
     "WantsNewsLetter": false,
     "Receipts": [
       "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
-    ]
+    ],
+    "UsedCoupons": []
   },
   {
     "Name": "luffe luffe",
@@ -118,6 +132,7 @@
     "Country": "Danmark",
     "PhoneNumber": "\u002B45 98647247",
     "WantsNewsLetter": false,
-    "Receipts": []
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]

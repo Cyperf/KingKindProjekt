@@ -11,8 +11,9 @@ namespace KingKindProjekt.Pages.OurPages
     public class CartModel : PageBase
     {
 		CouponService _couponService;
-
-        public string CurrentlyAppliedCoupon { get; private set; }
+		[BindProperty]
+		public string CurrentlyAppliedCoupon { get; private set; }
+		[BindProperty]
 		public string CouponToApply { get; set; }
 
 		public List<Item>? Items { get; set; }
@@ -57,6 +58,14 @@ namespace KingKindProjekt.Pages.OurPages
 				CurrentlyAppliedCoupon = CouponToApply;
 			}
             return Page();
+		}
+
+		public string CouponPercentOff ()
+		{ return _couponService.GetCouponPercentOff(CurrentlyAppliedCoupon).ToString("0"); }
+		public double GetPriceMultiplier()
+		{
+			if (CurrentlyAppliedCoupon == null) return 1;
+			return _couponService.GetCouponMultiplier(CurrentlyAppliedCoupon);
 		}
 	}
 }
