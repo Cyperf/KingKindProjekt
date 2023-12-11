@@ -190,5 +190,13 @@
     "Description": "burhan",
     "Price": 123,
     "PathToImage": "Burhan.PNG"
+  },
+  {
+    "Name": "Fredz",
+    "Brand": "Fredzito",
+    "Type": 0,
+    "Description": "Gunner",
+    "Price": 10000,
+    "PathToImage": "Bombevest.jpg"
   }
 ]
