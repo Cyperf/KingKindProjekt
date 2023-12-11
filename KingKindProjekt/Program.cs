@@ -12,6 +12,8 @@ builder.Services.AddSingleton<AccountService, AccountService>();
 builder.Services.AddTransient<JsonFileService<KingKindProjekt.Models.Sale>>();
 builder.Services.AddSingleton<SaleService, SaleService>();
 
+builder.Services.AddMvc();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

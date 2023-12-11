@@ -6,13 +6,13 @@ using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class InspectItemModel : PageModel
+    public class InspectItemModel : PageBase
     {
         public Item item;
         CartService _cartService;
         private ItemService _itemService;
         public ItemService ItemService { get { return _itemService; } }
-        public InspectItemModel (ItemService itemService, CartService cartService)
+        public InspectItemModel (ItemService itemService, CartService cartService, AccountService accountService) : base(accountService)
         {
             _itemService = itemService;
             _cartService = cartService;

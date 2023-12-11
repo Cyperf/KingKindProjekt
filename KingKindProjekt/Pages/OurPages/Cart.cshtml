@@ -16,7 +16,7 @@
 		<col style="width : 4%">
 	</colgroup>
 	<thead>
-		<tr class="btn-secondary active">
+		<tr class="btn-tertiary active">
 			<th>
 				Name
 			</th>
@@ -44,13 +44,13 @@
 						@item.Name
 					</td>
 					<td>
-						@Model.cartService.GetPrice(item.Name)
+						@Model.cartService.GetPrice(item.Name) kr.
 					</td>
 					<td>
-						@Model.cartService._amount.Read(item.Name);
+						@Model.cartService._amount.Read(item.Name)
 					</td>
 					<td>
-						@(Model.cartService.GetPrice(item.Name) * Model.cartService._amount.Read(item.Name));
+						@(Model.cartService.GetPrice(item.Name) * Model.cartService._amount.Read(item.Name)) kr.
 					</td>
 					<td>
 						<a class="btn btn-primary btn-sm" type="button" title="Add" asp-page="Cart" asp-route-createName="@item.Name"><i class="fa fa-edit"></i></a>
@@ -75,7 +75,7 @@
 				Cart Total
 			</td>
 			<td>
-				@Model.cartService.CalculateTotalPriceExTax()
+				@Model.cartService.CalculateTotalPriceExTax() kr.
 			</td>
 		</tbody>
 		<tbody>
@@ -83,7 +83,7 @@
 				Tax
 			</td>
 			<td>
-				@(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax())
+				@(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax()) kr.
 			</td>
 		</tbody>
 		<tbody>
@@ -99,7 +99,7 @@
 				Checkout Total
 			</td>
 			<td>
-				@Model.cartService.CalculateTotalPriceWTax()
+				@Model.cartService.CalculateTotalPriceWTax() kr.
 			</td>
 		</tbody>
 		<tbody>

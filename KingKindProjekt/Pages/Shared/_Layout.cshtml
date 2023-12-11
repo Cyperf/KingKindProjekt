@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/KingKindProjekt.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <style>
        
@@ -43,12 +44,13 @@
                                 <input type="submit" id="btnSearch" value="Søg" />
                             </div>
                         } *@
-                        <form method="post">
+                        @await Component.InvokeAsync("Search")
+                        @* <form method="post">
                             <div class="input-group">
                                 <input asp="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" class="form-control mr-1" placeholder="Enter search term" />
                                 <input type="submit" value="Search" class="btn btn-primary" asp-route-searchItems="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" asp-page="/OurPages/ViewProducts" />
                             </div>
-                        </form>
+                        </form> *@
                     </li>
 
                     <li class="nav-item col-1"></li> @* Padding *@
@@ -61,7 +63,11 @@
                         }
                     </li>
                     <li class="nav-item col-1">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">Cart</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/Cart">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                            </button>
+                        </a>
                     </li>
                     
                 </ul>
@@ -81,10 +87,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Kundesservice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/ViewProducts">Products</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">About us</a>
                         </li>
                     </ul>
                 </div>
@@ -92,17 +98,19 @@
         </nav>
     </header>
 
-    <div class="container" style="min-height: 1000px">
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
            
         </main>
     </div>
-
     @* Footer ------------------------------------------- *@
+    <div style="height: 150px;"></div>
     <footer class="border-top footer text-muted">
-    
-        <div id="newsletter" class="d-flex justify-content-center">
+
+        
+        @await Component.InvokeAsync("NewsletterSignup")
+        @* <div id="newsletter" class="d-flex justify-content-center">
               NEWSLETTER
          </div>
         <div id="newslettertilmeld" class="d-flex justify-content-center" style="width: 100%;">
@@ -111,7 +119,7 @@
                     onclick="alert('You have been signed up!');">
                 Tilmeld
             </button>
-        </div>
+        </div> *@
         <div class="container">
             &copy; 2023 - KingKindProjekt - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>

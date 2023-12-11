@@ -1,0 +1,21 @@
+﻿@model KingKindProjekt.Pages.OurPages.PageBase;
+
+<div id="newsletter" class="d-flex justify-content-center">
+    NEWSLETTER
+</div>
+@if (ViewData["NewsletterSignup"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert("@ViewData["NewsletterSignup"]");
+        };
+        </script>
+}
+<form method="post">
+    <div id="newslettertilmeld" class="d-flex justify-content-center input-group" style="width: 100%;">
+        <div style="width: 20%;"> </div>
+        <input  asp-for="NewsletterSignup" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="E-mail..." style="width: 40%;"/>
+        <input asp-page-handler="NewsletterSignup" type="submit" value="Tilmeld" class="btn btn-primary" id="alert-button" style="width: 10%;" />
+        <div style="width: 20%;"> </div>
+    </div> 
+</form>

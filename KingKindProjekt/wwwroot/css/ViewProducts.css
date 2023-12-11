@@ -4,6 +4,7 @@
 .brands {
     float: left;
     width: 20%;
+    padding: 10px
 }
 .mainPage {
     float: right;

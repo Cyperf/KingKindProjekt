@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class AdminModel : PageModel
+    public class AdminModel : PageBase
     {
         private AccountService accountService;
 
-        public AdminModel(AccountService accountService)
+        public AdminModel(AccountService accountService) : base(accountService)
         {
             this.accountService = accountService;
         }

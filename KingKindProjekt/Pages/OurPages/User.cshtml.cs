@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class UserModel : PageModel
+    public class UserModel : PageBase
     {
 
         Models.Account? account;
+
+        public UserModel(AccountService accountService) : base(accountService) { }
 
         public void OnGet()
         {

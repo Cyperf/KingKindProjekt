@@ -52,6 +52,11 @@ namespace KingKindProjekt.Services
             jsonFileService.SaveJsonItems(accounts.Items.Values);
         }
 
+        public Account Read (string Email)
+        {
+            return accounts.Read(Email);
+        }
+
         public static string checkAccountState()
         {
             if (AccountService.LoggedInAccount != null)

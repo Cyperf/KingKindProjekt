@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace KingKindProjekt.Pages.OurPages
 {
-    public class CartModel : PageModel
+    public class CartModel : PageBase
     {
 		public List<Item>? Items { get; set; }
 		public List<string>? Name { get; set; }
@@ -16,8 +16,8 @@ namespace KingKindProjekt.Pages.OurPages
 		public CartService? cartService { get; set; }
         public int? Amount { get; set; }
 		public ItemService _itemService { get; set; }
-		public CartModel(CartService cartService, ItemService itemService)
-		{
+		public CartModel(CartService cartService, ItemService itemService, AccountService accountService) : base(accountService)
+        {
 			this.cartService = cartService;
 			_itemService = itemService;
 
