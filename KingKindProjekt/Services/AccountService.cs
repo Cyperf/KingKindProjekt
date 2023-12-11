@@ -58,6 +58,12 @@ namespace KingKindProjekt.Services
             return accounts.Read(Email);
         }
 
+        public void Update(Account account)
+        {
+            accounts.Update(account.EMail, account);
+            Save();
+        }
+
         public static string checkAccountState()
         {
             if (AccountService.LoggedInAccount != null)

@@ -6,6 +6,8 @@ namespace KingKindProjekt.Models
         NoItem,
         Razor,
         Hairgel,
+        HairDye,
+
     }
     public class Item
     {
