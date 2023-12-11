@@ -84,8 +84,8 @@
 				Tax
 			</td>
 			<td>
-				@{double tax = price*0.8d;}
-				<p>tax</p>
+				@{double tax = price*0.2d;}
+				<p>@tax</p>
 				@* @(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax()) kr. *@
 			</td>
 		</tbody>

@@ -40,7 +40,7 @@ namespace KingKindProjekt.Pages.OurPages
                     price *= _couponService.GetCouponMultiplier(appliedCoupon);
 				}
                 currentReceipt += "Total price: " + price + "\n";
-				currentReceipt += "Tax: " + (price * .8d) + "\n";
+				currentReceipt += "Tax: " + (price * .2d) + "\n";
 				currentReceipt += "---------------RECEIPT END---------------" + "\n";
 				if (AccountService.LoggedInAccount != null)
                 {
