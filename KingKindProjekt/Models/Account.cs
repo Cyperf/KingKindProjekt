@@ -37,11 +37,13 @@ namespace KingKindProjekt.Models
         public bool WantsNewsLetter { get; set; }
         [BindProperty]
         public List<string>? Receipts { get; set; }
+        [BindProperty]
+        public List<string>? UsedCoupons { get; set; }
 
 
         public Account ()
-        { Receipts = new List<string>(); }
-        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter, List<string>? receipts)
+        { Receipts = new List<string>(); UsedCoupons = new List<string>(); }
+        public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter, List<string>? receipts, List<string>? usedCoupons)
         {
             Name = name;
             EMail = email;
@@ -54,7 +56,9 @@ namespace KingKindProjekt.Models
             PhoneNumber = phoneNumber;
             WantsNewsLetter = wantsNewsLetter;
             Receipts = receipts;
-            if (receipts == null) { Receipts = new List<string>(); }
+            if (Receipts == null) { Receipts = new List<string>(); }
+            UsedCoupons = usedCoupons;
+            if (UsedCoupons == null) { UsedCoupons = new List<string>(); }
         }
 
         public override string ToString()

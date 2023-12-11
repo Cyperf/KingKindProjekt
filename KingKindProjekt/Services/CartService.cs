@@ -11,26 +11,21 @@ namespace KingKindProjekt.Services
 
         public Repository<Item> _cart;
         public Repository<int> _amount;
-        SaleService _saleService;
+		ItemService _itemService;
 
 
-        public CartService (SaleService saleService)
+        public CartService (ItemService itemService)
         {
             _cart = new Repository<Item> ();
 			_amount = new Repository<int>();
-			_saleService = saleService;
+			//_saleService = saleService;
+			_itemService = itemService;
 
         }
 
         public double GetPrice(string itemName)
         {
-            Item item = _cart.Read(itemName);
-            if (item == null)
-                return 0;
-            if (_saleService.IsOnSale(itemName))
-                return _saleService.GetPriceAsDouble(itemName);
-            return item.Price;
-
+			return _itemService.GetPriceAsDouble(itemName);
         }
 
 		public double GetPrice(Item item)
