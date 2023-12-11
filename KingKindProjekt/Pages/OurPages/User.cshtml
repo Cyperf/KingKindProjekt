@@ -36,7 +36,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group">
                                                         <label asp-for="_Account.Password" class="control-label"></label>
-                                                        <input asp-for="_Account.Password" type="password" class="form-control" />
+                                                        <input asp-for="_Account.Password" type="password" class="form-control" value="@Model._Account.Password" />
                                                         <span asp-validation-for="_Account.Password" class="text-danger"></span>
                                                         @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
                                                         @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
@@ -46,7 +46,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group">
                                                         <label asp-for="PasswordChecker" class="control-label"></label>
-                                                        <input asp-for="PasswordChecker" type="password" class="form-control" />
+                                                        <input asp-for="PasswordChecker" type="password" class="form-control" value="@Model._Account.Password" />
                                                         <span asp-validation-for="PasswordChecker" class="text-danger"></span>
                                                         @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
                                                         @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
@@ -57,7 +57,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group">
                                                         <label asp-for="_Account.CVR" class="control-label"></label>
-                                                        <input asp-for="_Account.CVR" class="form-control" />
+                                                        <input asp-for="_Account.CVR" class="form-control" value="@Model._Account.CVR" />
                                                         @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
                                                         @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
@@ -90,7 +90,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="Address" class="control-label"></label>
-                                                        <input asp-for="Address" class="form-control" />
+                                                        <input asp-for="Address" class="form-control" value="@Model._Account.Address" />
                                                         <span asp-validation-for="Address" class="text-danger"></span>
                                                         @* <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplea3">Ydeligere Information</label> *@
@@ -126,7 +126,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="_Account.Country" class="control-label"></label>
-                                                        <input asp-for="_Account.Country" class="form-control" />
+                                                        <input asp-for="_Account.Country" class="form-control" value="@Model._Account.Country" />
                                                         <span asp-validation-for="_Account.Country" class="text-danger"></span>
                                                         @* <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplea6">Land</label> *@
@@ -149,7 +149,7 @@
 
                                                         <div class="form-outline form-group form-white">
                                                             <label asp-for="PhoneNumber" class="control-label"></label>
-                                                            <input asp-for="PhoneNumber" class="form-control" />
+                                                            <input asp-for="PhoneNumber" class="form-control" value="@Model._Account.PhoneNumber" />
                                                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                                             @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
                                                         <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
@@ -158,7 +158,7 @@
                                                     </div>
                                                 </div>
 
-                                                <input asp-page-handler="Signup" type="submit" value="Signup" class="btn btn-info btn-lg btn-block" name="Signup" />
+                                                <input asp-page-handler="Update" type="submit" value="Update user info" class="btn btn-info btn-lg btn-block" name="Update" />
 
                                                 @* <button type="button" class="btn btn-light btn-lg"
                                             data-mdb-ripple-color="dark">
