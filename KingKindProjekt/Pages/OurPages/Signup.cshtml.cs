@@ -63,11 +63,11 @@ namespace KingKindProjekt.Pages.OurPages
             _Account.WantsNewsLetter = false;
             if (!ValidateAccountDetails())//if(!ModelState.IsValid)
                 return Page();
-
             // login automatically 
             _accountService.Create(_Account);
             if (_accountService.TryLogin(_Account.EMail, _Account.Password))
                 return RedirectToPage("ViewProducts");
+            _Account.EMail = "";
             return Page(); // could not login - ? (douplicate email... maybe)
         }
 
