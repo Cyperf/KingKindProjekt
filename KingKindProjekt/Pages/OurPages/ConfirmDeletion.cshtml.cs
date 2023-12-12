@@ -11,7 +11,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public ConfirmDeletionModel(AccountService accountService) : base(accountService)
         {
-        
+            _accountService = accountService;
         }
         public IActionResult OnPostGoBack()
         {
@@ -20,7 +20,6 @@ namespace KingKindProjekt.Pages.OurPages
         }
         public IActionResult OnPostDelete()
         {
-            Debug.WriteLine("I got this far..");
             _accountService.Delete(AccountService.LoggedInAccount);
             AccountService.LoggedInAccount = null;
             return RedirectToPage("ViewProducts");
