@@ -94,9 +94,7 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnPostDelete()
         {
-            _accountService.Delete(AccountService.LoggedInAccount);
-            AccountService.LoggedInAccount = null;
-            return RedirectToPage("ViewProducts");
+            return RedirectToPage("ConfirmDeletion");
         }
 
         private bool ValidateAccountDetails()

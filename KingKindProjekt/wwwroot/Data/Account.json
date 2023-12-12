@@ -176,5 +176,19 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "sadasd asdfas",
+    "EMail": "kakaka@aka.dka",
+    "Password": "qwerty",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "asdasddsaf, 4 asdasdasd",
+    "Country": "asdasdasd",
+    "PhoneNumber": "5 584158499",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
