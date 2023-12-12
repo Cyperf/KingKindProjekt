@@ -117,10 +117,10 @@
                                                         @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
                                                     </div>
-
+                                                    <div class="mb-4 pb-2">
                                                         <div class="form-outline form-group form-white">
                                                             <label asp-for="PhoneNumber" class="control-label"></label>
-                                                        <input asp-for="PhoneNumber" class="form-control" value="@Model.PhoneNumber" />
+                                                            <input asp-for="PhoneNumber" class="form-control" value="@Model.PhoneNumber" />
                                                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                                             @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
                                                         <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
@@ -128,6 +128,13 @@
 
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                                 <input asp-page-handler="Delete" type="submit" value="Delete user info" class="btn btn-info btn-lg btn-block btn-danger" name="Delete" />
 
@@ -138,12 +145,12 @@
 
                                             </div>
                                         </div>
-
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 
             </section>
         </form>

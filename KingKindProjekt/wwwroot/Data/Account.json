@@ -190,5 +190,19 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "jens torben",
+    "EMail": "Jens@jensen.dk",
+    "Password": "password",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": "75459596589",
+    "Address": "Jensen, 2475 LikolIga",
+    "Country": "Kjahmonaete",
+    "PhoneNumber": "45 60504030",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
