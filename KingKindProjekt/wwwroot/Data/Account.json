@@ -1,33 +1,5 @@
 [
   {
-    "Name": "name",
-    "EMail": "email@gmail.com",
-    "Password": "password",
-    "_PrivateOrCorporation": 0,
-    "_AccountType": 0,
-    "CVR": "cvr",
-    "Address": "AAA vej, 4000 Roskilde",
-    "Country": "Danmark",
-    "PhoneNumber": "\u002B45 10 02 24 90",
-    "WantsNewsLetter": false,
-    "Receipts": [],
-    "UsedCoupons": []
-  },
-  {
-    "Name": "name2",
-    "EMail": "email2@gmail.com",
-    "Password": "pass",
-    "_PrivateOrCorporation": 0,
-    "_AccountType": 0,
-    "CVR": "cvr",
-    "Address": "BBB vej, 4000 Roskilde",
-    "Country": "Danmark",
-    "PhoneNumber": "\u002B45 15 22 42 09",
-    "WantsNewsLetter": false,
-    "Receipts": [],
-    "UsedCoupons": []
-  },
-  {
     "Name": "ajidao jioadj",
     "EMail": "aabb@gmail.com",
     "Password": "iojad",
