@@ -49,9 +49,9 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet()
         {
-            _Account.PhoneNumber = int.Parse(AccountService.LoggedInAccount.PhoneNumber);
+            //_Account.PhoneNumber = int.Parse(AccountService.LoggedInAccount.PhoneNumber);
             if (AccountService.LoggedInAccount == null)
-                return RedirectToPage("ViewProducts")
+                return RedirectToPage("ViewProducts");
             return Page();
         }
 
