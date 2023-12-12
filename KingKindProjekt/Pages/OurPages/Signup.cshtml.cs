@@ -25,6 +25,7 @@ namespace KingKindProjekt.Pages.OurPages
         public int PhoneNumber { get; set; }
         [Display(Name = "Accept")]
         [BindProperty]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You must accept our terms and conditions, to create an account")]
         public bool AcceptTermsAndConditions { get; set; }
         [BindProperty]
         public string PasswordChecker { get; set; }
@@ -72,18 +73,22 @@ namespace KingKindProjekt.Pages.OurPages
 
         private bool ValidateAccountDetails()
         {
-            if (_Account.Name.Length < 5)
+            Debug.WriteLine("aaa: " + AcceptTermsAndConditions);
+            if (_Account.Name == null || _Account.Name.Length < 5)
                 return false;
-            if (_Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
+            if (_Account.EMail==null || _Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
                 return false;
-            if (_Account.Password.Length < 5 || _Account.Password != PasswordChecker)
+            if (_Account.Password == null || _Account.Password.Length < 5 || _Account.Password != PasswordChecker)
                 return false;
-            if (_Account.Address.Length < 5)
+            if (_Account.Address == null || _Account.Address.Length < 5)
                 return false;
-            if (_Account.Country.Length < 3)
+            if (_Account.Country == null || _Account.Country.Length < 3)
                 return false;
-            if (_Account.PhoneNumber.Length < 8)
+            if (_Account.PhoneNumber == null || _Account.PhoneNumber.Length < 8)
                 return false;
+            if (!AcceptTermsAndConditions)
+                return false;
+
             return true;
         }
     }

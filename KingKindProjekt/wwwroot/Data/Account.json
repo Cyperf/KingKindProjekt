@@ -162,5 +162,19 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "dsfafjk dsajkdn",
+    "EMail": "assadf@gmail.com",
+    "Password": "123456",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "njdsa, 4000 Roskilde",
+    "Country": "Danmark",
+    "PhoneNumber": "\u002B45 12548658",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
