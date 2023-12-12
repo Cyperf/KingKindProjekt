@@ -162,5 +162,33 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "sdagf gdasf",
+    "EMail": "amin@gmail.com",
+    "Password": "123456",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "fdmsaio, 0 Roskilde",
+    "Country": "Denmark",
+    "PhoneNumber": "0 12548658",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
+  },
+  {
+    "Name": "sadasd asdfas",
+    "EMail": "kakaka@aka.dka",
+    "Password": "qwerty",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "asdasddsaf, 4 asdasdasd",
+    "Country": "asdasdasd",
+    "PhoneNumber": "5 584158499",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
