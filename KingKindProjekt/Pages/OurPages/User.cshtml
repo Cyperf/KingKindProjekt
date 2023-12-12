@@ -121,7 +121,7 @@
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="CountryCode" class="control-label"></label>
-                                                        <input asp-for="CountryCode" class="form-control" value="CountryCode" />
+                                                        <input asp-for="CountryCode" class="form-control" value="@Model.CountryCode" />
                                                         <span asp-validation-for="CountryCode" class="text-danger"></span>
                                                         @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
@@ -129,7 +129,7 @@
 
                                                         <div class="form-outline form-group form-white">
                                                             <label asp-for="PhoneNumber" class="control-label"></label>
-                                                            <input asp-for="PhoneNumber" class="form-control" value="PhoneNumber" />
+                                                        <input asp-for="PhoneNumber" class="form-control" value="@Model.PhoneNumber" />
                                                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                                             @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
                                                         <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
