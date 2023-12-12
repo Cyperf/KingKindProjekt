@@ -41,7 +41,7 @@ namespace KingKindProjekt.Models
         public List<string>? UsedCoupons { get; set; }
 
 
-        public Account ()
+        public Account()
         { Receipts = new List<string>(); UsedCoupons = new List<string>(); }
         public Account(string name, string email, string password, PrivateOrCorporation poc, AccountType at, string cvr, string address, string country, string phoneNumber, bool wantsNewsLetter, List<string>? receipts, List<string>? usedCoupons)
         {
@@ -63,7 +63,7 @@ namespace KingKindProjekt.Models
 
         public override string ToString()
         {
-            string temp="";
+            string temp = "";
             foreach (string str in Receipts)
             {
                 temp = temp + str;

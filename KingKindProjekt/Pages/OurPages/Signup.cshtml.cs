@@ -1,7 +1,6 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
@@ -46,7 +45,7 @@ namespace KingKindProjekt.Pages.OurPages
         [BindProperty]
         public string Address { get; set; }
 
-        public SignupModel (AccountService accountService) : base(accountService)
+        public SignupModel(AccountService accountService) : base(accountService)
         {
             _accountService = accountService;
         }
@@ -58,22 +57,9 @@ namespace KingKindProjekt.Pages.OurPages
         public IActionResult OnPostSignup()
         {
             _Account.Name = FirstName + " " + LastName;
-            _Account.PhoneNumber = "+" + CountryCode + " " + PhoneNumber;
+            _Account.PhoneNumber = CountryCode + " " + PhoneNumber;
             _Account.Address = Address + ", " + PostNumber + " " + City;
             _Account.WantsNewsLetter = false;
-            Debug.WriteLine("<--------------------------------->");
-            Debug.WriteLine(_Account.Name);
-            Debug.WriteLine(_Account.EMail);
-            Debug.WriteLine(_Account.Password);
-            Debug.WriteLine(_Account._PrivateOrCorporation);
-            Debug.WriteLine(_Account._AccountType);
-            Debug.WriteLine(_Account.CVR);
-            Debug.WriteLine(_Account.Address);
-            Debug.WriteLine(_Account.Country);
-            Debug.WriteLine(_Account.PhoneNumber);
-            Debug.WriteLine(_Account.WantsNewsLetter);
-            Debug.WriteLine("Valid: " + ModelState.ToString());
-            Debug.WriteLine("<--------------------------------->");
             if (!ValidateAccountDetails())//if(!ModelState.IsValid)
                 return Page();
 
@@ -84,7 +70,7 @@ namespace KingKindProjekt.Pages.OurPages
             return Page(); // could not login - ? (douplicate email... maybe)
         }
 
-        private bool ValidateAccountDetails ()
+        private bool ValidateAccountDetails()
         {
             if (_Account.Name.Length < 5)
                 return false;

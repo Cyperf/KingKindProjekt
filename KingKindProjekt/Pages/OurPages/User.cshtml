@@ -71,8 +71,17 @@
                                                     <div class="col-md-6">
                                                     </div>
                                                 </div>
-
                                             </div>
+
+                                            <input asp-page-handler="Update" type="submit" value="Update user info" class="btn btn-info btn-lg btn-block" name="Update" />
+
+                                            @* <button type="button" class="btn btn-light btn-lg"
+                                        data-mdb-ripple-color="dark">
+                                        Register
+                                        </button> *@
+
+                                        
+                                            
                                         </div>
                                         <div class="col-lg-6 bg-indigo text-dark">
                                             <div class="p-5">
@@ -98,31 +107,6 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
-                                                    <div class="col-md-5 mb-4 pb-2">
-
-                                                        <div class="form-outline form-group form-white">
-                                                            <label asp-for="PostNumber" class="control-label"></label>
-                                                            <input asp-for="PostNumber" class="form-control" />
-                                                            <span asp-validation-for="PostNumber" class="text-danger"></span>
-                                                            @* <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea4">Postnummer</label> *@
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-7 mb-4 pb-2">
-
-                                                        <div class="form-outline form-group form-white">
-                                                            <label asp-for="City" class="control-label"></label>
-                                                            <input asp-for="City" class="form-control" />
-                                                            <span asp-validation-for="City" class="text-danger"></span>
-                                                            @* <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea5">By</label> *@
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
                                                 <div class="mb-4 pb-2">
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="_Account.Country" class="control-label"></label>
@@ -133,19 +117,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
-                                                    <div class="col-md-5 mb-4 pb-2">
 
-                                                        <div class="form-outline form-group form-white">
-                                                            <label asp-for="CountryCode" class="control-label"></label>
-                                                            <input asp-for="CountryCode" class="form-control" />
-                                                            <span asp-validation-for="CountryCode" class="text-danger"></span>
-                                                            @* <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea7">Kode +</label>  *@
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-md-7 mb-4 pb-2">
+                                                    <div class="mb-4 pb-2">
 
                                                         <div class="form-outline form-group form-white">
                                                             <label asp-for="PhoneNumber" class="control-label"></label>
@@ -158,7 +131,7 @@
                                                     </div>
                                                 </div>
 
-                                                <input asp-page-handler="Update" type="submit" value="Update user info" class="btn btn-info btn-lg btn-block" name="Update" />
+                                                <input asp-page-handler="Delete" type="submit" value="Delete user info" class="btn btn-info btn-lg btn-block btn-danger" name="Delete" />
 
                                                 @* <button type="button" class="btn btn-light btn-lg"
                                             data-mdb-ripple-color="dark">
@@ -173,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </section>
         </form>
     </body>

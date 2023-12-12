@@ -1,8 +1,5 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -12,11 +9,11 @@ namespace KingKindProjekt.Pages.OurPages
         CartService _cartService;
         private ItemService _itemService;
         public ItemService ItemService { get { return _itemService; } }
-        public InspectItemModel (ItemService itemService, CartService cartService, AccountService accountService) : base(accountService)
+        public InspectItemModel(ItemService itemService, CartService cartService, AccountService accountService) : base(accountService)
         {
             _itemService = itemService;
             _cartService = cartService;
-            
+
         }
         public void OnGet(string ItemName, string createName = "", string deleteName = "")
         {
