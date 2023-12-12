@@ -134,5 +134,19 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "Worker Workersen",
+    "EMail": "work@non",
+    "Password": "worker",
+    "_PrivateOrCorporation": 1,
+    "_AccountType": 1,
+    "CVR": "123412342222",
+    "Address": "jatjak 1, 2314 iiiisjelg",
+    "Country": "Kjjjak",
+    "PhoneNumber": "\u002B99 99887755",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
