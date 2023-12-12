@@ -21,8 +21,8 @@ namespace KingKindProjekt.Services
             }
             else // dummy data
             {
-                Create(new Account("name", "email@gmail.com", "password", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "+45 10 02 24 90", false, null, null));
-                Create(new Account("name2", "email2@gmail.com", "pass", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "+45 15 22 42 09", false, null, null));
+                Create(new Account("name", "email@gmail.com", "password", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "45 10022490", false, null, null));
+                Create(new Account("name2", "email2@gmail.com", "pass", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "45 15224209", false, null, null));
             }
         }
 

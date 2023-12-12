@@ -73,7 +73,6 @@ namespace KingKindProjekt.Pages.OurPages
 
         private bool ValidateAccountDetails()
         {
-            Debug.WriteLine("aaa: " + AcceptTermsAndConditions);
             if (_Account.Name == null || _Account.Name.Length < 5)
                 return false;
             if (_Account.EMail==null || _Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
