@@ -4,7 +4,6 @@
 
     ViewData["Title"] = "Sign Up";
 }
-<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -203,12 +202,15 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-check d-flex justify-content-start mb-4 pb-3 form-group"> @* TO:DO *@
-                                                <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                                                <label class="form-check-label text-black" for="form2Example3">
-                                                    I do accept the <a href="#!" class="text-warning"><u>Terms and Conditions</u></a> of your
-                                                    site.
-                                                </label>
+                                            <div class="mb-4">
+                                                <div class="form-check d-flex justify-content-start mb-4 pb-3 form-group">
+                                                    <input asp-for="AcceptTermsAndConditions" class="form-check-input me-3" type="checkbox" value="true" id="form2Example3c" />
+                                                    <label class="form-check-label text-black" for="form2Example3">
+                                                        I do accept the <a asp-page="/OurPages/TermsAndConditions" target="_blank" class="text-warning"><u>Terms and Conditions</u></a> of your
+                                                        site.
+                                                    </label>
+                                                    <span asp-validation-for="AcceptTermsAndConditions" value="true" class="text-danger"></span>
+                                                </div>
                                             </div>
 
                                             <input asp-page-handler="Signup" type="submit" value="Signup" class="btn btn-info btn-lg btn-block" name="Signup" />
