@@ -83,7 +83,19 @@ namespace KingKindProjekt.Services
             }
             return items;
         }
-        public IEnumerable<Item> FilterBrands(string brandName)
+		public IEnumerable<Item> GetItems(ItemType type)
+		{
+			List<Item> items = new List<Item>();
+			foreach (var item in _items.Items.Values)
+			{
+				if (item.Type == type)
+				{
+					items.Add(item);
+				}
+			}
+			return items;
+		}
+		public IEnumerable<Item> FilterBrands(string brandName)
         {
             List<Item> items = new List<Item>();
             if (brandName != "")

@@ -3,6 +3,16 @@
 @{
     ViewData["Title"] = "Customer Support";
 }
+
+@if (ViewData["AlertMessage"] != null)
+{
+	<script type="text/javascript">
+		window.onload = function () {
+			alert("@ViewData["AlertMessage"]");
+		};
+	</script>
+}
+
 <br />
 <style>
     .container {
@@ -69,7 +79,7 @@
 									<div id="form-message-success" class="mb-4">
 										Your message was sent, thank you!
 									</div>
-									<form method="POST" id="contactForm" name="contactForm">
+									<form method="post" id="contactForm" name="contactForm">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
@@ -93,7 +103,7 @@
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-warning">
+													<input asp-page-handler="SendMessage" type="submit" value="Send Message" class="btn btn-warning">
 													<div class="submitting"></div>
 												</div>
 											</div>
