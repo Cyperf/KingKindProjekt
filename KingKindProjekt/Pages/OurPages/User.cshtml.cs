@@ -50,7 +50,8 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet()
         {
-
+            if (AccountService.LoggedInAccount == null)
+                return RedirectToPage("ViewProducts");
             string s = AccountService.LoggedInAccount.PhoneNumber;
             string countryCode = AccountService.LoggedInAccount.PhoneNumber;
             for (int i = s.Length - 1; i > 0; i--) // remove country code from phone number
@@ -61,7 +62,7 @@ namespace KingKindProjekt.Pages.OurPages
 
                 }
             CountryCode = int.Parse(countryCode);
-            _Account.PhoneNumber = int.Parse(s).ToString();
+            PhoneNumber = int.Parse(s);
             if (AccountService.LoggedInAccount == null)
                 return RedirectToPage("ViewProducts");
             return Page();
