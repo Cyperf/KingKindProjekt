@@ -1,3 +1,6 @@
+using KingKindProjekt.Models;
+using Microsoft.AspNetCore.Mvc;
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CostumerSupportModel : PageBase
@@ -12,5 +15,11 @@ namespace KingKindProjekt.Pages.OurPages
         public void OnGet()
         {
         }
+        public IActionResult OnPostSendMessage ()
+		{
+			ViewData["AlertMessage"] = "Your message has been sent. Thank you for you feedback :D";
+
+			return Page();
+		}
     }
 }
