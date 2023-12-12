@@ -176,5 +176,19 @@
     "WantsNewsLetter": false,
     "Receipts": [],
     "UsedCoupons": []
+  },
+  {
+    "Name": "kage manden",
+    "EMail": "kage@kage",
+    "Password": "kager",
+    "_PrivateOrCorporation": 0,
+    "_AccountType": 0,
+    "CVR": null,
+    "Address": "kage, 2311 Kagelande",
+    "Country": "Kandelande",
+    "PhoneNumber": "41 65958695",
+    "WantsNewsLetter": false,
+    "Receipts": [],
+    "UsedCoupons": []
   }
 ]
