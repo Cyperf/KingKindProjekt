@@ -126,5 +126,14 @@
     "Description": "Most likely the best hair gel in excistence.",
     "Price": 1199.99,
     "PathToImage": ""
+  },
+  {
+    "Name": "Dyr barbermaskinemaskine",
+    "Brand": "maskinebarberen",
+    "Type": 0,
+    "Description": "Maskinen til ham der barbere en barber med maskine",
+    "Price": 510,
+    "PathToImage": "Bombevest.jpg"
   }
+
 ]

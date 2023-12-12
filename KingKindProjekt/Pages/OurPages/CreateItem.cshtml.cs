@@ -51,7 +51,7 @@ namespace KingKindProjekt.Pages.OurPages
             return default;
         }
 
-        public IActionResult OnPostSignup()
+        public IActionResult OnPostAdd()
         {
             _Item.Name = Name;
             _Item.Brand = Brand;
@@ -63,6 +63,7 @@ namespace KingKindProjekt.Pages.OurPages
 
 
             _itemService.Create(_Item);
+            Debug.WriteLine(PathToImage);
 
             return Page();
         }

@@ -58,8 +58,9 @@ namespace KingKindProjekt.Pages.OurPages
             
         }
 
-        public IActionResult OnPostSignup()
+        public IActionResult OnPostUpdate()
         {
+            _Account.EMail = AccountService.LoggedInAccount.EMail;
             _Account.PhoneNumber = "+" + CountryCode + " " + PhoneNumber;
             _Account.Address = Address + ", " + PostNumber + " " + City;
             _Account.WantsNewsLetter = false;
@@ -71,7 +72,7 @@ namespace KingKindProjekt.Pages.OurPages
             AccountService.LoggedInAccount.Password = _Account.Password;
             AccountService.LoggedInAccount.CVR = _Account.CVR;
             AccountService.LoggedInAccount.Country = _Account.Country;
-            _Account.EMail = AccountService.LoggedInAccount.EMail;
+            
             
             // login automatically 
             _accountService.Update(AccountService.LoggedInAccount);

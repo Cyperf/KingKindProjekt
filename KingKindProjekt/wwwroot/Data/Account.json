@@ -106,19 +106,20 @@
     ]
   },
   {
-    "Name": "username nameuserasdasdasdasdasdads",
+    "Name": "Username nameUser",
     "EMail": "user@user.user",
     "Password": "users",
     "_PrivateOrCorporation": 0,
     "_AccountType": 0,
     "CVR": null,
-    "Address": "userlane 12, 0 UserCity",
+    "Address": "et 1, 0 etterbyen, 0 usercity",
     "Country": "Denmark",
-    "PhoneNumber": "\u002B0 91739172",
+    "PhoneNumber": "\u002B1 11111111",
     "WantsNewsLetter": false,
     "Receipts": [
       "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
-    ]
+    ],
+    "UsedCoupons": []
   },
   {
     "Name": "luffe luffe",
