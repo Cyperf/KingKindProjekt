@@ -62,7 +62,7 @@ namespace KingKindProjekt.Pages.OurPages
 
                 }
             CountryCode = int.Parse(countryCode);
-            PhoneNumber = int.Parse(s);
+            _Account.PhoneNumber = int.Parse(s).ToString();
             if (AccountService.LoggedInAccount == null)
                 return RedirectToPage("ViewProducts");
             return Page();
