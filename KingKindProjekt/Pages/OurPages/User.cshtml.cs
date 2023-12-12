@@ -3,6 +3,7 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Globalization;
 
 namespace KingKindProjekt.Pages.OurPages
@@ -49,7 +50,17 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet()
         {
-            //_Account.PhoneNumber = int.Parse(AccountService.LoggedInAccount.PhoneNumber);
+            string s = AccountService.LoggedInAccount.PhoneNumber;
+            string countryCode = AccountService.LoggedInAccount.PhoneNumber;
+            for (int i = s.Length - 1; i > 0; i--) // remove country code from phone number
+                if (s[i] == ' ')
+                {
+                    countryCode = s.Substring(0, i);
+                    s = s.Substring(i, s.Length - i);
+
+                }
+            CountryCode = int.Parse(countryCode);
+            PhoneNumber = int.Parse(s);
             if (AccountService.LoggedInAccount == null)
                 return RedirectToPage("ViewProducts");
             return Page();
