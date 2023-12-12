@@ -1,11 +1,8 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
-using System.Xml.Linq;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -22,12 +19,12 @@ namespace KingKindProjekt.Pages.OurPages
         [Display(Name = "Days of sale")]
         [BindProperty]
         public int days { get; set; }
-        public CreateSaleModel(AccountService accountService, ItemService itemService, SaleService saleService) : base(accountService) 
+        public CreateSaleModel(AccountService accountService, ItemService itemService, SaleService saleService) : base(accountService)
         {
             _itemService = itemService;
             _saleService = saleService;
 
-            List<Models.Item> selectableItems = itemService.Items.ToList(); 
+            List<Models.Item> selectableItems = itemService.Items.ToList();
             ItemList = new SelectList(selectableItems, nameof(Models.Item.Name), nameof(Models.Item.Name));
         }
 

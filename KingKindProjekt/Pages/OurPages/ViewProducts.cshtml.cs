@@ -1,8 +1,6 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {

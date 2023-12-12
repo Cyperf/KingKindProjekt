@@ -1,7 +1,6 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
@@ -26,6 +25,7 @@ namespace KingKindProjekt.Pages.OurPages
         public int PhoneNumber { get; set; }
         [Display(Name = "Accept")]
         [BindProperty]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You must accept our terms and conditions, to create an account")]
         public bool AcceptTermsAndConditions { get; set; }
         [BindProperty]
         public string PasswordChecker { get; set; }
@@ -46,7 +46,7 @@ namespace KingKindProjekt.Pages.OurPages
         [BindProperty]
         public string Address { get; set; }
 
-        public SignupModel (AccountService accountService) : base(accountService)
+        public SignupModel(AccountService accountService) : base(accountService)
         {
             _accountService = accountService;
         }
@@ -58,46 +58,36 @@ namespace KingKindProjekt.Pages.OurPages
         public IActionResult OnPostSignup()
         {
             _Account.Name = FirstName + " " + LastName;
-            _Account.PhoneNumber = "+" + CountryCode + " " + PhoneNumber;
+            _Account.PhoneNumber = CountryCode + " " + PhoneNumber;
             _Account.Address = Address + ", " + PostNumber + " " + City;
             _Account.WantsNewsLetter = false;
-            Debug.WriteLine("<--------------------------------->");
-            Debug.WriteLine(_Account.Name);
-            Debug.WriteLine(_Account.EMail);
-            Debug.WriteLine(_Account.Password);
-            Debug.WriteLine(_Account._PrivateOrCorporation);
-            Debug.WriteLine(_Account._AccountType);
-            Debug.WriteLine(_Account.CVR);
-            Debug.WriteLine(_Account.Address);
-            Debug.WriteLine(_Account.Country);
-            Debug.WriteLine(_Account.PhoneNumber);
-            Debug.WriteLine(_Account.WantsNewsLetter);
-            Debug.WriteLine("Valid: " + ModelState.ToString());
-            Debug.WriteLine("<--------------------------------->");
             if (!ValidateAccountDetails())//if(!ModelState.IsValid)
                 return Page();
-
             // login automatically 
             _accountService.Create(_Account);
             if (_accountService.TryLogin(_Account.EMail, _Account.Password))
                 return RedirectToPage("ViewProducts");
+            _Account.EMail = "";
             return Page(); // could not login - ? (douplicate email... maybe)
         }
 
-        private bool ValidateAccountDetails ()
+        private bool ValidateAccountDetails()
         {
-            if (_Account.Name.Length < 5)
+            if (_Account.Name == null || _Account.Name.Length < 5)
                 return false;
-            if (_Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
+            if (_Account.EMail==null || _Account.EMail.Length < 4 || !_Account.EMail.Contains("@") || _Account.EMail.IndexOf("@") > _Account.EMail.Length - 3)
                 return false;
-            if (_Account.Password.Length < 5 || _Account.Password != PasswordChecker)
+            if (_Account.Password == null || _Account.Password.Length < 5 || _Account.Password != PasswordChecker)
                 return false;
-            if (_Account.Address.Length < 5)
+            if (_Account.Address == null || _Account.Address.Length < 5)
                 return false;
-            if (_Account.Country.Length < 3)
+            if (_Account.Country == null || _Account.Country.Length < 3)
                 return false;
-            if (_Account.PhoneNumber.Length < 8)
+            if (_Account.PhoneNumber == null || _Account.PhoneNumber.Length < 8)
                 return false;
+            if (!AcceptTermsAndConditions)
+                return false;
+
             return true;
         }
     }

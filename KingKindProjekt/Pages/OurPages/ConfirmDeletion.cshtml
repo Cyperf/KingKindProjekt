@@ -1,0 +1,12 @@
+﻿@page
+@model KingKindProjekt.Pages.OurPages.ConfirmDeletionModel
+@{
+    ViewData["Title"] = "Delete account";
+}
+<h1>Are you sure you want to delete your account?</h1>
+<form method="post">
+    <input asp-page-handler="GoBack" type="submit" value="Go Back" class="btn btn-info btn-lg btn-block" name="GoBack" />
+</form>
+<form method="post">
+    <input asp-page-handler="Delete" type="submit" value="Delete user info" class="btn btn-info btn-lg btn-block btn-danger" name="Delete" />
+</form>

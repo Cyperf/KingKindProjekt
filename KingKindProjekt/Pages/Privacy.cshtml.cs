@@ -1,19 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace KingKindProjekt.Pages
+﻿namespace KingKindProjekt.Pages
 {
-	public class PrivacyModel : KingKindProjekt.Pages.OurPages.PageBase
+    public class PrivacyModel : KingKindProjekt.Pages.OurPages.PageBase
     {
-		private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<PrivacyModel> _logger;
 
-		public PrivacyModel(ILogger<PrivacyModel> logger, KingKindProjekt.Services.AccountService accountService) : base(accountService)
-		{
-			_logger = logger;
-		}
+        public PrivacyModel(ILogger<PrivacyModel> logger, KingKindProjekt.Services.AccountService accountService) : base(accountService)
+        {
+            _logger = logger;
+        }
 
-		public void OnGet()
-		{
-		}
-	}
+        public void OnGet()
+        {
+        }
+    }
 }

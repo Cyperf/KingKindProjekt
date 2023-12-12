@@ -1,7 +1,5 @@
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -26,7 +24,7 @@ namespace KingKindProjekt.Pages.OurPages
         public IActionResult OnPostLogin()
         {
             //Debug.WriteLine("Onpost: " + EMail + " : " + Password);
-            if (EMail == null  || Password == null)
+            if (EMail == null || Password == null)
                 return Page();
             //Debug.WriteLine("dasklfnasklnskdmsafmakfls");
             if (_accountService.TryLogin(EMail, Password))

@@ -1,10 +1,10 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
-using System.Xml.Linq;
+using System.Globalization;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -50,19 +50,29 @@ namespace KingKindProjekt.Pages.OurPages
 
         public IActionResult OnGet()
         {
+            if (AccountService.LoggedInAccount == null)
+                return RedirectToPage("ViewProducts");
+            string s = AccountService.LoggedInAccount.PhoneNumber;
+            string countryCode = AccountService.LoggedInAccount.PhoneNumber;
+            for (int i = s.Length - 1; i > 0; i--) // remove country code from phone number
+                if (s[i] == ' ')
+                {
+                    countryCode = s.Substring(0, i);
+                    s = s.Substring(i, s.Length - i);
 
+                }
+            CountryCode = int.Parse(countryCode);
+            PhoneNumber = int.Parse(s);
             if (AccountService.LoggedInAccount == null)
                 return RedirectToPage("ViewProducts");
             return Page();
-
-            
         }
 
         public IActionResult OnPostUpdate()
         {
             _Account.EMail = AccountService.LoggedInAccount.EMail;
-            _Account.PhoneNumber = "+" + CountryCode + " " + PhoneNumber;
-            _Account.Address = Address + ", " + PostNumber + " " + City;
+            _Account.PhoneNumber = PhoneNumber.ToString();
+            _Account.Address = Address;
             _Account.WantsNewsLetter = false;
             if (!ValidateAccountDetails())//if(!ModelState.IsValid)
                 return Page();
@@ -72,14 +82,19 @@ namespace KingKindProjekt.Pages.OurPages
             AccountService.LoggedInAccount.Password = _Account.Password;
             AccountService.LoggedInAccount.CVR = _Account.CVR;
             AccountService.LoggedInAccount.Country = _Account.Country;
-            
-            
+
+
             // login automatically 
             _accountService.Update(AccountService.LoggedInAccount);
 
             if (_accountService.TryLogin(_Account.EMail, _Account.Password))
                 return RedirectToPage("ViewProducts");
             return Page(); // could not login - ? (douplicate email... maybe)
+        }
+
+        public IActionResult OnPostDelete()
+        {
+            return RedirectToPage("ConfirmDeletion");
         }
 
         private bool ValidateAccountDetails()
@@ -98,15 +113,15 @@ namespace KingKindProjekt.Pages.OurPages
                 return false;
             return true;
         }
-    
 
-    Models.Account? account;
 
-        public UserModel(AccountService accountService) : base(accountService) 
-        { 
+        Models.Account? account;
+
+        public UserModel(AccountService accountService) : base(accountService)
+        {
             _accountService = accountService;
             _Account = AccountService.LoggedInAccount;
-            
+
         }
 
 
@@ -118,7 +133,7 @@ namespace KingKindProjekt.Pages.OurPages
             return account.Receipts.ToString();
         }
 
-      
+
 
     }
 }

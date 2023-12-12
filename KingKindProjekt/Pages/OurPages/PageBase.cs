@@ -2,7 +2,6 @@
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
 
 namespace KingKindProjekt.Pages.OurPages
 {
@@ -22,7 +21,7 @@ namespace KingKindProjekt.Pages.OurPages
             _accountService = accountService;
         }
 
-        public IActionResult OnPostSearch ()
+        public IActionResult OnPostSearch()
         {
             TryingToSearch = SearchWord;
             SearchWord = "";
@@ -49,7 +48,7 @@ namespace KingKindProjekt.Pages.OurPages
             return RedirectToPage(Page().Page);
         }
 
-        public string CanSignupForNewsletter ()
+        public string CanSignupForNewsletter()
         {
             Account acc;
             if (NewsletterSignup == null || (acc = _accountService.Read(NewsletterSignup)) == null)

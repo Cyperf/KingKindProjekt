@@ -6,7 +6,7 @@ namespace KingKindProjekt.Services
     {
         Repository<Sale> _sales;
         JsonFileService<Sale> _jsonFileService;
-        public SaleService (JsonFileService<Sale> jsonFileService)
+        public SaleService(JsonFileService<Sale> jsonFileService)
         {
             _sales = new Repository<Sale>();
             _jsonFileService = jsonFileService;
@@ -22,7 +22,7 @@ namespace KingKindProjekt.Services
         {
             _sales.Create(sale.ItemName, sale);
         }
-        public void Create (Sale sale)
+        public void Create(Sale sale)
         {
             if (_sales.Contains(sale.ItemName))
                 return;
@@ -30,7 +30,7 @@ namespace KingKindProjekt.Services
             _jsonFileService.SaveJsonItems(_sales.Items.Values);
         }
 
-        public bool IsOnSale (string item)
+        public bool IsOnSale(string item)
         {
             bool b = false;
             DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
@@ -45,21 +45,21 @@ namespace KingKindProjekt.Services
             return b;
         }
 
-        public void Delete (string item)
+        public void Delete(string item)
         {
             _sales.Delete(item);
             _jsonFileService.SaveJsonItems(_sales.Items.Values);
         }
         public string GetPrice(string item)
         {
-            return _sales.Read(item).SalePrice.ToString()+" kr.";
+            return _sales.Read(item).SalePrice.ToString() + " kr.";
         }
-		public double GetPriceAsDouble(string item)
-		{
-			return _sales.Read(item).SalePrice;
-		}
+        public double GetPriceAsDouble(string item)
+        {
+            return _sales.Read(item).SalePrice;
+        }
 
-		private void GetMockData ()
+        private void GetMockData()
         {
             DateOnly today = DateOnly.FromDateTime(DateTime.Now);
             Create(new Sale("Name", 10d, today.AddDays(1)));

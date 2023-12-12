@@ -36,9 +36,9 @@
             }
             return default;
         }
-		public bool Contains(string id)
-		{
+        public bool Contains(string id)
+        {
             return Items.ContainsKey(id);
-		}
-	}
+        }
+    }
 }

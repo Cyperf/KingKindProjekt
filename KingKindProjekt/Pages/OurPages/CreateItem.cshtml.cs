@@ -1,17 +1,14 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
-using System.Net;
-using System.Security.Principal;
 
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CreateItemModel : PageBase
     {
-        
+
         private AccountService _accountService;
         public ItemService _itemService { get; set; }
         [BindProperty]
@@ -41,7 +38,7 @@ namespace KingKindProjekt.Pages.OurPages
         {
             _itemService = itemService;
             _accountService = accountService;
-            
+
         }
         public IActionResult OnGet()
         {

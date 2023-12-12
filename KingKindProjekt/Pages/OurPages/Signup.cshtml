@@ -4,7 +4,6 @@
 
     ViewData["Title"] = "Sign Up";
 }
-<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -24,20 +23,10 @@
 
                                             <div class="mb-4 pb-2 form-group">
                                                 <select asp-for="_Account._PrivateOrCorporation" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.PrivateOrCorporation>()"></select>
-                                            @* <select class="select">
-                                                <option value="1">Privat</option>
-                                                <option value="2">Virksomhed</option>
-                                            </select> *@
-                                                
                                             </div>
 
                                             <div class="mb-4 pb-2 form-group">
                                                 <select asp-for="_Account._AccountType" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.AccountType>()"></select>
-                                            @* <select class="select">
-                                                <option value="1">Kunde</option>
-                                                <option value="2">Medarbejder</option>
-                                                <option value="3">Admin</option>
-                                            </select> *@
                                             </div>
 
                                             <div class="row">
@@ -46,8 +35,6 @@
                                                     <label asp-for="FirstName" class="control-label"></label>
                                                         <input asp-for="FirstName" class="form-control" />
                                                         <span asp-validation-for="FirstName" class="text-danger"></span>
-                                                    @* <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev2">Fornavn</label> *@
                                                 </div> 
 
                                                 </div>
@@ -57,8 +44,6 @@
                                                         <label asp-for="LastName" class="control-label"></label>
                                                         <input asp-for="LastName" class="form-control" />
                                                         <span asp-validation-for="LastName" class="text-danger"></span>
-                                                    @* <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev3">Efternavn</label> *@
                                                 </div>
 
                                                 </div>
@@ -70,9 +55,6 @@
                                                     <label asp-for="_Account.Password" class="control-label"></label>
                                                     <input asp-for="_Account.Password" type="password" class="form-control" />
                                                     <span asp-validation-for="_Account.Password" class="text-danger"></span>
-                                                    @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
-                                                    @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
                                                 </div>
                                             </div>
                                             <div class="mb-4 pb-2">
@@ -80,9 +62,6 @@
                                                     <label asp-for="PasswordChecker" class="control-label"></label>
                                                     <input asp-for="PasswordChecker" type="password" class="form-control" />
                                                     <span asp-validation-for="PasswordChecker" class="text-danger"></span>
-                                                    @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
-                                                    @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
                                                 </div>
                                             </div>
 
@@ -90,9 +69,6 @@
                                                 <div class="form-outline form-group">
                                                     <label asp-for="_Account.CVR" class="control-label"></label>
                                                     <input asp-for="_Account.CVR" class="form-control" />
-                                                    @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
-                                                    @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
                                                 </div>
                                             </div>
 
@@ -115,21 +91,9 @@
 
                                             <div class="mb-4 pb-2">
                                                 <div class="form-outline form-group form-white">
-                                                    <label asp-for="ExtraInfo" class="control-label"></label>
-                                                    <input asp-for="ExtraInfo" class="form-control" />
-                                                    @* <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea2">Vej + Nr</label> *@
-                                                </div>
-                                            </div>
-
-                                            <div class="mb-4 pb-2">
-                                                <div class="form-outline form-group form-white">
                                                     <label asp-for="Address" class="control-label"></label>
                                                     <input asp-for="Address" class="form-control" />
                                                     <span asp-validation-for="Address" class="text-danger"></span>
-                                                    @* <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea3">Ydeligere Information</label> *@
-                                                    @* <span asp-validation-for="ExtraInfo" class="text-danger"></span> *@
                                                 </div>
                                             </div>
 
@@ -140,8 +104,6 @@
                                                         <label asp-for="PostNumber" class="control-label"></label>
                                                         <input asp-for="PostNumber" class="form-control" />
                                                         <span asp-validation-for="PostNumber" class="text-danger"></span>
-                                                        @* <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea4">Postnummer</label> *@
                                                     </div>
 
                                                 </div>
@@ -151,8 +113,6 @@
                                                         <label asp-for="City" class="control-label"></label>
                                                         <input asp-for="City" class="form-control" />
                                                         <span asp-validation-for="City" class="text-danger"></span>
-                                                        @* <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea5">By</label> *@
                                                     </div>
 
                                                 </div>
@@ -163,31 +123,25 @@
                                                     <label asp-for="_Account.Country" class="control-label"></label>
                                                     <input asp-for="_Account.Country" class="form-control" />
                                                     <span asp-validation-for="_Account.Country" class="text-danger"></span>
-                                                    @* <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea6">Land</label> *@
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-5 mb-4 pb-2">
+                                                <div class="mb-4 pb-2" style="width: 30%;">
 
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="CountryCode" class="control-label"></label>
                                                         <input asp-for="CountryCode" class="form-control" />
                                                         <span asp-validation-for="CountryCode" class="text-danger"></span>
-                                                        @* <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea7">Kode +</label>  *@
                                                     </div>
 
                                                 </div>
-                                                <div class="col-md-7 mb-4 pb-2">
+                                                <div class="mb-4 pb-2" style="width: 70%;">
 
                                                     <div class="form-outline form-group form-white">
                                                         <label asp-for="PhoneNumber" class="control-label"></label>
                                                         <input asp-for="PhoneNumber" class="form-control" />
                                                         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                                                        @* <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
-                                                        <label class="form-label" for="form3Examplea8">Telefonnummer</label> *@
                                                     </div>
 
                                                 </div>
@@ -196,27 +150,26 @@
                                             <div class="mb-4">
                                                 <div class="form-outline form-white">
                                                     <label asp-for="_Account.EMail" class="control-label"></label>
-                                                    <input asp-for="_Account.EMail" class="form-control" />
+                                                    @{
+                                                        string email = (Model._Account == null) ? "" : Model._Account.EMail;
+                                                    }
+                                                    <input asp-for="_Account.EMail" class="form-control" value="@email" />
                                                     <span asp-validation-for="_Account.EMail" class="text-danger"></span>
-                                                    @* <input type="text" id="form3Examplea9" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea9">Email</label> *@
                                                 </div>
                                             </div>
 
-                                            <div class="form-check d-flex justify-content-start mb-4 pb-3 form-group"> @* TO:DO *@
-                                                <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                                                <label class="form-check-label text-black" for="form2Example3">
-                                                    I do accept the <a href="#!" class="text-warning"><u>Terms and Conditions</u></a> of your
-                                                    site.
-                                                </label>
+                                            <div class="mb-4">
+                                                <div class="form-check d-flex justify-content-start mb-4 pb-3 form-group">
+                                                    <input asp-for="AcceptTermsAndConditions" class="form-check-input me-3" type="checkbox" value="true" id="form2Example3c" />
+                                                    <label class="form-check-label text-black" for="form2Example3">
+                                                        I do accept the <a asp-page="/OurPages/TermsAndConditions" target="_blank" class="text-warning"><u>Terms and Conditions</u></a> of your
+                                                        site.
+                                                    </label>
+                                                    <span asp-validation-for="AcceptTermsAndConditions" value="true" class="text-danger"></span>
+                                                </div>
                                             </div>
 
                                             <input asp-page-handler="Signup" type="submit" value="Signup" class="btn btn-info btn-lg btn-block" name="Signup" />
-
-                                            @* <button type="button" class="btn btn-light btn-lg"
-                                                    data-mdb-ripple-color="dark">
-                                                Register
-                                            </button> *@
 
                                         </div>
                                     </div>

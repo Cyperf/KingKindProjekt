@@ -1,25 +1,21 @@
-﻿using KingKindProjekt.Models;
-using KingKindProjekt.Services;
-using Microsoft.AspNetCore.Http.Features;
+﻿using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Xml.Linq;
 
 namespace KingKindProjekt.Pages
 {
-	public class IndexModel : KingKindProjekt.Pages.OurPages.PageBase
+    public class IndexModel : KingKindProjekt.Pages.OurPages.PageBase
     {
-		private readonly ILogger<IndexModel> _logger;
-		
-		public IndexModel(ILogger<IndexModel> logger, AccountService accountService) : base(accountService)
-        {
-			
-			_logger = logger;
-		}
+        private readonly ILogger<IndexModel> _logger;
 
-		public IActionResult OnGet()
+        public IndexModel(ILogger<IndexModel> logger, AccountService accountService) : base(accountService)
         {
-			return RedirectToPage("OurPages/ViewProducts");
-		}
-	}
+
+            _logger = logger;
+        }
+
+        public IActionResult OnGet()
+        {
+            return RedirectToPage("OurPages/ViewProducts");
+        }
+    }
 }

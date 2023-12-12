@@ -1,5 +1,4 @@
 ﻿using KingKindProjekt.Models;
-using System.Diagnostics;
 
 namespace KingKindProjekt.Services
 {
@@ -33,14 +32,14 @@ namespace KingKindProjekt.Services
                 }
         }
 
-        public string GetPrice (string itemName)
+        public string GetPrice(string itemName)
         {
             Item item = _items.Read(itemName);
             if (item == null)
                 return 0.ToString();
             if (_saleService.IsOnSale(itemName))
                 return _saleService.GetPrice(itemName);
-            return item.Price.ToString()+" kr.";
+            return item.Price.ToString() + " kr.";
 
         }
         public string GetPrice(Item item)
