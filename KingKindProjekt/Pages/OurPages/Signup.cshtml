@@ -186,7 +186,10 @@
                                             <div class="mb-4">
                                                 <div class="form-outline form-white">
                                                     <label asp-for="_Account.EMail" class="control-label"></label>
-                                                    <input asp-for="_Account.EMail" class="form-control" />
+                                                    @{
+                                                        string email = (Model._Account == null) ? "" : Model._Account.EMail;
+                                                    }
+                                                    <input asp-for="_Account.EMail" class="form-control" value="@email" />
                                                     <span asp-validation-for="_Account.EMail" class="text-danger"></span>
                                                     @* <input type="text" id="form3Examplea9" class="form-control form-control-lg" />
                                                     <label class="form-label" for="form3Examplea9">Email</label> *@
