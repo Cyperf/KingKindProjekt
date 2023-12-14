@@ -1,0 +1,12 @@
+[
+  {
+    "ItemName": "Name",
+    "SalePrice": 10,
+    "SaleDate": "2023-12-15"
+  },
+  {
+    "ItemName": "Hair gel",
+    "SalePrice": 10,
+    "SaleDate": "2023-12-16"
+  }
+]
