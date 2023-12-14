@@ -35,8 +35,8 @@
                             imagePath = Url.Content("~/res/NoPicture.png");
                         }
                         <img src="@imagePath" class="imageClass" style="max-height: 55%;">
-                        <h2>@item.Name</h2>
-                        <h3>@item.Brand</h3>
+                        <p>@item.Name</p>
+                        <p>@item.Brand</p>
                         <p>@Model.itemService.GetPrice(item.Name)</p>
                     </div>
                 </a>
