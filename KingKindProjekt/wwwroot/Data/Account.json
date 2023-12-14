@@ -77,9 +77,12 @@
     "PhoneNumber": "11111111",
     "WantsNewsLetter": false,
     "Receipts": [
-      "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n"
+      "---------------RECEIPT START---------------\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Gel\u0027ler hair Super brand Hairgel - 119,99 kr.\n[2] Name Branded Razor - 10 kr.\n[3] Nasme Branded Razor - 199,99 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[3] Expenssive hair gel Branded Hairgel - 1199,99 kr.\n[2] sName Branded Razor - 199,99 kr.\n[3] Hsair gel Other brand Hairgel - 99,99 kr.\n[5] Expensive hairs gel Branded Hairgel - 1199,99 kr.\n[3] Hairs gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n",
+      "---------------RECEIPT START---------------\n[1] Hair gel Other brand Hairgel - 1337 kr.\nApplied coupon: notevenaCoupon which gave 99% off\nTotal price: 1654,5375\nTax: 330,9075\n---------------RECEIPT END---------------\n"
     ],
-    "UsedCoupons": []
+    "UsedCoupons": [
+      "notevenaCoupon"
+    ]
   },
   {
     "Name": "luffe luffe",
