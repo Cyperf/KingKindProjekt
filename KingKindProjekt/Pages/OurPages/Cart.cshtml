@@ -86,7 +86,6 @@
 			<td>
 				@{double tax = price*0.2d;}
 				<p>@tax</p>
-				@* @(Model.cartService.CalculateTotalPriceWTax() - Model.cartService.CalculateTotalPriceExTax()) kr. *@
 			</td>
 		</tbody>
 		<tbody>
@@ -109,7 +108,6 @@
 		</tbody>
 		<tbody>
 			<td>
-			@* <a class="btn btn-success" href="Checkout" role="button">Checkout</a> *@
 				
 				<a class="btn-success btn" type="button" title="Checkout" asp-page="Checkout" asp-route-appliedCoupon="@Model.CurrentlyAppliedCoupon">Checkout</a>
 				
@@ -117,7 +115,6 @@
 			<td>
 			<li class="nav-item ">
 				<form method="post">
-					@* <input asp-for="SearchWord" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Search..." /> *@
 					Apply Coupon <input asp-for="CouponToApply" type="text" id="form2Example18" class="form-control form-control-lg" placeholder="Coupon...">
 					<input type="submit" value="Apply" asp-page-handler="ApplyCoupon" />
 				</form>

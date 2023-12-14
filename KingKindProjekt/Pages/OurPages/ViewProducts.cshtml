@@ -7,6 +7,10 @@
 
 <div class="wrapper">
     <div style="padding-left: 10px;" class="brands">
+        <form method="post"> @* Filter products by type button *@
+            <select asp-for="filterItemType" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.ItemType>()"></select>
+            <button class="btn btn-primary" asp-page-handler="FilterItemsByType" type="submit" asp-route-itemTypeFilter="@Model.filterItemType">Filter</button>
+        </form>
         <h1>Brands</h1>
         @foreach (string brand in Model.Brands)
         {
@@ -14,17 +18,12 @@
         }
     </div>
     <div class="mainPage">
-        <div style="float: left;"> @* Filter products by type button *@
-            <form method="post">
-                <select asp-for="filterItemType" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.ItemType>()"></select>
-                <button class="btn btn-primary" asp-page-handler="FilterItemsByType" type="submit" asp-route-itemTypeFilter="@Model.filterItemType">Filter</button>
-            </form>
+        <div style="float: left;">
         </div>
         <div class="container row-cols-sm-3 row-cols-md-6 row-cols-lg-9"> @* Display cards with all the products *@
             @foreach (Models.Item item in Model.Items)
             {
                 <a class="nav-link text-dark" asp-area="" asp-page="/OurPages/InspectItem" asp-route-ItemName="@item.Name">
-                @* <a href="InspectItem" asp-route-ItemName="@item.Name"> *@
                     <div class="card" style="width: 100%">
                         @* draw the image *@
                         @{string imagePath = Url.Content("~/res/" + item.PathToImage);}

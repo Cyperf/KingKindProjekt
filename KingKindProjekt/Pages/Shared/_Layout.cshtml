@@ -37,20 +37,7 @@
                     </li>
                     <li class="nav-item col-1"></li> @* Padding *@
                     <li class="nav-item col-6">
-                        @* @using (Html.BeginForm("SearchProducts", "ExtraController", FormMethod.Post))
-                        {
-                            <div class="input-group">
-                                @Html.TextBox("SearchString")
-                                <input type="submit" id="btnSearch" value="Søg" />
-                            </div>
-                        } *@
                         @await Component.InvokeAsync("Search")
-                        @* <form method="post">
-                            <div class="input-group">
-                                <input asp="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" class="form-control mr-1" placeholder="Enter search term" />
-                                <input type="submit" value="Search" class="btn btn-primary" asp-route-searchItems="@KingKindProjekt.Pages.OurPages.ViewProductsModel.SearchProduct" asp-page="/OurPages/ViewProducts" />
-                            </div>
-                        </form> *@
                     </li>
 
                     <li class="nav-item col-1"></li> @* Padding *@
@@ -107,19 +94,7 @@
     @* Footer ------------------------------------------- *@
     <div style="height: 150px;"></div>
     <footer class="border-top footer text-muted">
-
-        
         @await Component.InvokeAsync("NewsletterSignup")
-        @* <div id="newsletter" class="d-flex justify-content-center">
-              NEWSLETTER
-         </div>
-        <div id="newslettertilmeld" class="d-flex justify-content-center" style="width: 100%;">
-            <input type="text" placeholder="Enter E-Mail" style="width: 60%;"><br><br>
-            <button id="alert-button" style="width: 10%;"
-                    onclick="alert('You have been signed up!');">
-                Tilmeld
-            </button>
-        </div> *@
         <div class="container">
             &copy; 2023 - KingKindProjekt
         </div>

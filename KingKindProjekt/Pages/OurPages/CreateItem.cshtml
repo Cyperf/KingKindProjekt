@@ -45,11 +45,6 @@
 
                                             <div class="mb-4 pb-2 form-group">
                                                 <select asp-for="_Item.Type" asp-items="Html.GetEnumSelectList<KingKindProjekt.Models.ItemType>()"></select>
-                                                @* <select class="select">
-                                                <option value="1">Kunde</option>
-                                                <option value="2">Medarbejder</option>
-                                                <option value="3">Admin</option>
-                                                </select> *@
                                             </div>
 
                                             <div class="col-md-7 mb-4 pb-2">
@@ -85,7 +80,6 @@
                                             </div>
 
                                             <input asp-page-handler="Add" type="submit" value="Add" class="btn btn-info btn-lg btn-block" name="Create Item" />
-
                                         </div>
                                     </div>
 
