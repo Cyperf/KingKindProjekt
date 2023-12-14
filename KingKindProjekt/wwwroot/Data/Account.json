@@ -56,11 +56,13 @@
       "---------------RECEIPT START---------------\n[3] Name Branded Razor - 10 kr.\n[3] Hair gel Other brand Hairgel - 10 kr.\n[2] Hair gsel Other brand Hairgel - 99,99 kr.\n[2] Hsair gel Other brand Hairgel - 99,99 kr.\n---------------RECEIPT END---------------\n",
       "---------------RECEIPT START---------------\n[2] Hair gel Other brand Hairgel - 1337 kr.\n[4] sName Branded Razor - 199,99 kr.\nTotal price: 4342,45\nTax: 3473,96\n---------------RECEIPT END---------------\n",
       "---------------RECEIPT START---------------\n[4] Hair gel Other brand Hairgel - 1337 kr.\n[1] Gel\u0027ler hairs Super brand Hairgel - 119,99 kr.\n[1] Hair gsel Other brand Hairgel - 99,99 kr.\nApplied coupon: CurrentlyAppliedCoupon which gave 100% off\nTotal price: 6959,974999999999\nTax: 5567,98\n---------------RECEIPT END---------------\n",
-      "---------------RECEIPT START---------------\n[1] Hair gel Other brand Hairgel - 1337 kr.\n[1] sName Branded Razor - 199,99 kr.\nApplied coupon: 25-Off which gave 25% off\nTotal price: 480,309375\nTax: 384,2475\n---------------RECEIPT END---------------\n"
+      "---------------RECEIPT START---------------\n[1] Hair gel Other brand Hairgel - 1337 kr.\n[1] sName Branded Razor - 199,99 kr.\nApplied coupon: 25-Off which gave 25% off\nTotal price: 480,309375\nTax: 384,2475\n---------------RECEIPT END---------------\n",
+      "---------------RECEIPT START---------------\n[1] Name Branded Razor - 199,99 kr.\nApplied coupon: notevenaCoupon which gave 1% off\nTotal price: 2,4998750000000003\nTax: 0,49997500000000006\n---------------RECEIPT END---------------\n"
     ],
     "UsedCoupons": [
       "CurrentlyAppliedCoupon",
-      "25-Off"
+      "25-Off",
+      "notevenaCoupon"
     ]
   },
   {
