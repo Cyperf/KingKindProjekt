@@ -3,10 +3,9 @@
 @{
     ViewData["Title"] = "User";
 }
-@{
 
-    <head>
-    </head>
+@*Lavet af Frederik*@
+
     <body>
         <form method="post">
             <section class="h-100 h-custom gradient-custom-2">
@@ -117,15 +116,14 @@
             </section>
         </form>
     </body>
-
-
+@{
 
     <h1>Receipt History</h1>
     foreach (string str in KingKindProjekt.Services.AccountService.LoggedInAccount.Receipts){
-    string[] strings = str.Split("\n");
-    foreach (string s in strings)
-    {
-        <p>@s</p>
+        string[] strings = str.Split("\n");
+        foreach (string s in strings)
+        {
+            <p>@s</p>
+        }
     }
-}
 }

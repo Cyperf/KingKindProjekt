@@ -7,7 +7,6 @@ namespace KingKindProjekt.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             return View("NewsletterSignupView.cshtml");
-            //return View("/Pages/OurPages/Components/Search/SearchView.cshtml");
         }
     }
 }

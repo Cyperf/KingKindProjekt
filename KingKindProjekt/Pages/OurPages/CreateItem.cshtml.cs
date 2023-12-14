@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CreateItemModel : PageBase
     {
 
-        private AccountService _accountService;
         public ItemService _itemService { get; set; }
         [BindProperty]
         public Item _Item { get; set; }
@@ -45,7 +46,7 @@ namespace KingKindProjekt.Pages.OurPages
             if (!_accountService.IsLoggedIn() || AccountService.LoggedInAccount._AccountType != Models.AccountType.Admin)
                 return RedirectToPage("ViewProducts");
 
-            return default;
+            return Page();
         }
 
         public IActionResult OnPostAdd()
@@ -56,11 +57,7 @@ namespace KingKindProjekt.Pages.OurPages
             _Item.Description = Description;
             _Item.Price = Price;
             _Item.PathToImage = PathToImage;
-
-
-
             _itemService.Create(_Item);
-            Debug.WriteLine(PathToImage);
 
             return Page();
         }

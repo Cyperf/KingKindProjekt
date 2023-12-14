@@ -6,6 +6,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Globalization;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class UserModel : PageBase
@@ -74,7 +76,7 @@ namespace KingKindProjekt.Pages.OurPages
             _Account.PhoneNumber = PhoneNumber.ToString();
             _Account.Address = Address;
             _Account.WantsNewsLetter = false;
-            if (!ValidateAccountDetails())//if(!ModelState.IsValid)
+            if (!ValidateAccountDetails())
                 return Page();
             AccountService.LoggedInAccount.Name = _Account.Name;
             AccountService.LoggedInAccount.PhoneNumber = _Account.PhoneNumber;
@@ -83,8 +85,6 @@ namespace KingKindProjekt.Pages.OurPages
             AccountService.LoggedInAccount.CVR = _Account.CVR;
             AccountService.LoggedInAccount.Country = _Account.Country;
 
-
-            // login automatically 
             _accountService.Update(AccountService.LoggedInAccount);
 
             if (_accountService.TryLogin(_Account.EMail, _Account.Password))

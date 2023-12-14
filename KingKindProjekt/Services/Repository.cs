@@ -1,4 +1,7 @@
-﻿namespace KingKindProjekt.Services
+﻿
+// Lavet af Jeppe
+
+namespace KingKindProjekt.Services
 {
     public class Repository<T>
     {

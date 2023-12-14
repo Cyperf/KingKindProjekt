@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class ConfirmDeletionModel : PageBase
@@ -15,7 +17,6 @@ namespace KingKindProjekt.Pages.OurPages
         }
         public IActionResult OnPostGoBack()
         {
-            Debug.WriteLine("I got this far..");
             return RedirectToPage("User");
         }
         public IActionResult OnPostDelete()
@@ -26,7 +27,6 @@ namespace KingKindProjekt.Pages.OurPages
         }
         public void OnGet()
         {
-            Debug.WriteLine("I got this far..");
         }
     }
 }

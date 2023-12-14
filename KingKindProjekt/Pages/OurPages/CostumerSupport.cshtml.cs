@@ -1,6 +1,8 @@
 using KingKindProjekt.Models;
 using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CostumerSupportModel : PageBase

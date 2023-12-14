@@ -2,6 +2,8 @@ using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CartModel : PageBase
@@ -28,8 +30,6 @@ namespace KingKindProjekt.Pages.OurPages
             _couponService = couponService;
 
         }
-
-
 
         public IActionResult OnGet(string ItemName, string createName = "", string deleteName = "")
         {

@@ -1,5 +1,7 @@
 ﻿using KingKindProjekt.Models;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Services
 {
     public class CartService
@@ -17,7 +19,6 @@ namespace KingKindProjekt.Services
         {
             _cart = new Repository<Item>();
             _amount = new Repository<int>();
-            //_saleService = saleService;
             _itemService = itemService;
 
         }

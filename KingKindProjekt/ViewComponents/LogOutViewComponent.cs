@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.ViewComponents
 {
     public class LogOutViewComponent : ViewComponent

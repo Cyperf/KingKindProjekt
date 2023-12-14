@@ -1,6 +1,8 @@
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class LoginModel : PageBase
@@ -16,19 +18,13 @@ namespace KingKindProjekt.Pages.OurPages
         {
             _accountService = accountService;
         }
-        //void OnGet ()
-        //{
-        //    EMail = "";
-        //    Password = "";
-        //}
+
         public IActionResult OnPostLogin()
         {
-            //Debug.WriteLine("Onpost: " + EMail + " : " + Password);
             if (EMail == null || Password == null)
                 return Page();
-            //Debug.WriteLine("dasklfnasklnskdmsafmakfls");
             if (_accountService.TryLogin(EMail, Password))
-                return RedirectToPage("ViewProducts"); // should be look at account stuff
+                return RedirectToPage("ViewProducts"); 
             return Page(); // could not login
         }
     }

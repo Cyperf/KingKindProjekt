@@ -1,5 +1,7 @@
 ﻿using KingKindProjekt.Models;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Services
 {
     public class AccountService
@@ -21,8 +23,8 @@ namespace KingKindProjekt.Services
             }
             else // dummy data
             {
-                Create(new Account("name", "email@gmail.com", "password", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "45 10022490", false, null, null));
-                Create(new Account("name2", "email2@gmail.com", "pass", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "45 15224209", false, null, null));
+                Create(new Account("user", "user@user.user", "users", PrivateOrCorporation.Private, AccountType.Customer, "cvr", "AAA vej, 4000 Roskilde", "Danmark", "45 10022490", false, null, null));
+                Create(new Account("Admin", "admin@admin.admin", "admin", PrivateOrCorporation.Private, AccountType.Admin, "cvr", "BBB vej, 4000 Roskilde", "Danmark", "45 15224209", false, null, null));
             }
         }
 
@@ -33,7 +35,6 @@ namespace KingKindProjekt.Services
         public bool IsLoggedIn() { return LoggedInAccount != null; }
         public bool TryLogin(string Email, string password)
         {
-            //Debug.WriteLine(Email + " : " + password);
             Account temp = accounts.Read(Email);
             if (temp == null || temp.Password != password)
                 return false;

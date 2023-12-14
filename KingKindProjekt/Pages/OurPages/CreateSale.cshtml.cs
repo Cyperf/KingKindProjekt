@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CreateSaleModel : PageBase
@@ -36,7 +38,7 @@ namespace KingKindProjekt.Pages.OurPages
             if (!_accountService.IsLoggedIn() || AccountService.LoggedInAccount._AccountType != Models.AccountType.Admin)
                 return RedirectToPage("ViewProducts");
 
-            return default;
+            return Page();
         }
         public IActionResult OnPostSignup()
         {

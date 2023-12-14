@@ -1,6 +1,8 @@
 using KingKindProjekt.Models;
 using KingKindProjekt.Services;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class InspectItemModel : PageBase

@@ -3,6 +3,8 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class PageBase : PageModel
@@ -44,7 +46,6 @@ namespace KingKindProjekt.Pages.OurPages
         public IActionResult OnPostLogOut()
         {
             AccountService.LogOut();
-            //return Page();
             return RedirectToPage(Page().Page);
         }
 

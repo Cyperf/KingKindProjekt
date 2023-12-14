@@ -1,6 +1,8 @@
 using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Frederik
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class CheckoutModel : PageBase

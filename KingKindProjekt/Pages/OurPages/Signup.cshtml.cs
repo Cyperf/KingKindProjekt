@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class SignupModel : PageBase
@@ -61,7 +63,7 @@ namespace KingKindProjekt.Pages.OurPages
             _Account.PhoneNumber = CountryCode + " " + PhoneNumber;
             _Account.Address = Address + ", " + PostNumber + " " + City;
             _Account.WantsNewsLetter = false;
-            if (!ValidateAccountDetails())//if(!ModelState.IsValid)
+            if (!ValidateAccountDetails())
                 return Page();
             // login automatically 
             _accountService.Create(_Account);

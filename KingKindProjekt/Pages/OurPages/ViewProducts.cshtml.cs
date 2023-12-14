@@ -3,6 +3,8 @@ using KingKindProjekt.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Pages.OurPages
 {
     public class ViewProductsModel : PageBase

@@ -1,4 +1,5 @@
-﻿
+﻿// Lavet af Jeppe
+
 namespace KingKindProjekt.Models
 {
     public enum ItemType

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Models
 {
     public enum PrivateOrCorporation

@@ -1,5 +1,7 @@
 ﻿using KingKindProjekt.Models;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Services
 {
     public class ItemService
@@ -7,23 +9,17 @@ namespace KingKindProjekt.Services
         Repository<Item> _items;
         JsonFileService<Item> _jsonFileService;
         SaleService _saleService;
-        //public ItemService()
-        //{
-        //    _items = new Repository<Item>();
-        //}
 
         public ItemService(JsonFileService<Item> JsonFileService, SaleService saleService)
         {
             _items = new Repository<Item>();
             _jsonFileService = JsonFileService;
             _saleService = saleService;
-            //_items = JsonFileService.GetJsonItems();
             _items = new Repository<Item>();
             var items = JsonFileService.GetJsonItems();
             if (items == null)
             {
                 AddMockData();
-                //System.Diagnostics.Debug.WriteLine("---------------------" + _items.Items.Count + "----------------------------");
             }
             if (items != null)
                 foreach (var item in items)

@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Models
 {
-
-
     public class Sale
     {
-
-
         [BindProperty]
         public string ItemName { get; set; }
         [BindProperty]

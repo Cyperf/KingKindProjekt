@@ -1,5 +1,7 @@
 ﻿using System.Text.Json;
 
+// Lavet af Jeppe
+
 namespace KingKindProjekt.Services
 {
     public class JsonFileService<T>
@@ -28,14 +30,6 @@ namespace KingKindProjekt.Services
                 return null;
             using (StreamReader jsonFileReader = File.OpenText(JsonFileName))
             {
-                //Repository<T> repository = new Repository<T>();
-                //while (!jsonFileReader.EndOfStream)
-                //{
-                //    string key = JsonSerializer.Deserialize<string>(jsonFileReader.Read());
-                //    T item = JsonSerializer.Deserialize<T>(jsonFileReader.Read());
-                //    repository.Create(key, item);
-                //}
-                //return repository;
                 return JsonSerializer.Deserialize<T[]>(jsonFileReader.ReadToEnd());
             }
         }
@@ -50,12 +44,6 @@ namespace KingKindProjekt.Services
                     SkipValidation = false,
                     Indented = true
                 });
-                /*foreach (var temp in items.Items)
-                {
-                    JsonSerializer.Serialize<string>(jsonWriter, temp.Key);
-                    JsonSerializer.Serialize<T>(jsonWriter, temp.Value);
-                }*/
-                //JsonSerializer.Serialize<string[]>(jsonWriter, items.Items.Keys.ToArray());
                 JsonSerializer.Serialize<T[]>(jsonWriter, items.ToArray());
             }
         }
