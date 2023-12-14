@@ -72,6 +72,9 @@
 	</colgroup>
 	@if (Model.cartService._cart.Items != null) {
 		double price = Model.cartService.CalculateTotalPriceWTax() * Model.GetPriceMultiplier();
+		double tax = Model.cartService.CalculateTotalPriceWTax() * 0.2d;
+		double cartTotal = price - tax;
+		//double tax = price - Model.cartService.CalculateTotalPriceExTax() * Model.GetPriceMultiplier();
 		<tbody>
 			<td>
 				Cart Total
@@ -85,7 +88,7 @@
 				Tax
 			</td>
 			<td>
-				@{double tax = price*0.2d;}
+				
 				<p>@tax</p>
 			</td>
 		</tbody>
