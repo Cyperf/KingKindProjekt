@@ -7,7 +7,11 @@ namespace KingKindProjekt.Models
         NoItem,
         Razor,
         Hairgel,
-        HairDye,
+        ShavingGel,
+        Aftershave,
+        Scissors,
+        Comb,
+        Hairdryer,
 
     }
     public class Item

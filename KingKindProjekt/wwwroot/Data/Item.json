@@ -2,7 +2,7 @@
   {
     "Name": "ELEGANCE",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 4,
     "Description": "KING KIND EAU DE COLOGNE   \u2022 The King Kind After Shave Cologne offers a mat, clean, fresh and cool skin after shaving. Prevents skin redness, shaving burn and also shaving pimples on the face. Suitable for all skin types and daily skin car. Select from:  \u2022 Imposing: fresh citrus blend with apple and woody notes  \u2022 Elegance: elegant fresh citrus blend with spicy and woody notes  \u2022 Gentleman: captivating amber and woody high notes blends out with fresh fruity and citral notes  \u2022 Lemon: refreshing citrus notes, an eternal shaving classic scent",
     "Price": 40,
     "PathToImage": "Aftershave1.jpg"
@@ -10,7 +10,7 @@
   {
     "Name": "Imposing",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 4,
     "Description": "KING KIND EAU DE COLOGNE \u2022 The King Kind After Shave Cologne offers a mat, clean, fresh and cool skin after shaving. Prevents skin redness, shaving burn and also shaving pimples on the face. Suitable for all skin types and daily skin car. Select from:  \u2022 Imposing: fresh citrus blend with apple and woody notes \u2022 Elegance: elegant fresh citrus blend with spicy and woody notes \u2022 Gentleman: captivating amber and woody high notes blends out with fresh fruity and citral notes \u2022 Lemon: refreshing citrus notes, an eternal shaving classic scent",
     "Price": 40,
     "PathToImage": "Aftershave2.jpg"
@@ -18,7 +18,7 @@
   {
     "Name": "Gentleman",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 4,
     "Description": "KING KIND EAU DE COLOGNE \u2022 The King Kind After Shave Cologne offers a mat, clean, fresh and cool skin after shaving. Prevents skin redness, shaving burn and also shaving pimples on the face. Suitable for all skin types and daily skin car. Select from:  \u2022 Imposing: fresh citrus blend with apple and woody notes \u2022 Elegance: elegant fresh citrus blend with spicy and woody notes \u2022 Gentleman: captivating amber and woody high notes blends out with fresh fruity and citral notes \u2022 Lemon: refreshing citrus notes, an eternal shaving classic scent",
     "Price": 40,
     "PathToImage": "aftershave3.jpg"
@@ -26,7 +26,7 @@
   {
     "Name": "Hair wax medium",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 2,
     "Description": "  King Kind Aqua Wax creates easily any desired styles for your hair with a long-lasting shine. Wet hair gives less hold with more shine and dry hair gives more hold with less shine. King Kind Aqua wax formula is alcohol-free with no harsh ingredients, perfect for all hair types, including those with naturally dry hair. \u2022 Easy to apply and distribute, manage flyways, braids or create professional look \u2022 Long lasting hold and shine \u2022 Dries light, clean and flake-free \u2022 Water-based wax, therefore not greasy to your hands and hair, easily rinses off with water \u2022 Alcohol-free, no harsh ingredients formula, perfect for any hair type. \u2022 Available in 3 colours, strengths and scents \u27A2 Yellow: Medium hold, amazing sweet tropical scent \u27A2 Blue: Strong hold, fresh, bubble gum scent. \u27A2 Red: Fresh and cool, watermelon scent  Product Short Description: Brand: King Kind Aqua Wax (Medium, Strong, Extra Strong Hold) Category: Hair Styling products Type: Aqua Hair wax Scent: Sweet tropical, fresh bubble-gum, fresh watermelon Size:160 ml  Made in EU ",
     "Price": 80,
     "PathToImage": "Hairwax1.jpg"
@@ -34,7 +34,7 @@
   {
     "Name": "Hair wax Strong",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 2,
     "Description": "  King Kind Aqua Wax creates easily any desired styles for your hair with a long-lasting shine. Wet hair gives less hold with more shine and dry hair gives more hold with less shine. King Kind Aqua wax formula is alcohol-free with no harsh ingredients, perfect for all hair types, including those with naturally dry hair. \u2022 Easy to apply and distribute, manage flyways, braids or create professional look \u2022 Long lasting hold and shine \u2022 Dries light, clean and flake-free \u2022 Water-based wax, therefore not greasy to your hands and hair, easily rinses off with water \u2022 Alcohol-free, no harsh ingredients formula, perfect for any hair type. \u2022 Available in 3 colours, strengths and scents \u27A2 Yellow: Medium hold, amazing sweet tropical scent \u27A2 Blue: Strong hold, fresh, bubble gum scent. \u27A2 Red: Fresh and cool, watermelon scent  Product Short Description: Brand: King Kind Aqua Wax (Medium, Strong, Extra Strong Hold) Category: Hair Styling products Type: Aqua Hair wax Scent: Sweet tropical, fresh bubble-gum, fresh watermelon Size:160 ml  Made in EU ",
     "Price": 80,
     "PathToImage": "Hairwax2.jpg"
@@ -42,7 +42,7 @@
   {
     "Name": "Hair wax Extra Strong",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 2,
     "Description": "  King Kind Aqua Wax creates easily any desired styles for your hair with a long-lasting shine. Wet hair gives less hold with more shine and dry hair gives more hold with less shine. King Kind Aqua wax formula is alcohol-free with no harsh ingredients, perfect for all hair types, including those with naturally dry hair. \u2022 Easy to apply and distribute, manage flyways, braids or create professional look \u2022 Long lasting hold and shine \u2022 Dries light, clean and flake-free \u2022 Water-based wax, therefore not greasy to your hands and hair, easily rinses off with water \u2022 Alcohol-free, no harsh ingredients formula, perfect for any hair type. \u2022 Available in 3 colours, strengths and scents \u27A2 Yellow: Medium hold, amazing sweet tropical scent \u27A2 Blue: Strong hold, fresh, bubble gum scent. \u27A2 Red: Fresh and cool, watermelon scent  Product Short Description: Brand: King Kind Aqua Wax (Medium, Strong, Extra Strong Hold) Category: Hair Styling products Type: Aqua Hair wax Scent: Sweet tropical, fresh bubble-gum, fresh watermelon Size:160 ml  Made in EU ",
     "Price": 80,
     "PathToImage": "Hairwax3.jpg"
@@ -50,7 +50,7 @@
   {
     "Name": "Shaving Gel",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 3,
     "Description": "King Kind Shaving gel provides an easy professional shaving that softens the beard and prevents skin irritation. Compared to shaving creams, it allows faster removal with less amount and it provides transparency so you can see where the razor blades have already passed through. KK Shaving Gel creates a layer between the blade and your skin, shielding it from cuts, nicks, razor burns, leaving skin fresh, smooth and moisturised. Perfect for professional barber use. Dispenser provides easily the product in-hand avoiding contamination of the product. \u2022 Easy application: dispenses product in-hand \u2022 Great Visibility: clear gel for transparent visibility during shaving \u2022 Comfort: goes on smoothly and provides a slick surface for comfort shaving \u2022 Precision: softens the beard, goes on clear for a clean, close and comfortable shave \u2022 Moisturing formula: non-foaming moisturing formula leaves skin fresh and soft. Suitable for sensitive skin \u2022 No razor clogs formula: The rich non-foaming formula won\u2019t clog your razor providing a slick surface that prevents razor burn, nicks and cuts.   Product Short Description: Brand: King Kind Shaving Gel Category: Shaving products Type: Shaving gel Scent: fresh, citrus notes Size:500 ml",
     "Price": 80,
     "PathToImage": "ShavingGel.jpg"
@@ -58,7 +58,7 @@
   {
     "Name": "Hot wax",
     "Brand": "King Kind",
-    "Type": 0,
+    "Type": 2,
     "Description": "  INSTRUCTIONS FOR USE:   Use a sharp object and break the quantity of wax that you want to use for your application. Warm the wax inside a heating device until it melts. Prepare properly the skin for the hair removal with a specialized product or use talc powder to remove any potential greasiness on the area to be depilated. Using a spatula, spread a thin layer of wax on the area you wish to depilate in the direction of hair growth. Let it dry. Pull it away quickly in the opposite direction of hair growth with a movement parallel to the skin. A second application of wax can also be done in the opposite direction of hair growth and pulled away in the direction of hair growth. Use a specialized post depilation care product to calm the skin after the hair removal.    PRECAUTIONS: Before applying the hot wax on the area to be depilated, check if its temperature is bearable for your skin. Do not apply on irritated skin, wounds, or skin affected with pathologies. Avoid contact with eyes. In case of contact with eyes rinse immediately with water for at least 10 minutes. Keep out of the reach of children. STORAGE CONDITIONS: always prefer to store the product in a cool and dry place, and avoid exposing it to direct sunlight. Storage temperature, preferably 4-25 degrees Celsius.    INGREDIENTS: Glyceryl Rosinate, Cera Microcristallina, Paraffinum Liquidum, Cera Alba, CI 77499. ",
     "Price": 80,
     "PathToImage": "Hotwax.jpg"
@@ -66,7 +66,7 @@
   {
     "Name": "Combset",
     "Brand": "JRL",
-    "Type": 0,
+    "Type": 6,
     "Description": "J301 cutting comb 7\u2033   J302 cutting comb 7.3\u2033   J304 fine cutting comb 7.4\u2033   J202 Barber Blending comb 9.6\u2033   Leather bag.   Patented fine teeth with flute design, helps lift the hair.   Comfortable anti-skid handle grip.   Long Term heat resistance, up to 240\u00B0C and excellent chemical resistance.   Light but strong.   Comfortable round teeth, soft to touch but strong and durable.   Made with ceramic technology, JRL combs eliminate static electricity, speed up the drying process and create a sleek, shiny result. ",
     "Price": 200,
     "PathToImage": "JRLcombset.png"
@@ -74,7 +74,7 @@
   {
     "Name": "Forte Pro Dryer",
     "Brand": "JRL",
-    "Type": 0,
+    "Type": 7,
     "Description": "J301 cutting comb 7\u2033   J302 cutting comb 7.3\u2033   J304 fine cutting comb 7.4\u2033   J202 Barber Blending comb 9.6\u2033   Leather bag.   Patented fine teeth with flute design, helps lift the hair.   Comfortable anti-skid handle grip.   Long Term heat resistance, up to 240\u00B0C and excellent chemical resistance.   Light but strong.   Comfortable round teeth, soft to touch but strong and durable.   Made with ceramic technology, JRL combs eliminate static electricity, speed up the drying process and create a sleek, shiny result. ",
     "Price": 1999,
     "PathToImage": "JRLHairdry.png"
@@ -82,7 +82,7 @@
   {
     "Name": "Fresh Fade 1040",
     "Brand": "JRL",
-    "Type": 0,
+    "Type": 1,
     "Description": "J301 cutting comb 7\u2033   J302 cutting comb 7.3\u2033   J304 fine cutting comb 7.4\u2033   J202 Barber Blending comb 9.6\u2033   Leather bag.   Patented fine teeth with flute design, helps lift the hair.   Comfortable anti-skid handle grip.   Long Term heat resistance, up to 240\u00B0C and excellent chemical resistance.   Light but strong.   Comfortable round teeth, soft to touch but strong and durable.   Made with ceramic technology, JRL combs eliminate static electricity, speed up the drying process and create a sleek, shiny result. ",
     "Price": 880,
     "PathToImage": "JRLmaskine.png"
@@ -90,7 +90,7 @@
   {
     "Name": "FF2020 Gold Collection",
     "Brand": "JRL",
-    "Type": 0,
+    "Type": 1,
     "Description": "J301 cutting comb 7\u2033   J302 cutting comb 7.3\u2033   J304 fine cutting comb 7.4\u2033   J202 Barber Blending comb 9.6\u2033   Leather bag.   Patented fine teeth with flute design, helps lift the hair.   Comfortable anti-skid handle grip.   Long Term heat resistance, up to 240\u00B0C and excellent chemical resistance.   Light but strong.   Comfortable round teeth, soft to touch but strong and durable.   Made with ceramic technology, JRL combs eliminate static electricity, speed up the drying process and create a sleek, shiny result. ",
     "Price": 1040,
     "PathToImage": "JRLmaskine2.png"
@@ -98,7 +98,7 @@
   {
     "Name": "FF2020C Clipper",
     "Brand": "JRL",
-    "Type": 0,
+    "Type": 1,
     "Description": "      Advanced Lever-locking Feature Maintains Lever Secure For Extended Use      4 Hours Battery Life      Revolutionary Cool Blade      2-adjustable speeds for cutting versatility ( 6,000 \u0026 7,200 revolutions per minute)       Quiet Motor      Lithium Ion Battery      Hanging Hook      Patented Smart-Clip Technology      Longer Cutting Range opens more, from 0.5-3.5mm      Accessories:  1 Screwdriver, 1 Brush, 1 Lubricant Oil, 1 Blade Protector,   10 Comb Guards  (\u00BD#, 1#, 1-1/2#, 2#, 3#, 4#, 5#, 6#, 7#, 8#),  1 US Plug      Charging Dock Is Not Included",
     "Price": 1040,
     "PathToImage": "JRLmaskine3.png"
