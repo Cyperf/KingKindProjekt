@@ -18,5 +18,10 @@
     "Name": "notevenaCoupon",
     "PercentOff": 1,
     "SaleDate": "2297-09-27"
+  },
+  {
+    "Name": "1Off",
+    "PercentOff": 1,
+    "SaleDate": "2026-09-09"
   }
 ]
