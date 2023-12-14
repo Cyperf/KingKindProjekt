@@ -57,7 +57,7 @@ namespace KingKindProjekt.Pages.OurPages
         }
 
         public string CouponPercentOff()
-        { return _couponService.GetCouponPercentOff(CurrentlyAppliedCoupon).ToString("0"); }
+        { return (1-_couponService.GetCouponPercentOff(CurrentlyAppliedCoupon)).ToString("0"); }
         public double GetPriceMultiplier()
         {
             if (CurrentlyAppliedCoupon == null) return 1;
