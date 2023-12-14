@@ -26,9 +26,6 @@
                                                         <label asp-for="_Account.Name" class="control-label"></label>
                                                         <input asp-for="_Account.Name" type="text" class="form-control" value="@Model._Account.Name"/>
                                                         <span asp-validation-for="_Account.Name" class="text-danger"></span>
-                                                        @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
-                                                        @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
                                                     </div>
                                                 </div>
 
@@ -38,9 +35,6 @@
                                                         <label asp-for="_Account.Password" class="control-label"></label>
                                                         <input asp-for="_Account.Password" type="password" class="form-control" value="@Model._Account.Password" />
                                                         <span asp-validation-for="_Account.Password" class="text-danger"></span>
-                                                        @* <span asp-validation-for="_Account.CVR" class="text-danger"></span> *@
-                                                        @* <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev4">CVR-(Valgfri)</label> *@
                                                     </div>
                                                 </div>
                                                 <div class="mb-4 pb-2">
@@ -68,14 +62,6 @@
                                             </div>
 
                                             <input asp-page-handler="Update" type="submit" value="Update user info" class="btn btn-info btn-lg btn-block" name="Update" style="position: absolute; bottom: 0; width: 50%; left: 25%;" />
-
-                                            @* <button type="button" class="btn btn-light btn-lg"
-                                        data-mdb-ripple-color="dark">
-                                        Register
-                                        </button> *@
-
-                                        
-                                            
                                         </div>
                                         <div class="col-lg-6 bg-indigo text-dark">
                                             <div class="p-5">
