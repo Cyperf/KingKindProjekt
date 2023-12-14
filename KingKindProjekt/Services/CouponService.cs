@@ -41,7 +41,7 @@ namespace KingKindProjekt.Services
                 Delete(coupon.Name);
                 return 1d;
             }
-            return coupon.PercentOff / 100d;
+            return 1 - coupon.PercentOff / 100d;
         }
         public double GetCouponPercentOff(string name)
         {

@@ -6,8 +6,8 @@
 
 <h1>Thank you for shopping</h1>
     
-    string[] strings = Model.currentReceipt.Split("\n");
-    foreach (string s in strings)
+    @{string[] strings = Model.currentReceipt.Split("\n");}
+    @foreach (string s in strings)
     {
         <p>@s</p>
     }
