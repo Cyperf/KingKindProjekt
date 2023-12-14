@@ -1,7 +1,7 @@
 ﻿@page
-@model KingKindProjekt.Pages.OurPages.CreateSaleModel
+@model KingKindProjekt.Pages.OurPages.CreateCouponModel
 @{
-    ViewData["Title"] = "Create Sale";
+    ViewData["Title"] = "Create Coupon";
 }
 
 <body>
@@ -22,15 +22,14 @@
                                             <div class="col-md-7 mb-4 pb-2">
 
                                                 <div class="form-outline form-group form-white">
-                                                    <label asp-for="salePrice" class="control-label"></label>
-                                                    <input asp-for="salePrice" class="form-control" />
-                                                    <span asp-validation-for="salePrice" class="text-danger"></span>
+                                                    <label asp-for="couponPercent" class="control-label"></label>
+                                                    <input asp-for="couponPercent" class="form-control" />
+                                                    <span asp-validation-for="couponPercent" class="text-danger"></span>
 
                                                 </div>
 
-                                            </div>
+                                            
 
-                                            <div class="col-md-7 mb-4 pb-2">
 
                                                 <div class="form-outline form-group form-white">
                                                     <label asp-for="days" class="control-label"></label>
@@ -39,27 +38,32 @@
 
                                                 </div>
 
-                                            <p>
-                                                <form method="post">
-                                                    <label>Choose item to put on sale </label>
-                                                    <select asp-for="_Item.Name" asp-items="@Model.ItemList" class="form-control"></select>
-                                                </form>
-                                            </p>
+                                                <div class="form-outline form-group form-white">
+                                                    <label asp-for="name" class="control-label"></label>
+                                                    <input asp-for="name" class="form-control" />
+                                                    <span asp-validation-for="name" class="text-danger"></span>
+
+                                                </div>
 
 
 
 
-                                            <input asp-page-handler="Signup" type="submit" value="Create Sale" class="btn btn-info btn-lg btn-block" name="Create Sale" />
+                                                <input asp-page-handler="Create" type="submit" value="Create Coupon" class="btn btn-info btn-lg btn-block" name="Create Coupon" />
+
+                                                @* <button type="button" class="btn btn-light btn-lg"
+                                                data-mdb-ripple-color="dark">
+                                                Register
+                                                </button> *@
+
+                                            </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </form>
 </body>
-
